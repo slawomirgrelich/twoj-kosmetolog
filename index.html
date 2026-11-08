@@ -1,0 +1,3568 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#4a154b">
+  <meta name="description" content="Gabinet kosmetologiczny w Gliwicach. Specjalistyczna laseroterapia, masaże liftingujące Kobido, estGen, mezoterapia i holistyczna pielęgnacja twarzy. Umów wizytę: 512 166 250.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Twój Kosmetolog Gliwice – Magdalena Marędziak">
+  <meta property="og:description" content="Profesjonalna kosmetologia estetyczna, laseroterapia i masaże w Gliwicach. Zadbaj o zdrowie i piękno swojej skóry.">
+  <meta property="og:url" content="https://twojkosmetolog.com">
+  <title>Twój Kosmetolog Gliwice | Magdalena Marędziak – Gabinet Kosmetologii i Fizjoterapii</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%236A2E61'/%3E%3Cpath d='M24 39C22 30 17 26 17 20c0-6 4-10 7-12 3 2 7 6 7 12 0 6-5 10-7 19Z' fill='none' stroke='%23f3e5e7' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --primary-color: #6a2e61;
+      --plum: var(--primary-color);
+      --plum-deep: #4d2349;
+      --rose: #d48c96;
+      --rose-pale: #f3e5e7;
+      --ink: #302832;
+      --muted: #716873;
+      --paper: #fff;
+      --soft: #faf8f9;
+      --line: #eadfe7;
+      --green: #23734c;
+      --red: #b64052;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --shadow: 0 18px 55px rgb(74 21 59 / 10%);
+      --radius: 18px;
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--paper);
+      scroll-behavior: smooth;
+      scroll-padding-top: 166px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body,
+    button,
+    input {
+      font-family: var(--sans);
+    }
+
+    body.menu-open,
+    body.overflow-hidden {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--rose);
+      outline-offset: 4px;
+    }
+
+    ::selection {
+      color: var(--paper);
+      background: var(--plum);
+    }
+
+    .shell {
+      width: min(1160px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 1000;
+      top: 10px;
+      left: 10px;
+      padding: 10px 14px;
+      color: var(--paper);
+      background: var(--plum-deep);
+      border-radius: 8px;
+      transform: translateY(-160%);
+      transition: transform 180ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 100;
+      top: 0;
+      background: var(--paper);
+      box-shadow: 0 3px 18px rgb(40 25 39 / 6%);
+    }
+
+    .nav-wrap {
+      position: relative;
+    }
+
+    .nav-inner {
+      display: flex;
+      min-height: 112px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      padding-block: 10px;
+    }
+
+    .brand {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 8px;
+      padding: 0;
+      color: var(--plum);
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      text-decoration: none;
+      transition: opacity 180ms ease;
+    }
+
+    .brand:hover {
+      opacity: 0.82;
+    }
+
+    .brand-mark {
+      display: block;
+      width: auto;
+      max-width: 200px;
+      height: 48px;
+      flex: 0 0 auto;
+      object-fit: contain;
+    }
+
+    .brand-wordmark {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .brand-name {
+      color: var(--plum-deep);
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .brand-owner {
+      color: var(--muted);
+      font-size: 0.59rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      line-height: 1.4;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .primary-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(13px, 1.1vw, 17px);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(13px, 1.15vw, 18px);
+    }
+
+    .nav-links > a:not(.button) {
+      position: relative;
+      padding: 10px 4px;
+      color: #483f49;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links > a:not(.button)::after {
+      position: absolute;
+      right: 0;
+      bottom: 1px;
+      left: 0;
+      height: 2px;
+      background: var(--rose);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 180ms ease;
+    }
+
+    .nav-links > a:not(.button):hover::after,
+    .nav-links > a:not(.button):focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .nav-contact {
+      display: grid;
+      flex: 0 0 auto;
+      gap: 4px;
+      margin: 0;
+      padding-left: 13px;
+      border-left: 1px solid var(--line);
+      font-size: 0.67rem;
+      font-style: normal;
+      line-height: 1.35;
+    }
+
+    .nav-contact-phone,
+    .nav-contact-address,
+    .nav-contact-facebook {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .nav-contact-phone {
+      color: var(--primary-color);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-contact-address,
+    .nav-contact-facebook {
+      color: var(--muted);
+      font-size: 0.66rem;
+      text-decoration: none;
+    }
+
+    .nav-contact-facebook:hover {
+      color: var(--primary-color);
+    }
+
+    .nav-contact svg {
+      width: 14px;
+      height: 14px;
+      flex: 0 0 auto;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      color: var(--plum);
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .menu-toggle-bars,
+    .menu-toggle-bars::before,
+    .menu-toggle-bars::after {
+      position: relative;
+      display: block;
+      width: 19px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 4px;
+      transition: transform 180ms ease, top 180ms ease;
+    }
+
+    .menu-toggle-bars::before,
+    .menu-toggle-bars::after {
+      position: absolute;
+      left: 0;
+      content: "";
+    }
+
+    .menu-toggle-bars::before {
+      top: -6px;
+    }
+
+    .menu-toggle-bars::after {
+      top: 6px;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-bars {
+      background: transparent;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-bars::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-bars::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 21px;
+      color: var(--paper);
+      background: var(--plum);
+      border: 1px solid var(--plum);
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgb(90 32 73 / 12%);
+      cursor: pointer;
+      font-size: 0.91rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .button:hover {
+      background: var(--plum-deep);
+      box-shadow: 0 12px 24px rgb(90 32 73 / 20%);
+      transform: translateY(-2px);
+    }
+
+    .button:active {
+      transform: translateY(0);
+    }
+
+    .button svg {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 auto;
+    }
+
+    .button-sm {
+      min-height: 43px;
+      padding: 10px 16px;
+      font-size: 0.81rem;
+      white-space: nowrap;
+    }
+
+    .button-light {
+      color: var(--plum);
+      background: transparent;
+      border-color: rgb(90 32 73 / 30%);
+      box-shadow: none;
+    }
+
+    .button-light:hover {
+      color: var(--paper);
+      background: var(--plum);
+    }
+
+    .button-rose {
+      color: var(--plum-deep);
+      background: var(--rose-pale);
+      border-color: var(--rose-pale);
+      box-shadow: none;
+    }
+
+    .button-rose:hover {
+      color: var(--plum-deep);
+      background: #e8c5c9;
+      box-shadow: none;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 87% 14%, rgb(232 180 184 / 19%), transparent 29%),
+        var(--soft);
+    }
+
+    .hero-grid {
+      display: grid;
+      min-height: 660px;
+      align-items: center;
+      grid-template-columns: minmax(0, 1fr) minmax(360px, 0.86fr);
+      gap: clamp(42px, 7vw, 100px);
+      padding-block: 65px 74px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 610px;
+      padding-block: 12px;
+    }
+
+    .treatment-ticker {
+      width: 100%;
+      overflow: hidden;
+      padding-block: 12px;
+      background: #fafaf9;
+      border-block: 1px solid rgb(231 229 228 / 50%);
+      user-select: none;
+    }
+
+    .treatment-ticker-track {
+      display: flex;
+      width: max-content;
+      min-width: 200%;
+      animation: treatment-marquee 60s linear infinite;
+    }
+
+    .treatment-ticker-copy {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1 0 50%;
+      gap: 16px;
+      padding-right: 16px;
+      color: rgb(88 28 135 / 40%);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .treatment-ticker-copy span::after {
+      margin-left: 16px;
+      content: "•";
+    }
+
+    @keyframes treatment-marquee {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 17px;
+      color: var(--plum);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 26px;
+      height: 1px;
+      background: var(--rose);
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--primary-color);
+    }
+
+    h1,
+    h2 {
+      font-family: var(--serif);
+      font-weight: 600;
+      letter-spacing: -0.035em;
+    }
+
+    .hero h1 {
+      max-width: 600px;
+      margin-bottom: 20px;
+      font-size: clamp(3.35rem, 6.7vw, 5.85rem);
+      line-height: 1.02;
+    }
+
+    .hero-lead {
+      max-width: 580px;
+      margin-bottom: 15px;
+      color: #514853;
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 1.8vw, 1.36rem);
+      line-height: 1.55;
+    }
+
+    .hero-description {
+      max-width: 500px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+
+    .hero-note svg {
+      width: 19px;
+      height: 19px;
+      flex: 0 0 auto;
+      color: var(--rose);
+    }
+
+    .hero-media {
+      position: relative;
+      min-width: 0;
+      padding: 0 20px 24px 0;
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: 530px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 46% 46% 14px 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-media::before {
+      position: absolute;
+      z-index: 0;
+      top: 28px;
+      right: -2px;
+      bottom: 0;
+      left: 36px;
+      border: 1px solid rgb(212 140 150 / 66%);
+      border-radius: 46% 46% 14px 14px;
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-photo,
+    .hero-badge {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      position: absolute;
+      right: -14px;
+      bottom: 1px;
+      display: grid;
+      width: 148px;
+      height: 148px;
+      align-content: center;
+      padding: 18px;
+      color: var(--paper);
+      background: var(--plum);
+      border: 7px solid var(--soft);
+      border-radius: 50%;
+      text-align: center;
+      transform: rotate(5deg);
+    }
+
+    .hero-badge strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    .hero-badge span {
+      display: block;
+      margin-top: 5px;
+      color: #f6e5e8;
+      font-size: 0.69rem;
+      line-height: 1.35;
+    }
+
+    .section {
+      padding-block: 96px;
+    }
+
+    .section-soft {
+      background: var(--soft);
+    }
+
+    .section-heading {
+      max-width: 710px;
+      margin: 0 auto 43px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      justify-content: center;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 14px;
+      font-size: clamp(2.35rem, 4vw, 3.4rem);
+      line-height: 1.13;
+    }
+
+    .section-heading > p:last-child {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      align-items: center;
+      grid-template-columns: minmax(280px, 0.88fr) minmax(0, 1fr);
+      gap: clamp(45px, 8vw, 105px);
+    }
+
+    .about-media {
+      position: relative;
+      width: 100%;
+      max-width: 445px;
+      aspect-ratio: 4 / 5;
+      margin-inline: auto;
+    }
+
+    .about-media::before {
+      position: absolute;
+      z-index: 0;
+      top: 14px;
+      right: -10px;
+      bottom: -10px;
+      left: 14px;
+      border: 1px solid rgb(212 140 150 / 72%);
+      border-radius: 22px;
+      content: "";
+    }
+
+    .about-photo {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 24px;
+      box-shadow: 0 20px 25px -5px rgb(74 21 59 / 14%), 0 8px 10px -6px rgb(74 21 59 / 10%);
+    }
+
+    .about-copy .eyebrow {
+      margin-bottom: 12px;
+    }
+
+    .about-copy h2 {
+      margin-bottom: 20px;
+      font-size: clamp(2.45rem, 4vw, 3.55rem);
+      line-height: 1.1;
+    }
+
+    .about-copy p {
+      margin-bottom: 15px;
+      color: var(--muted);
+    }
+
+    .signature {
+      display: inline-block;
+      margin-top: 7px;
+      color: var(--plum);
+      font-family: var(--serif);
+      font-size: 1.23rem;
+      font-style: italic;
+    }
+
+    .credentials {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 58px;
+      padding: 22px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .credential {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 10px 14px;
+    }
+
+    .credential-icon {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      flex: 0 0 auto;
+      place-items: center;
+      color: var(--plum);
+      background: var(--rose-pale);
+      border-radius: 50%;
+    }
+
+    .credential-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .credential strong {
+      display: block;
+      color: var(--plum-deep);
+      font-size: 0.88rem;
+      line-height: 1.35;
+    }
+
+    .credential span:last-child {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      line-height: 1.45;
+    }
+
+    .qualifications {
+      margin-top: 24px;
+      padding: 24px;
+      background: rgb(250 245 255 / 55%);
+      border: 1px solid #f3e8ff;
+      border-radius: 16px;
+    }
+
+    .qualification-group + .qualification-group {
+      margin-top: 18px;
+    }
+
+    .qualification-group h3 {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 0 12px;
+      padding: 4px 11px;
+      color: var(--plum-deep);
+      background: rgb(255 255 255 / 82%);
+      border: 1px solid rgb(233 213 255 / 68%);
+      border-radius: 999px;
+      box-shadow: 0 1px 2px rgb(40 25 39 / 6%);
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .qualification-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .qualification-list li {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      color: #581c87;
+      background: #faf5ff;
+      border: 1px solid rgb(233 213 255 / 60%);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .brands-bar {
+      max-width: 64rem;
+      margin: 48px auto 0;
+      padding: 32px 16px;
+      border-block: 1px solid rgb(231 229 228 / 60%);
+      text-align: center;
+    }
+
+    .brands-caption {
+      margin-bottom: 16px;
+      color: #78716c;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .brands-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 16px 24px;
+      margin: 0;
+      padding: 0;
+      color: #57534e;
+      font-family: var(--serif);
+      font-size: 1rem;
+      letter-spacing: 0.025em;
+      list-style: none;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 23px;
+    }
+
+    .service-card {
+      overflow: hidden;
+      background: linear-gradient(180deg, #fff 0%, rgb(250 250 249 / 80%) 100%);
+      border: 1px solid rgb(231 229 228 / 70%);
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgb(74 21 59 / 4%);
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    }
+
+    .service-card:hover {
+      border-color: #e7e5e4;
+      box-shadow: 0 16px 32px rgb(74 21 59 / 10%);
+      transform: translateY(-4px);
+    }
+
+    .service-icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      color: var(--plum);
+      background: var(--rose-pale);
+      border-radius: 50%;
+    }
+
+    .service-card:nth-child(3n + 2) .service-icon {
+      color: #8d5c87;
+      background: #f5eef5;
+    }
+
+    .service-card:nth-child(3n) .service-icon {
+      color: #ad6574;
+      background: #faeef0;
+    }
+
+    .service-icon svg {
+      width: 23px;
+      height: 23px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.6;
+    }
+
+    .service-content {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 24px 24px 32px;
+    }
+
+    .service-content h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 1.38rem;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .service-content .text-button {
+      gap: 4px;
+      margin-top: 16px;
+      color: #581c87;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .service-content .text-button:hover {
+      gap: 4px;
+      color: #7e22ce;
+    }
+
+    .service-content .text-button svg {
+      flex: 0 0 auto;
+    }
+
+    .text-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0;
+      color: var(--plum);
+      background: none;
+      border: 0;
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-align: left;
+      text-decoration: underline;
+      text-decoration-color: rgb(106 46 97 / 28%);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      transition: color 180ms ease, gap 180ms ease;
+    }
+
+    .text-button:hover {
+      gap: 11px;
+      color: var(--plum-deep);
+    }
+
+    .text-button svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 180ms cubic-bezier(.2, .7, .3, 1);
+    }
+
+    .text-button:hover svg {
+      transform: translateX(4px);
+    }
+
+    .service-footnote {
+      max-width: 790px;
+      margin: 26px auto 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    .treatment-dialog {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      margin: 0;
+      padding: 16px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      color: var(--ink);
+      background: rgb(28 25 23 / 60%);
+      border: 0;
+      backdrop-filter: blur(4px);
+    }
+
+    .treatment-dialog[open] {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .treatment-dialog::backdrop {
+      background: transparent;
+    }
+
+    .dialog-inner {
+      position: relative;
+      width: 100%;
+      max-width: 42rem;
+      margin: auto;
+      padding: 24px;
+      background: var(--paper);
+      border-radius: 24px;
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+      animation: dialog-enter 220ms ease-out both;
+    }
+
+    @media (min-width: 640px) {
+      .treatment-dialog {
+        padding: 24px;
+      }
+
+      .dialog-inner {
+        padding: 32px;
+      }
+    }
+
+    .dialog-topline {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .dialog-topline .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .dialog-close {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      flex: 0 0 auto;
+      place-items: center;
+      color: var(--plum);
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .dialog-close:hover {
+      background: var(--rose-pale);
+    }
+
+    .treatment-dialog h2 {
+      margin-bottom: 14px;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      line-height: 1.12;
+    }
+
+    .dialog-description {
+      max-width: 650px;
+      margin-bottom: 24px;
+      color: var(--muted);
+    }
+
+    .dialog-preparation {
+      margin-bottom: 25px;
+      padding: 17px 19px;
+      background: var(--soft);
+      border-left: 3px solid var(--rose);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .dialog-preparation h3,
+    .dialog-list-section h3 {
+      margin-bottom: 10px;
+      font-family: var(--serif);
+      font-size: 1.2rem;
+    }
+
+    .dialog-preparation p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    .dialog-lists {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .dialog-list-section ul {
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .dialog-list-section li {
+      display: grid;
+      align-items: start;
+      grid-template-columns: 21px minmax(0, 1fr);
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.87rem;
+      line-height: 1.5;
+    }
+
+    .list-icon {
+      display: inline-grid;
+      width: 19px;
+      height: 19px;
+      place-items: center;
+      border-radius: 50%;
+      font-size: 0.76rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .list-icon.positive {
+      color: var(--green);
+      background: #e6f3eb;
+    }
+
+    .list-icon.caution {
+      color: var(--red);
+      background: #fae9ec;
+    }
+
+    .dialog-disclaimer {
+      margin: 25px 0 0;
+      padding-top: 16px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 0.78rem;
+    }
+
+    @keyframes dialog-enter {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.99);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .pricing-section {
+      background:
+        radial-gradient(ellipse at 0% 50%, rgb(232 180 184 / 14%), transparent 30%),
+        var(--paper);
+    }
+
+    .gift-section {
+      width: min(64rem, calc(100% - 32px));
+      margin: 64px auto;
+    }
+
+    .gift-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px;
+      background: linear-gradient(90deg, #faf5ff, rgb(255 241 242 / 40%), #fafaf9);
+      border: 1px solid rgb(233 213 255 / 50%);
+      border-radius: 24px;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+    }
+
+    .gift-eyebrow {
+      margin: 0 0 4px;
+      color: #6b21a8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .gift-card h2 {
+      margin-bottom: 8px;
+      color: #1c1917;
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      line-height: 1.25;
+    }
+
+    .gift-description {
+      max-width: 36rem;
+      margin-bottom: 0;
+      color: #57534e;
+      font-size: 0.875rem;
+    }
+
+    .gift-card .gift-link {
+      min-height: 48px;
+      flex: 0 0 auto;
+      padding: 12px 24px;
+      color: #581c87;
+      background: var(--paper);
+      border-color: #e9d5ff;
+      border-radius: 12px;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .gift-card .gift-link:hover {
+      background: var(--paper);
+      border-color: #d8b4fe;
+    }
+
+    @media (min-width: 640px) {
+      .brands-list {
+        column-gap: 40px;
+        font-size: 1.125rem;
+      }
+
+      .gift-card {
+        padding: 32px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .gift-card {
+        flex-direction: row;
+      }
+    }
+
+    .pricing-toolbar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 56rem;
+      margin: 0 auto 40px;
+      padding-inline: 16px;
+    }
+
+    .price-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .price-tab {
+      max-width: 100%;
+      min-height: 40px;
+      padding: 8px 16px;
+      color: #44403c;
+      background: #f5f5f4;
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 500;
+      overflow-wrap: anywhere;
+      transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .price-tab:hover:not([aria-selected="true"]) {
+      background: rgb(231 229 228 / 70%);
+    }
+
+    .price-tab[aria-selected="true"] {
+      color: var(--paper);
+      background: #581c87;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+    }
+
+    @media (min-width: 768px) {
+      .price-tab {
+        font-size: 0.875rem;
+      }
+    }
+
+    .price-search {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 36rem;
+      margin-inline: auto;
+    }
+
+    .price-search svg {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      width: 20px;
+      height: 20px;
+      color: #a8a29e;
+      pointer-events: none;
+      transform: translateY(-50%);
+    }
+
+    .price-search input {
+      width: 100%;
+      padding: 14px 16px 14px 48px;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid #e7e5e4;
+      border-radius: 16px;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+      font-size: 0.875rem;
+      transition: border-color 180ms ease, box-shadow 180ms ease;
+    }
+
+    .price-search input::placeholder {
+      color: #a8a29e;
+    }
+
+    .price-search input:focus {
+      outline: none;
+      border-color: #581c87;
+      box-shadow: 0 0 0 2px rgb(88 28 135 / 20%);
+    }
+
+    .price-panel {
+      min-height: 275px;
+      max-width: 56rem;
+      margin-inline: auto;
+      padding: 10px 30px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 34px rgb(74 21 59 / 4%);
+    }
+
+    .price-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0;
+      padding: 17px 3px;
+      border-bottom: 1px solid rgb(231 229 228 / 70%);
+    }
+
+    .price-row::after {
+      min-width: 16px;
+      flex: 1 1 20px;
+      align-self: flex-end;
+      order: 1;
+      margin: 0 12px 6px;
+      border-bottom: 1px dotted #d6d3d1;
+      content: "";
+    }
+
+    .price-row:has(.price-variants)::after,
+    .price-row.is-global-search::after {
+      display: none;
+    }
+
+    .price-row:last-child {
+      border-bottom: 0;
+    }
+
+    .price-row[hidden],
+    [hidden] {
+      display: none !important;
+    }
+
+    .price-name {
+      display: block;
+      min-width: 0;
+      flex: 0 1 auto;
+      order: 0;
+      color: #514853;
+      font-size: 0.94rem;
+    }
+
+    .price-category {
+      display: none;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.73rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .price-row.is-global-search {
+      align-items: flex-start;
+    }
+
+    .price-row.is-global-search .price-category {
+      display: block;
+    }
+
+    .price-value {
+      flex: 0 0 auto;
+      order: 2;
+      color: var(--plum-deep);
+      font-size: 0.96rem;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .price-variants {
+      display: grid;
+      gap: 5px;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.88em;
+      line-height: 1.45;
+    }
+
+    .price-subnote {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.88em;
+      line-height: 1.45;
+    }
+
+    .price-variants > span {
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+    }
+
+    .price-variants > span::after {
+      min-width: 16px;
+      flex: 1 1 20px;
+      align-self: flex-end;
+      order: 1;
+      margin: 0 12px 5px;
+      border-bottom: 1px dotted #d6d3d1;
+      content: "";
+    }
+
+    .price-variants strong {
+      flex: 0 0 auto;
+      order: 2;
+      color: var(--plum-deep);
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .price-empty {
+      display: grid;
+      min-height: 245px;
+      place-items: center;
+      color: var(--muted);
+      font-size: 0.94rem;
+      text-align: center;
+    }
+
+    .price-search-note {
+      max-width: 56rem;
+      margin: 0 auto 12px;
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+
+    .pricing-note {
+      max-width: 56rem;
+      margin: 16px auto 0;
+      color: var(--muted);
+      font-size: 0.79rem;
+      text-align: center;
+    }
+
+    .review-carousel {
+      max-width: 48rem;
+      margin-inline: auto;
+    }
+
+    .review-viewport {
+      overflow: hidden;
+      border-radius: var(--radius);
+      touch-action: pan-y pinch-zoom;
+    }
+
+    .review-viewport:focus-visible {
+      outline: 3px solid var(--rose);
+      outline-offset: 5px;
+    }
+
+    .reviews-track {
+      display: flex;
+      width: 100%;
+      transition: transform 420ms cubic-bezier(.2, .75, .25, 1);
+      will-change: transform;
+    }
+
+    .reviews-track.is-dragging {
+      transition: none;
+    }
+
+    .review-slide {
+      flex: 0 0 100%;
+      min-width: 0;
+    }
+
+    .review-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .review-arrow {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 auto;
+      place-items: center;
+      color: var(--plum);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      box-shadow: 0 6px 18px rgb(74 21 59 / 7%);
+      cursor: pointer;
+      transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .review-arrow:hover {
+      color: var(--paper);
+      background: var(--plum);
+      border-color: var(--plum);
+      transform: translateY(-1px);
+    }
+
+    .review-arrow svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .review-dots {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .review-dot {
+      display: grid;
+      width: 36px;
+      height: 44px;
+      place-items: center;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .review-dot::before {
+      width: 9px;
+      height: 9px;
+      background: #d8cbd6;
+      border-radius: 999px;
+      content: "";
+      transition: width 180ms ease, background 180ms ease;
+    }
+
+    .review-dot[aria-current="true"]::before {
+      width: 23px;
+      background: var(--plum);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .review-card {
+      position: relative;
+      padding: 29px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 9px 28px rgb(74 21 59 / 4%);
+    }
+
+    .review-quote-mark {
+      position: absolute;
+      top: 15px;
+      right: 23px;
+      color: var(--rose-pale);
+      font-family: var(--serif);
+      font-size: 5.6rem;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .review-stars {
+      position: relative;
+      margin-bottom: 17px;
+      color: #fbbf24;
+      font-size: 1.12rem;
+      letter-spacing: 0.13em;
+      text-shadow: 0 1px 6px rgb(245 158 11 / 20%);
+    }
+
+    .review-card blockquote {
+      position: relative;
+      margin: 0 0 22px;
+      color: #514853;
+      font-family: var(--serif);
+      font-size: 1.12rem;
+      line-height: 1.7;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--plum);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .review-avatar {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      color: var(--plum);
+      background: var(--rose-pale);
+      border-radius: 50%;
+      font-family: var(--serif);
+      font-size: 1rem;
+    }
+
+    .contact-section.section {
+      padding-block: 64px;
+    }
+
+    .faq-section {
+      width: min(56rem, calc(100% - 32px));
+      margin-inline: auto;
+      padding-block: 64px;
+    }
+
+    .faq-heading {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .faq-heading .eyebrow {
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .faq-heading h2 {
+      margin-bottom: 0;
+      color: #1c1917;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      line-height: 1.2;
+    }
+
+    .faq-item {
+      margin-bottom: 16px;
+      padding: 20px;
+      background: var(--paper);
+      border: 1px solid rgb(231 229 228 / 80%);
+      border-radius: 16px;
+      transition: box-shadow 180ms ease;
+    }
+
+    .faq-item[open] {
+      box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+    }
+
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: #292524;
+      cursor: pointer;
+      font-weight: 600;
+      line-height: 1.4;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary svg {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 auto;
+      color: var(--plum);
+      transition: transform 180ms ease;
+    }
+
+    .faq-item[open] summary svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-item p {
+      margin: 12px 0 0;
+      color: #57534e;
+      font-size: 0.875rem;
+    }
+
+    .contact-section {
+      background: var(--soft);
+    }
+
+    .contact-section > .shell {
+      width: 100%;
+      max-width: 72rem;
+      padding-inline: 16px;
+    }
+
+    .contact-section .section-heading {
+      text-align: center;
+    }
+
+    .contact-section .section-heading .eyebrow {
+      justify-content: center;
+    }
+
+    .contact-section .contact-grid {
+      display: grid;
+      align-items: stretch;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 32px;
+    }
+
+    .contact-section .contact-card {
+      display: flex;
+      grid-column: 1 / -1;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 32px;
+      background: #fff;
+      border: 1px solid rgb(231 229 228 / 70%);
+      border-radius: 24px;
+      box-shadow: 0 1px 2px rgb(40 25 39 / 5%);
+    }
+
+    .contact-section .contact-card h3 {
+      margin-bottom: 25px;
+      font-family: var(--serif);
+      color: #1c1917;
+      font-size: 1.5rem;
+      line-height: 1.25;
+    }
+
+    .contact-section .contact-list {
+      display: grid;
+      gap: 20px;
+      margin: 0 0 26px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-section .contact-item {
+      display: grid;
+      align-items: start;
+      grid-template-columns: 40px minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .contact-section .contact-icon {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      color: #6b21a8;
+      background: #faf5ff;
+      border-radius: 50%;
+    }
+
+    .contact-section .contact-icon svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .contact-item strong,
+    .contact-item span,
+    .contact-item a {
+      display: block;
+    }
+
+    .contact-item strong {
+      margin: 1px 0 3px;
+      color: var(--plum-deep);
+      font-size: 0.89rem;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: var(--muted);
+      font-size: 0.87rem;
+      line-height: 1.55;
+    }
+
+    .contact-item a {
+      overflow-wrap: anywhere;
+      text-decoration-color: rgb(90 32 73 / 30%);
+      text-underline-offset: 3px;
+    }
+
+    .contact-item a:hover {
+      color: var(--plum);
+    }
+
+    .contact-section .appointment-note {
+      margin: 0 0 24px;
+      padding: 16px;
+      color: #57534e;
+      background: #f5f5f4;
+      border-left: 2px solid #5b2160;
+      border-radius: 0 12px 12px 0;
+      font-size: 0.75rem;
+    }
+
+    .contact-section .contact-cta {
+      width: 100%;
+      min-height: 56px;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 20px;
+      color: #fff;
+      background: var(--plum-deep);
+      border: 0;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgb(77 35 73 / 16%);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    }
+
+    .contact-section .contact-cta:hover {
+      background: #351832;
+      box-shadow: 0 10px 24px rgb(77 35 73 / 20%);
+      transform: translateY(-1px);
+    }
+
+    .contact-section .contact-cta svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .contact-section .map-wrap {
+      grid-column: 1 / -1;
+      position: relative;
+      height: 450px;
+      min-height: 380px;
+      overflow: hidden;
+      background: #eee8ec;
+      border: 1px solid rgb(231 229 228 / 70%);
+      border-radius: 24px;
+      box-shadow: 0 1px 2px rgb(40 25 39 / 5%);
+    }
+
+    .map-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (min-width: 640px) {
+      .contact-section > .shell {
+        padding-inline: 24px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .contact-section > .shell {
+        padding-inline: 32px;
+      }
+
+      .contact-section .contact-grid {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+      }
+
+      .contact-section .contact-card {
+        grid-column: span 5;
+      }
+
+      .contact-section .map-wrap {
+        height: auto;
+        grid-column: span 7;
+      }
+    }
+
+    .site-footer {
+      padding-block: 28px 34px;
+      color: #f6eaf0;
+      background: var(--plum-deep);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-mark {
+      display: block;
+      width: auto;
+      height: 40px;
+      flex: 0 0 auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-brand .brand-name {
+      color: #f6eaf0;
+    }
+
+    .footer-brand .brand-owner {
+      color: #e6d3df;
+    }
+
+    .footer-meta {
+      color: #e6d3df;
+      font-size: 0.78rem;
+      text-align: right;
+    }
+
+    .footer-meta a {
+      color: inherit;
+      text-underline-offset: 3px;
+    }
+
+    .mobile-action-bar {
+      display: none;
+    }
+
+    .cookie-banner {
+      position: fixed;
+      z-index: 110;
+      right: 16px;
+      bottom: 16px;
+      left: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-height: calc(100dvh - 32px);
+      overflow-y: auto;
+      padding: 16px;
+      color: #57534e;
+      background: var(--paper);
+      border: 1px solid #e7e5e4;
+      border-radius: 16px;
+      box-shadow: 0 20px 30px rgb(0 0 0 / 15%);
+      font-size: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .cookie-banner p {
+      margin: 0;
+    }
+
+    .cookie-banner .cookie-error {
+      margin-top: 6px;
+      color: #9f1239;
+    }
+
+    .cookie-dismiss {
+      flex: 0 0 auto;
+      padding: 8px 16px;
+      color: var(--paper);
+      background: #581c87;
+      border: 0;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 500;
+      transition: background 180ms ease;
+    }
+
+    .cookie-dismiss:hover {
+      background: #3b0764;
+    }
+
+    @media (min-width: 768px) {
+      .cookie-banner {
+        left: auto;
+        width: min(28rem, calc(100% - 32px));
+      }
+    }
+
+    @media (max-width: 767px) {
+      body {
+        padding-bottom: calc(76px + env(safe-area-inset-bottom));
+      }
+
+      .mobile-action-bar {
+        position: fixed;
+        z-index: 90;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+        background: rgb(255 255 255 / 95%);
+        border-top: 1px solid rgb(231 229 228 / 80%);
+        box-shadow: 0 -4px 20px rgb(0 0 0 / 6%);
+        backdrop-filter: blur(12px);
+      }
+
+      .mobile-action-bar .button {
+        width: 100%;
+        min-height: 48px;
+        gap: 8px;
+        padding: 12px;
+        background: #581c87;
+        border-color: #581c87;
+        border-radius: 12px;
+        box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+
+      .mobile-action-bar .button:hover {
+        background: #3b0764;
+        border-color: #3b0764;
+        transform: none;
+      }
+
+      .cookie-banner {
+        bottom: calc(88px + env(safe-area-inset-bottom));
+        max-height: calc(100dvh - 104px - env(safe-area-inset-bottom));
+      }
+    }
+
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 550ms ease, transform 550ms ease;
+    }
+
+    .js .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1200px) {
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .primary-nav {
+        position: absolute;
+        z-index: 5;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: flex;
+        max-height: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        padding: 0 max(24px, calc((100% - 1160px) / 2));
+        background: var(--paper);
+        border-top: 1px solid transparent;
+        box-shadow: 0 20px 24px transparent;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        visibility: hidden;
+        transition:
+          max-height 280ms ease,
+          padding 280ms ease,
+          opacity 180ms ease,
+          transform 180ms ease,
+          border-color 180ms ease,
+          box-shadow 220ms ease,
+          visibility 0s linear 280ms;
+      }
+
+      .primary-nav.is-open {
+        max-height: min(80vh, 720px);
+        padding: 9px max(24px, calc((100% - 1160px) / 2)) 22px;
+        border-top-color: var(--line);
+        box-shadow: 0 20px 24px rgb(40 25 39 / 9%);
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+        visibility: visible;
+        transition:
+          max-height 280ms ease,
+          padding 280ms ease,
+          opacity 180ms ease,
+          transform 180ms ease,
+          border-color 180ms ease,
+          box-shadow 220ms ease,
+          visibility 0s;
+      }
+
+      .nav-links {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .nav-links > a:not(.button) {
+        padding: 13px 2px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-links > a:not(.button)::after {
+        display: none;
+      }
+
+      .nav-contact {
+        gap: 9px;
+        margin-top: 13px;
+        padding: 14px 2px 0;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+        font-size: 0.8rem;
+      }
+
+      .nav-contact-phone {
+        font-size: 0.88rem;
+      }
+
+      .nav-contact-address,
+      .nav-contact-facebook {
+        font-size: 0.78rem;
+      }
+
+      .nav-contact svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .primary-nav .nav-cta {
+        margin-top: 15px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        min-height: 580px;
+        grid-template-columns: minmax(0, 1fr) minmax(290px, 0.82fr);
+        gap: 36px;
+        padding-block: 55px 62px;
+      }
+
+      .hero-photo {
+        height: 460px;
+      }
+
+      .hero-badge {
+        right: -8px;
+        width: 126px;
+        height: 126px;
+      }
+
+      .hero-badge strong {
+        font-size: 1.55rem;
+      }
+
+      .section {
+        padding-block: 96px;
+      }
+
+      .about-grid {
+        gap: 48px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      :root {
+        scroll-padding-top: 142px;
+      }
+
+      body {
+        font-size: 15px;
+      }
+
+      .shell {
+        width: min(100% - 34px, 520px);
+      }
+
+      .nav-inner {
+        min-height: 72px;
+        gap: 12px;
+        padding-block: 8px;
+      }
+
+      .brand {
+        padding: 0;
+      }
+
+      .brand-name {
+        font-size: 0.95rem;
+      }
+
+      .brand-owner {
+        font-size: 0.55rem;
+      }
+
+      .primary-nav {
+        padding-inline: 17px;
+      }
+
+      .hero-grid {
+        min-height: auto;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding-block: 47px 54px;
+      }
+
+      .hero-copy {
+        padding: 0;
+      }
+
+      .hero h1 {
+        margin-bottom: 15px;
+        font-size: clamp(3.05rem, 13vw, 4.2rem);
+      }
+
+      .hero-lead {
+        font-size: 1.08rem;
+      }
+
+      .hero-description {
+        font-size: 0.91rem;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .hero-note {
+        align-items: flex-start;
+        font-size: 0.78rem;
+      }
+
+      .hero-media {
+        width: min(100%, 410px);
+        margin-inline: auto;
+        padding: 0 14px 18px 0;
+      }
+
+      .hero-photo {
+        height: auto;
+        aspect-ratio: 0.98;
+      }
+
+      .hero-media::before {
+        top: 18px;
+        left: 24px;
+      }
+
+      .hero-badge {
+        right: -4px;
+        bottom: -2px;
+        width: 110px;
+        height: 110px;
+        border-width: 5px;
+      }
+
+      .hero-badge strong {
+        font-size: 1.35rem;
+      }
+
+      .hero-badge span {
+        font-size: 0.61rem;
+      }
+
+      .section {
+        padding-block: 64px;
+      }
+
+      .section-heading {
+        margin-bottom: 32px;
+        text-align: left;
+      }
+
+      .section-heading .eyebrow {
+        justify-content: flex-start;
+      }
+
+      .section-heading h2 {
+        font-size: clamp(2.2rem, 9.5vw, 2.8rem);
+      }
+
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 36px;
+      }
+
+      .about-media {
+        width: min(100%, 390px);
+      }
+
+      .about-copy h2 {
+        font-size: 2.55rem;
+      }
+
+      .credentials {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 3px;
+        margin-top: 38px;
+        padding: 12px;
+      }
+
+      .credential {
+        padding: 9px 6px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .service-content {
+        gap: 12px;
+      }
+
+      .service-content h3 {
+        font-size: 1.15rem;
+      }
+
+      .dialog-lists {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .price-panel {
+        min-height: 250px;
+        padding: 5px 16px;
+      }
+
+      .price-row {
+        align-items: flex-start;
+        gap: 12px;
+        padding-block: 15px;
+      }
+
+      .price-name,
+      .price-value {
+        font-size: 0.84rem;
+      }
+
+      .review-controls {
+        gap: 6px;
+        margin-top: 15px;
+      }
+
+      .review-card {
+        padding: 23px;
+      }
+
+      .review-card blockquote {
+        font-size: 1.03rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      .contact-card {
+        padding: 24px 20px;
+      }
+
+      .map-wrap {
+        min-height: 340px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+      }
+
+      .footer-meta {
+        text-align: left;
+      }
+
+    }
+
+    @media (max-width: 380px) {
+      .shell {
+        width: calc(100% - 28px);
+      }
+
+      .brand {
+        padding: 0;
+      }
+
+      .brand-name {
+        font-size: 0.9rem;
+      }
+
+      .brand-owner {
+        font-size: 0.52rem;
+      }
+
+      .menu-toggle {
+        width: 42px;
+        height: 42px;
+      }
+
+      .service-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .mobile-action-bar .button {
+        padding-inline: 8px;
+        font-size: 0.75rem;
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .treatment-ticker-track {
+        width: auto;
+        min-width: 0;
+        animation: none;
+      }
+
+      .treatment-ticker-copy {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px 12px;
+        padding-inline: 16px;
+        text-align: center;
+        white-space: normal;
+      }
+
+      .treatment-ticker-copy[aria-hidden="true"] {
+        display: none;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Twój Kosmetolog – Magdalena Marędziak",
+      "telephone": "+48 512 166 250",
+      "email": "gabinettwojkosmetolog@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Dolnej Wsi 57",
+        "addressLocality": "Gliwice",
+        "postalCode": "44-100",
+        "addressCountry": "PL"
+      },
+      "sameAs": [
+        "https://www.facebook.com/twojkosmetolog"
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <div class="shell nav-inner">
+        <a class="brand" href="#start" aria-label="Strona główna — Twój Kosmetolog Magdalena Marędziak">
+          <img class="brand-mark" src="logo-kompletne.svg" alt="">
+          <span class="brand-wordmark">
+            <span class="brand-name">Twój Kosmetolog</span>
+            <span class="brand-owner">Magdalena Marędziak</span>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Otwórz menu">
+          <span class="menu-toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-nav" aria-label="Menu główne">
+          <div class="nav-links">
+            <a href="#start">Strona główna</a>
+            <a href="#o-mnie">O mnie</a>
+            <a href="#oferta">Oferta zabiegów</a>
+            <a href="#cennik">Cennik</a>
+            <a href="#opinie">Opinie</a>
+            <a href="#kontakt">Kontakt</a>
+          </div>
+          <address class="nav-contact" aria-label="Dane kontaktowe gabinetu">
+            <a class="nav-contact-phone" href="tel:512166250">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M6.6 3.8 9 3.3l1.5 4-1.7 1.5a15.2 15.2 0 0 0 6.4 6.4l1.5-1.7 4 1.5-.5 2.4a2 2 0 0 1-2.1 1.6A16.8 16.8 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"/>
+              </svg>
+              <span>512 166 250</span>
+            </a>
+            <span class="nav-contact-address">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.2"/>
+              </svg>
+              <span>Gliwice, ul. Dolnej Wsi 57</span>
+            </span>
+            <a class="nav-contact-facebook" href="https://www.facebook.com/twojkosmetolog" target="_blank" rel="noopener noreferrer" aria-label="Otwórz Facebooka gabinetu w nowej karcie">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13.55 21v-8.2h2.76l.41-3.2h-3.17V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14c-.3-.04-1.34-.14-2.55-.14-2.52 0-4.25 1.54-4.25 4.37V9.6H7.2v3.2h2.84V21h3.51Z"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </address>
+          <a class="button button-sm nav-cta booking-link" href="tel:512166250">
+            Rezerwacja telefoniczna
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M6.6 3.8 9 3.3l1.5 4-1.7 1.5a15.2 15.2 0 0 0 6.4 6.4l1.5-1.7 4 1.5-.5 2.4a2 2 0 0 1-2.1 1.6A16.8 16.8 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="start" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Twój czas. Twoja skóra. Twoje piękno.</p>
+          <p class="hero-lead">Szukasz gabinetu kosmetycznego, w którym mogłabyś się odprężyć? Gabinetu, który zadba o Twoje piękno, o zdrowie Twojej skóry, a przede wszystkim zadba o Twoje samopoczucie?</p>
+          <h1 id="hero-title">Dobrze<br>trafiłaś!</h1>
+          <p class="hero-description">Profesjonalne zabiegi kosmetologiczne i chwila wytchnienia w kameralnym gabinecie w Gliwicach.</p>
+          <div class="hero-actions">
+            <a class="button" href="#oferta">
+              Zobacz ofertę i cennik
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M12 5v14m-7-7 7 7 7-7"/>
+              </svg>
+            </a>
+            <a class="button button-light booking-link" href="tel:512166250">
+              Umów wizytę telefonicznie
+            </a>
+          </div>
+          <p class="hero-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+              <path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z"/>
+              <circle cx="12" cy="10" r="2.2"/>
+            </svg>
+            <span>Gabinet kosmetologiczny w Gliwicach · ul. Dolnej Wsi 57</span>
+          </p>
+        </div>
+
+        <div class="hero-media reveal">
+          <img
+            class="hero-photo"
+            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"
+            alt="Relaksujący zabieg pielęgnacyjny na twarz w gabinecie kosmetologicznym"
+            width="900"
+            height="1100"
+            fetchpriority="high"
+          >
+          <div class="hero-badge" aria-label="Ponad 25 certyfikatów i szkoleń">
+            <strong>25+</strong>
+            <span>certyfikatów<br>i szkoleń</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="treatment-ticker">
+      <div class="treatment-ticker-track">
+        <div class="treatment-ticker-copy">
+          <span>MEZOTERAPIA IGŁOWA</span>
+          <span>MASAŻ KOBIDO</span>
+          <span>PEELING ZIOŁOWY JADWIGA</span>
+          <span>TRWAŁA NA RZĘSY</span>
+          <span>EKSFOLIACJA KWASAMI</span>
+          <span>RADIOFREKWENCJA MIKROIGŁOWA</span>
+          <span>ESTGEN</span>
+          <span>MANICURE &amp; PEDICURE</span>
+          <span>LASEROTERAPIA</span>
+        </div>
+        <div class="treatment-ticker-copy" aria-hidden="true">
+          <span>MEZOTERAPIA IGŁOWA</span>
+          <span>MASAŻ KOBIDO</span>
+          <span>PEELING ZIOŁOWY JADWIGA</span>
+          <span>TRWAŁA NA RZĘSY</span>
+          <span>EKSFOLIACJA KWASAMI</span>
+          <span>RADIOFREKWENCJA MIKROIGŁOWA</span>
+          <span>ESTGEN</span>
+          <span>MANICURE &amp; PEDICURE</span>
+          <span>LASEROTERAPIA</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="o-mnie" aria-labelledby="about-title">
+      <div class="shell">
+        <div class="about-grid">
+          <div class="about-media reveal">
+            <img
+              class="about-photo"
+              src="magda.jpg"
+              alt="Magdalena Marędziak w fartuszku kosmetologicznym"
+              width="680"
+              height="453"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="about-copy reveal">
+            <p class="eyebrow">Poznajmy się</p>
+            <h2 id="about-title">Z troską o Ciebie i Twoją skórę</h2>
+            <p>Zapraszam do gabinetu kosmetologicznego na profesjonalne zabiegi wykonywane na najwyższej klasie kosmetykach. Jestem fizjoterapeutką i kosmetologiem. Systematycznie podnoszę kwalifikacje na kursach i szkoleniach.</p>
+            <p>Oferuję Państwu zabiegi z zakresu kosmetyki i kosmetologii twarzy, szyi i dekoltu. W ofercie znajdują się również specjalistyczne masaże i refleksoterapia twarzy. Zapraszam do zapoznania się z pełną ofertą gabinetu.</p>
+            <span class="signature">Magdalena Marędziak – Twój Kosmetolog</span>
+          </div>
+        </div>
+
+        <div class="credentials reveal" aria-label="Kwalifikacje i atuty gabinetu">
+          <div class="credential">
+            <span class="credential-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 3 19 6v5c0 4.4-2.7 7.8-7 10-4.3-2.2-7-5.6-7-10V6l7-3Z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </span>
+            <span><strong>Ponad 25 certyfikatów i szkoleń</strong><span>Stały rozwój i aktualna wiedza</span></span>
+          </div>
+          <div class="credential">
+            <span class="credential-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 3 14.8 8.7 21 9.6l-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/>
+              </svg>
+            </span>
+            <span><strong>Kosmetolog i fizjoterapeuta</strong><span>Wykształcenie i indywidualne podejście</span></span>
+          </div>
+          <div class="credential">
+            <span class="credential-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M4 20V9l8-5 8 5v11H4Z"/>
+                <path d="M9 20v-6h6v6M8 10h.01M12 10h.01M16 10h.01"/>
+              </svg>
+            </span>
+            <span><strong>Laser diodowy MeDioStar</strong><span>Nowoczesny sprzęt zabiegowy</span></span>
+          </div>
+        </div>
+        <div class="qualifications reveal" aria-label="Wykształcenie i specjalizacje">
+          <div class="qualification-group">
+            <h3>Wykształcenie</h3>
+            <ul class="qualification-list">
+              <li>Kosmetologia estetyczna</li>
+              <li>Fizjoterapia</li>
+              <li>Naturoterapia</li>
+            </ul>
+          </div>
+          <div class="qualification-group">
+            <h3>Specjalizacje i techniki</h3>
+            <ul class="qualification-list">
+              <li>Mezoterapia</li>
+              <li>Anatomia w pracy kosmetologa</li>
+              <li>Masaż Kobido</li>
+              <li>Nero Face Estegn</li>
+              <li>Masaż Thalgolift</li>
+              <li>Laseroterapia</li>
+              <li>Kosmetologia holistyczna</li>
+            </ul>
+          </div>
+        </div>
+        <div class="brands-bar reveal" aria-label="Marki i sprzęt wykorzystywane w gabinecie">
+          <p class="brands-caption">Pracuję wyłącznie na certyfikowanych markach i sprzęcie medycznym</p>
+          <ul class="brands-list">
+            <li>estGen</li>
+            <li>Thalgo</li>
+            <li>Jadwiga Polska</li>
+            <li>MeDioStar Laser</li>
+            <li>Tropocollagen Medical</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="oferta" aria-labelledby="services-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Oferta gabinetu</p>
+          <h2 id="services-title">Wybierz to, czego potrzebuje Twoja skóra</h2>
+          <p>Każdy zabieg dobieramy do potrzeb, kondycji skóry i Twojego komfortu. Poznaj zakres usług i ważne informacje przed wizytą.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-content">
+              <span class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m12 3 2.2 6.8L21 12l-6.8 2.2L12 21l-2.2-6.8L3 12l6.8-2.2L12 3Z"/><path d="m19 3 .6 1.8 1.9.7-1.9.7L19 8l-.6-1.8-1.9-.7 1.9-.7L19 3Z"/></svg>
+              </span>
+              <h3>Kosmetologia estetyczna</h3>
+              <button class="text-button treatment-open" type="button" data-treatment="cosmetology">
+                Opis i przeciwwskazania
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-content">
+              <span class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3.5a7.5 7.5 0 0 0-7.5 7.5c0 3.1 1.4 5.1 3.2 6.6.7.6 1.3 1.4 1.3 2.4V21h6v-1c0-1 .6-1.8 1.3-2.4 1.8-1.5 3.2-3.5 3.2-6.6A7.5 7.5 0 0 0 12 3.5Z"/><path d="M9 10.5h.01M15 10.5h.01M9.5 14.5c.7.7 1.5 1 2.5 1s1.8-.3 2.5-1M4 4l1.2 1.2M20 4l-1.2 1.2"/></svg>
+              </span>
+              <h3>Zabiegi na skórę i laseroterapia</h3>
+              <button class="text-button treatment-open" type="button" data-treatment="laser">
+                Opis i przeciwwskazania
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-content">
+              <span class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20.2 8.8c0 4.7-8.2 10.2-8.2 10.2S3.8 13.5 3.8 8.8a4.4 4.4 0 0 1 8.2-2.3 4.4 4.4 0 0 1 8.2 2.3Z"/><path d="M6.5 12h3l1.5-2.4 2.2 4.2 1.4-2.3h2.9"/></svg>
+              </span>
+              <h3>Masaże i refleksoterapia twarzy</h3>
+              <button class="text-button treatment-open" type="button" data-treatment="massage">
+                Opis i przeciwwskazania
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-content">
+              <span class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M9 7h6l1 14H8L9 7Z"/><path d="M10 7V4h4v3M9 10h6M12 3V1.8"/></svg>
+              </span>
+              <h3>Manicure</h3>
+              <button class="text-button treatment-open" type="button" data-treatment="manicure">
+                Opis i przeciwwskazania
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-content">
+              <span class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20 4c-9.2.3-14 4.6-14 10a5.8 5.8 0 0 0 5.8 5.8C17.2 19.8 20 13.2 20 4Z"/><path d="M5 21c2.4-5.1 6.6-8.4 11.6-11.3M8.8 15.1c1 .2 2.1.1 3.3-.2M12.1 11.7c.1-1.1-.1-2.1-.6-3"/></svg>
+              </span>
+              <h3>Pedicure</h3>
+              <button class="text-button treatment-open" type="button" data-treatment="pedicure">
+                Opis i przeciwwskazania
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-content">
+              <span class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/><path d="m6.3 6.3-1.2-1.5m12.6 1.5 1.2-1.5"/></svg>
+              </span>
+              <h3>Brwi, rzęsy i depilacja</h3>
+              <button class="text-button treatment-open" type="button" data-treatment="brows">
+                Opis i przeciwwskazania
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <p class="service-footnote">Opis ma charakter informacyjny. Ostateczny wybór zabiegu i kwalifikacja odbywają się po konsultacji oraz wywiadzie przed wizytą.</p>
+      </div>
+    </section>
+
+    <dialog class="treatment-dialog" id="treatment-dialog" aria-labelledby="modal-title" aria-describedby="modal-description">
+      <div class="dialog-inner">
+        <div class="dialog-topline">
+          <div>
+            <p class="eyebrow">Informacje o zabiegu</p>
+            <h2 id="modal-title">Opis zabiegu</h2>
+          </div>
+          <button class="dialog-close" type="button" aria-label="Zamknij okno">×</button>
+        </div>
+        <p class="dialog-description" id="modal-description"></p>
+        <section class="dialog-preparation" aria-labelledby="modal-preparation-title">
+          <h3 id="modal-preparation-title">Jak przygotować się do wizyty?</h3>
+          <p id="modal-preparation"></p>
+        </section>
+        <div class="dialog-lists">
+          <section class="dialog-list-section" aria-labelledby="modal-indications-title">
+            <h3 id="modal-indications-title">Wskazania</h3>
+            <ul id="modal-indications"></ul>
+          </section>
+          <section class="dialog-list-section" aria-labelledby="modal-contraindications-title">
+            <h3 id="modal-contraindications-title">Przeciwwskazania</h3>
+            <ul id="modal-contraindications"></ul>
+          </section>
+        </div>
+        <p class="dialog-disclaimer">Przeciwwskazania mogą różnić się zależnie od wybranej metody i stanu zdrowia. Przed zabiegiem poinformuj kosmetologa o chorobach, przyjmowanych lekach i suplementach. W razie wątpliwości zabieg należy odłożyć i skonsultować się z lekarzem.</p>
+      </div>
+    </dialog>
+
+    <section class="gift-section" aria-labelledby="gift-title">
+      <div class="gift-card reveal">
+        <div>
+          <p class="gift-eyebrow">Podaruj chwilę relaksu</p>
+          <h2 id="gift-title">Eleganckie Bony Podarunkowe</h2>
+          <p class="gift-description">Szukasz wyjątkowego prezentu dla bliskiej osoby? W gabinecie zakupisz imienny bon na dowolną kwotę lub wybrany zabieg z oferty. Poinformuj o chęci zakupu bonu podczas kontaktu telefonicznego.</p>
+        </div>
+        <a class="button gift-link" href="tel:512166250">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8H8.5a2.5 2.5 0 1 1 2.4-3.2L12 8Zm0 0h3.5a2.5 2.5 0 1 0-2.4-3.2L12 8Z"/></svg>
+          Zapytaj o bon
+        </a>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="cennik" aria-labelledby="pricing-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Przejrzyste ceny</p>
+          <h2 id="pricing-title">Cennik zabiegów</h2>
+          <p>Wybierz kategorię lub wyszukaj zabieg w całym cenniku. Ostateczna cena może zależeć od zakresu i indywidualnego planu pielęgnacji.</p>
+        </div>
+
+        <div class="pricing-toolbar reveal">
+          <label class="price-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/>
+            </svg>
+            <input id="price-search" type="search" placeholder="Szukaj zabiegu lub partii ciała (np. kobido, kwasy, laser, rzęsy)..." autocomplete="off" aria-label="Szukaj zabiegu we wszystkich kategoriach">
+          </label>
+          <div class="price-tabs" role="tablist" aria-label="Kategorie cennika">
+            <button class="price-tab" type="button" role="tab" id="tab-eyes" aria-controls="price-panel" aria-selected="true" tabindex="0" data-pricing-tab="eyes">Oprawa oczu</button>
+            <button class="price-tab" type="button" role="tab" id="tab-manual" aria-controls="price-panel" aria-selected="false" tabindex="-1" data-pricing-tab="manual">Terapia manualna twarzy</button>
+            <button class="price-tab" type="button" role="tab" id="tab-face" aria-controls="price-panel" aria-selected="false" tabindex="-1" data-pricing-tab="face">Kosmetyka i pielęgnacja twarzy</button>
+            <button class="price-tab" type="button" role="tab" id="tab-aesthetic" aria-controls="price-panel" aria-selected="false" tabindex="-1" data-pricing-tab="aesthetic">Kosmetologia estetyczna i aparaturowa</button>
+            <button class="price-tab" type="button" role="tab" id="tab-neuro" aria-controls="price-panel" aria-selected="false" tabindex="-1" data-pricing-tab="neuro">Neurorehabilitacja</button>
+            <button class="price-tab" type="button" role="tab" id="tab-laser" aria-controls="price-panel" aria-selected="false" tabindex="-1" data-pricing-tab="laser">Zabiegi laserowe – terapia i lifting</button>
+            <button class="price-tab" type="button" role="tab" id="tab-laser-hair" aria-controls="price-panel" aria-selected="false" tabindex="-1" data-pricing-tab="laser-hair">Depilacja laserowa</button>
+            <button class="price-tab" type="button" role="tab" id="tab-wax" aria-controls="price-panel" aria-selected="false" tabindex="-1" data-pricing-tab="wax">Depilacja woskiem</button>
+            <button class="price-tab" type="button" role="tab" id="tab-body" aria-controls="price-panel" aria-selected="false" tabindex="-1" data-pricing-tab="body">Pielęgnacja ciała</button>
+            <button class="price-tab" type="button" role="tab" id="tab-hands-feet" aria-controls="price-panel" aria-selected="false" tabindex="-1" data-pricing-tab="hands-feet">Dłonie i stopy</button>
+            <button class="price-tab" type="button" role="tab" id="tab-nature" aria-controls="price-panel" aria-selected="false" tabindex="-1" data-pricing-tab="nature">Naturoterapia i inne</button>
+            <button class="price-tab" type="button" role="tab" id="tab-permanent" aria-controls="price-panel" aria-selected="false" tabindex="-1" data-pricing-tab="permanent">Makijaż permanentny – p. Kinga</button>
+          </div>
+        </div>
+
+        <p class="price-search-note" id="price-search-note" hidden>Wyniki ze wszystkich kategorii. Wybierz kategorię, aby zakończyć wyszukiwanie.</p>
+        <div class="price-panel reveal" id="price-panel" role="tabpanel" aria-labelledby="tab-eyes">
+          <ul class="price-list" id="price-list" aria-live="polite">
+            <li class="price-row" data-category="eyes"><span class="price-name">Regulacja brwi</span><span class="price-value">30 zł</span></li>
+            <li class="price-row" data-category="eyes"><span class="price-name">Henna rzęs</span><span class="price-value">40 zł</span></li>
+            <li class="price-row" data-category="eyes"><span class="price-name">Henna brwi + regulacja<span class="price-variants"><span><span>Standardowo</span><strong>55 zł</strong></span><span><span>Przy zabiegu</span><strong>30 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="eyes"><span class="price-name">Henna brwi i rzęs + regulacja<span class="price-variants"><span><span>Standardowo</span><strong>65 zł</strong></span><span><span>Przy zabiegu</span><strong>40 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="eyes"><span class="price-name">Henna pudrowa</span><span class="price-value">80 zł</span></li>
+            <li class="price-row" data-category="eyes"><span class="price-name">Trwała na rzęsy (efekt podkręcenia do 8 tyg.)</span><span class="price-value">90 zł</span></li>
+            <li class="price-row" data-category="eyes"><span class="price-name">Henna pudrowa brwi + henna rzęs</span><span class="price-value">100 zł</span></li>
+
+            <li class="price-row" data-category="manual"><span class="price-name">Kinesiotaping estetyczny (przy zabiegu / masażu)</span><span class="price-value">50 zł</span></li>
+            <li class="price-row" data-category="manual"><span class="price-name">Masaż relaksacyjny (ok. 20 min)</span><span class="price-value">100 zł</span></li>
+            <li class="price-row" data-category="manual"><span class="price-name">Limfodrenaż</span><span class="price-value">100 zł</span></li>
+            <li class="price-row" data-category="manual"><span class="price-name">Drenaż limfatyczny</span><span class="price-value">150 zł</span></li>
+            <li class="price-row" data-category="manual"><span class="price-name">Refleksoterapia twarzy (miofascioplastyka)</span><span class="price-value">190 zł</span></li>
+            <li class="price-row" data-category="manual"><span class="price-name">Cosmolifting (masaż japoński)</span><span class="price-value">190 zł</span></li>
+            <li class="price-row" data-category="manual"><span class="price-name">Kobido / Kobido PREMIUM</span><span class="price-value">200 zł</span></li>
+            <li class="price-row" data-category="manual"><span class="price-name">Masaż łącznotkankowy</span><span class="price-value">200 zł</span></li>
+            <li class="price-row" data-category="manual"><span class="price-name">Masaż twarzy 3D / Transbukkalny</span><span class="price-value">230 zł</span></li>
+
+            <li class="price-row" data-category="face"><span class="price-name">Konsultacja</span><span class="price-value">100 zł</span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Mikrodermabrazja<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span><span><span>Z kwasem</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie twarzy</span><span class="price-value">180 zł</span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Peelingi chemiczne<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span><span><span>Retinol / TCA</span><strong>220 zł / 320 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Fale radiowe z laserem biostymulującym<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg z papryką chili<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Peeling ziołowy Jadwiga</span><span class="price-value">180 zł</span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie wodorowe<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span><span><span>+ fale radiowe</span><strong>300 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg Glow Skin<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>210 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg kolagenowy z masażem<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry wrażliwej / naczyniowej / AZS</span><span class="price-value">200 zł</span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg z drenażem limfatycznym</span><span class="price-value">200 zł</span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg Anty Aging estGen<span class="price-variants"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>240 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry trądzikowej</span><span class="price-value">200 zł</span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg z biomikroigłami<span class="price-variants"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>240 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Biopeptydowy lifting</span><span class="price-value">270 zł</span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg personalizowany z masażem Energy Chi</span><span class="price-value">240 zł</span></li>
+
+            <li class="price-row" data-category="aesthetic"><span class="price-name">Konsultacja</span><span class="price-value">100 zł</span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">Elektrokoagulacja (usuwanie włókniaków)</span><span class="price-value">200 zł</span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">Mezoterapia skóry głowy</span><span class="price-value">185 zł</span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">Mezoterapia igłowa koktajl<span class="price-variants"><span><span>Twarz</span><strong>250 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>300 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">Mezoterapia mikroigłowa<span class="price-variants"><span><span>Twarz</span><strong>280 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>330 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">estGen mezoterapia mikroigłowa<span class="price-variants"><span><span>Warianty</span><strong>300 zł / 350 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">Mezoterapia mikroigłowa z biopeptydami<span class="price-variants"><span><span>Warianty</span><strong>350 zł / 390 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">Mezoterapia igłowa kwasem hialuronowym / Ampułkostrzykawka</span><span class="price-value">350 zł</span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">Lipoliza iniekcyjna<span class="price-variants"><span><span>Brzuch</span><strong>250 zł</strong></span><span><span>Uda</span><strong>300 zł</strong></span><span><span>Ramiona</span><strong>250 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">Tropokolagen<span class="price-variants"><span><span>2 ml</span><strong>300 zł</strong></span><span><span>4 ml</span><strong>550 zł</strong></span><span><span>6 ml</span><strong>790 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">Radiofrekwencja mikroigłowa<span class="price-variants"><span><span>Twarz</span><strong>590 zł</strong></span><span><span>Twarz + szyja</span><strong>690 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>800 zł</strong></span><span><span>Biust</span><strong>490 zł</strong></span><span><span>Ramiona</span><strong>390 zł</strong></span><span><span>Brzuch</span><strong>490 zł</strong></span><span><span>Pośladki (rozstępy, wiotka skóra)</span><strong>550 zł</strong></span><span><span>Redukcja blizny</span><strong>350 zł</strong></span></span></span></li>
+
+            <li class="price-row" data-category="neuro"><span class="price-name">Neuro Scars (redukcja blizny)<span class="price-variants"><span><span>Mała</span><strong>300 zł</strong></span><span><span>Średnia</span><strong>400 zł</strong></span><span><span>Duża</span><strong>500 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="neuro"><span class="price-name">Neuro Face – Neuro Lifting<span class="price-variants"><span><span>Twarz</span><strong>550 zł</strong></span><span><span>Twarz + szyja</span><strong>600 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="neuro"><span class="price-name">Neuro Inflamacja (trądzik, trądzik różowaty, bruksizm)</span><span class="price-value">550 zł</span></li>
+            <li class="price-row" data-category="neuro"><span class="price-name">Neuro Body (ujędrnianie, redukcja tkanki tłuszczowej)</span><span class="price-value">550 zł</span></li>
+
+            <li class="price-row" data-category="laser"><span class="price-name">Usuwanie brodawek, rubinków</span><span class="price-value">50 zł / szt.</span></li>
+            <li class="price-row" data-category="laser"><span class="price-name">Usuwanie włókniaków</span><span class="price-value">70 zł / szt.</span></li>
+            <li class="price-row" data-category="laser"><span class="price-name">Zmiany bólowe / opryszczka</span><span class="price-value">50 zł</span></li>
+            <li class="price-row" data-category="laser"><span class="price-name">Rewitalizacja laserowa<span class="price-variants"><span><span>Rewitalizacja</span><strong>150 zł</strong></span><span><span>Pełny zabieg z pielęgnacją</span><strong>190 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="laser"><span class="price-name">Redukowanie przebarwień</span><span class="price-value">230 zł</span></li>
+            <li class="price-row" data-category="laser"><span class="price-name">Zamykanie naczynek</span><span class="price-value">230 zł</span></li>
+            <li class="price-row" data-category="laser"><span class="price-name">Laserowy lifting powiek</span><span class="price-value">250 zł</span></li>
+            <li class="price-row" data-category="laser"><span class="price-name">Laserowy lifting twarzy</span><span class="price-value">550 zł</span></li>
+            <li class="price-row" data-category="laser"><span class="price-name">Terapia zmian trądzikowych</span><span class="price-value">300–400 zł</span></li>
+            <li class="price-row" data-category="laser"><span class="price-name">Fotoodmładzanie, rumień<span class="price-variants"><span><span>Twarz</span><strong>350 zł</strong></span><span><span>Twarz + szyja</span><strong>400 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>450 zł</strong></span></span></span></li>
+
+            <li class="price-row" data-category="laser-hair"><span class="price-name">1 okolica (uszy / skronie / broda / policzki)</span><span class="price-value">120 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">1 okolica (wąsik / szyja / kark)</span><span class="price-value">170 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Wewnętrzna część ud / pachwiny / bikini</span><span class="price-value">200–220 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Pachy</span><span class="price-value">220 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Brzuch</span><span class="price-value">250 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Przedramiona / ramiona</span><span class="price-value">270 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Pośladki + szpara pośladkowa</span><span class="price-value">270 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Cała twarz</span><span class="price-value">320 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Łydki</span><span class="price-value">320 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Plecy</span><span class="price-value">350 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Bikini pełne + szpara pośladkowa + linia brzucha</span><span class="price-value">350 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Uda</span><span class="price-value">400 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Całe ręce</span><span class="price-value">400 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Całe nogi</span><span class="price-value">600 zł</span></li>
+            <li class="price-row" data-category="laser-hair"><span class="price-name">Całe nogi + pełne bikini (pachy i wąsik GRATIS)</span><span class="price-value">950 zł</span></li>
+
+            <li class="price-row" data-category="wax"><span class="price-name">Wąsik / broda / nos</span><span class="price-value">25 zł</span></li>
+            <li class="price-row" data-category="wax"><span class="price-name">Wąsik + broda</span><span class="price-value">40 zł</span></li>
+            <li class="price-row" data-category="wax"><span class="price-name">Twarz + broda + wąsik</span><span class="price-value">50 zł</span></li>
+            <li class="price-row" data-category="wax"><span class="price-name">Pachy</span><span class="price-value">30 zł</span></li>
+            <li class="price-row" data-category="wax"><span class="price-name">Bikini<span class="price-variants"><span><span>Okolice bikini</span><strong>45 zł</strong></span><span><span>Bikini Hollywood</span><strong>80 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="wax"><span class="price-name">Depilacja woskiem – partie ciała<span class="price-variants"><span><span>Łydki / ręce</span><strong>45 zł</strong></span><span><span>Uda</span><strong>55 zł</strong></span><span><span>Klatka piersiowa / plecy</span><strong>55 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="wax"><span class="price-name">Uda + łydki</span><span class="price-value">90 zł</span></li>
+
+            <li class="price-row" data-category="body"><span class="price-name">Limfodrenaż / presoterapia nóg<span class="price-variants"><span><span>Standardowo</span><strong>50 zł</strong></span><span><span>Przy zabiegu</span><strong>40 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="body"><span class="price-name">Zabieg termoaktywny<span class="price-variants"><span><span>Brzuch</span><strong>50 zł</strong></span><span><span>Uda</span><strong>80 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="body"><span class="price-name">Fale radiowe / dermomasaż</span><span class="price-value">85 zł</span></li>
+            <li class="price-row" data-category="body"><span class="price-name">Oczyszczanie pleców</span><span class="price-value">120 zł</span></li>
+            <li class="price-row" data-category="body"><span class="price-name">Peeling ziołowy Jadwigi</span><span class="price-value">200 zł</span></li>
+            <li class="price-row" data-category="body"><span class="price-name">Kwasy na ciało</span><span class="price-value">230 zł</span></li>
+
+            <li class="price-row" data-category="hands-feet"><span class="price-name">Parafina</span><span class="price-value">40 zł</span></li>
+            <li class="price-row" data-category="hands-feet"><span class="price-name">Manicure tradycyjny<span class="price-variants"><span><span>Tradycyjny</span><strong>60 zł</strong></span><span><span>Z odżywką</span><strong>70 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="hands-feet"><span class="price-name">Manicure japoński</span><span class="price-value">70 zł</span></li>
+            <li class="price-row" data-category="hands-feet"><span class="price-name">Manicure hybrydowy</span><span class="price-value">90 zł</span></li>
+            <li class="price-row" data-category="hands-feet"><span class="price-name">Ściągnięcie + manicure<span class="price-variants"><span><span>Hybryda</span><strong>70 zł</strong></span><span><span>Żel</span><strong>100 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="hands-feet"><span class="price-name">Kwasy na dłonie</span><span class="price-value">100 zł</span></li>
+            <li class="price-row" data-category="hands-feet"><span class="price-name">Mezoterapia na dłonie</span><span class="price-value">150 zł</span></li>
+            <li class="price-row" data-category="hands-feet"><span class="price-name">Pedicure (bez malowania)</span><span class="price-value">150 zł</span></li>
+            <li class="price-row" data-category="hands-feet"><span class="price-name">Pakiet hybrydowy</span><span class="price-value">170 zł</span></li>
+            <li class="price-row" data-category="hands-feet"><span class="price-name">Pedicure z hybrydą</span><span class="price-value">190 zł</span></li>
+            <li class="price-row" data-category="hands-feet"><span class="price-name">Tropokolagen na dłonie</span><span class="price-value">350 zł</span></li>
+
+            <li class="price-row" data-category="nature"><span class="price-name">Konchowanie uszu</span><span class="price-value">60 zł</span></li>
+            <li class="price-row" data-category="nature"><span class="price-name">Stawianie baniek</span><span class="price-value">70 zł</span></li>
+            <li class="price-row" data-category="nature"><span class="price-name">Przekłuwanie uszu</span><span class="price-value">80 zł</span></li>
+            <li class="price-row" data-category="nature"><span class="price-name">Biorezonans</span><span class="price-value">100 zł</span></li>
+
+            <li class="price-row" data-category="permanent"><span class="price-name">Konsultacja</span><span class="price-value">50 zł</span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Kreska dolna<span class="price-variants"><span><span>Kreska dolna</span><strong>500 zł</strong></span><span><span>Cieniowana</span><strong>600 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Kreska górna w linii rzęs<span class="price-subnote">500 zł + 150 zł</span></span><span class="price-value">650 zł</span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Kreska górna cieniowana<span class="price-subnote">600 zł + 150 zł</span></span><span class="price-value">750 zł</span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Kreska górna eyeliner<span class="price-subnote">600 zł + 200 zł</span></span><span class="price-value">800 zł</span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Brwi (dowolna metoda)<span class="price-subnote">750 zł + 200 zł</span></span><span class="price-value">950 zł</span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Usta (dowolna metoda)<span class="price-subnote">800 zł + 200 zł</span></span><span class="price-value">1000 zł</span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Odświeżenie brwi / ust<span class="price-variants"><span><span>Do roku</span><strong>550 zł</strong></span><span><span>Do 2 lat</span><strong>650 zł</strong></span></span></span></li>
+          </ul>
+          <p class="price-empty" id="price-empty" hidden>Nie znaleziono zabiegów pasujących do tego hasła.</p>
+        </div>
+        <p class="pricing-note">Cennik z listopada 2026 r. Cena może zależeć od zakresu zabiegu.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="opinie" aria-labelledby="reviews-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Rekomendacje</p>
+          <h2 id="reviews-title">Opinie klientek</h2>
+          <p>Największą satysfakcję daje mi zaufanie i zadowolenie osób, które odwiedzają gabinet.</p>
+        </div>
+        <div class="review-carousel reveal" id="review-carousel" role="region" aria-label="Opinie klientek" aria-roledescription="karuzela">
+          <div class="review-viewport" id="review-viewport" tabindex="0" aria-label="Opinie. Przesuń palcem lub użyj strzałek w lewo i w prawo, aby zmienić slajd">
+            <div class="reviews-track" id="reviews-track">
+              <article class="review-card review-slide" data-review-slide role="group" aria-roledescription="slajd" aria-label="Opinia 1 z 2">
+                <span class="review-quote-mark" aria-hidden="true">“</span>
+                <div class="review-stars" role="img" aria-label="5 na 5 gwiazdek">★★★★★</div>
+                <blockquote>„Pani Magda to bardzo profesjonalna a ponadto przemiła osoba. Jestem bardzo zadowolona z zabiegu. Jej studio znalazłam przypadkowo, a będzie tym do którego zechcę powracać. Polecam!! :-)”</blockquote>
+                <div class="review-author"><span class="review-avatar" aria-hidden="true">B</span>Banita Exillio</div>
+              </article>
+              <article class="review-card review-slide" data-review-slide role="group" aria-roledescription="slajd" aria-label="Opinia 2 z 2" aria-hidden="true" inert>
+                <span class="review-quote-mark" aria-hidden="true">“</span>
+                <div class="review-stars" role="img" aria-label="5 na 5 gwiazdek">★★★★★</div>
+                <blockquote>„Wspaniały człowiek i cudowne umiejętności! Buźka przygotowana do ślubu idealnie, a makijaż jeszcze lepszy :)”</blockquote>
+                <div class="review-author"><span class="review-avatar" aria-hidden="true">S</span>Sylwia Kluge</div>
+              </article>
+            </div>
+          </div>
+          <div class="review-controls" role="group" aria-label="Sterowanie karuzelą opinii">
+            <button class="review-arrow" type="button" data-review-prev aria-label="Poprzednia opinia">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7"/></svg>
+            </button>
+            <div class="review-dots" role="group" aria-label="Wybierz opinię">
+              <button class="review-dot" type="button" data-review-index="0" aria-label="Pokaż opinię 1" aria-current="true"></button>
+              <button class="review-dot" type="button" data-review-index="1" aria-label="Pokaż opinię 2" tabindex="-1"></button>
+            </div>
+            <button class="review-arrow" type="button" data-review-next aria-label="Następna opinia">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </button>
+          </div>
+          <p class="sr-only" id="review-status" aria-live="polite" aria-atomic="true">Opinia 1 z 2</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="faq-heading">
+        <p class="eyebrow">Warto wiedzieć</p>
+        <h2 id="faq-title">Często zadawane pytania</h2>
+      </div>
+      <details class="faq-item">
+        <summary>Jak przygotować się do pierwszej wizyty kosmetologicznej?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>Na pierwszą wizytę przyjdź bez makijażu (jeśli to możliwe). Przed zabiegiem nie wykonuj mocnych peelingów domowych i nie wprowadzaj silnie działających nowych kosmetyków. Zabierz ze sobą listę aktualnie stosowanych leków i preparatów do pielęgnacji.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Czy przed zabiegiem odbywa się kwalifikacja i wywiad?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>Tak, każda wizyta rozpoczyna się wywiadem kosmetologicznym oraz oceną stanu skóry. Na tej podstawie wykluczamy ewentualne przeciwwskazania i dobieramy bezpieczną procedurę dopasowaną do Twoich potrzeb.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Gdzie znajduje się gabinet i jak wygląda kwestia parkowania?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>Gabinet mieści się w Gliwicach przy ul. Dolnej Wsi 57 (I piętro, naprzeciwko restauracji Pod Wiązem). Bezpłatne miejsca parkingowe znajdują się wzdłuż budynku po prawej stronie, tuż przed schodkami wejściowymi.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Jak umówić wizytę lub zrealizować bon podarunkowy?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p>Wizyty umawiane są telefonicznie pod numerem <a href="tel:512166250">+48 512 166 250</a> w godzinach 10:00–18:00 (Pn–Pt). Jeśli posiadasz bon podarunkowy, poinformuj o tym w trakcie rozmowy.</p>
+      </details>
+    </section>
+
+    <section class="section contact-section" id="kontakt" aria-labelledby="contact-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Zapraszam do gabinetu</p>
+          <h2 id="contact-title">Kontakt i rezerwacja</h2>
+          <p>Umów dogodny termin i podaruj sobie chwilę uważnej pielęgnacji.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <h3>Znajdźmy dobry termin</h3>
+            <ul class="contact-list">
+              <li class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.2"/></svg>
+                </span>
+                <span><strong>Adres gabinetu</strong><span>Gliwice, ul. Dolnej Wsi 57, I piętro<br>(naprzeciwko restauracji Pod Wiązem)</span><span>Parkowanie wzdłuż budynku, po prawej stronie, tuż przed schodkami.</span></span>
+              </li>
+              <li class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                </span>
+                <span><strong>Rezerwacja telefoniczna</strong><span>Pn–Pt, 10:00–18:00</span><a href="tel:512166250">+48 512 166 250</a></span>
+              </li>
+              <li class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+                </span>
+                <span><strong>E-mail</strong><a href="mailto:gabinettwojkosmetolog@gmail.com">gabinettwojkosmetolog@gmail.com</a></span>
+              </li>
+            </ul>
+            <p class="appointment-note"><strong>Ważne:</strong> Gabinet czynny jest wyłącznie na wcześniej umówione wizyty. Jeśli masz bon podarunkowy, poinformuj o nim podczas rezerwacji.</p>
+            <a class="button contact-cta booking-link" href="tel:512166250">
+              Rezerwuj wizytę telefonicznie
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6.6 3.8 9 3.3l1.5 4-1.7 1.5a15.2 15.2 0 0 0 6.4 6.4l1.5-1.7 4 1.5-.5 2.4a2 2 0 0 1-2.1 1.6A16.8 16.8 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"/></svg>
+            </a>
+          </div>
+
+          <div class="map-wrap reveal">
+            <iframe
+              title="Mapa dojazdu do gabinetu Twój Kosmetolog przy ul. Dolnej Wsi 57 w Gliwicach"
+              src="https://www.google.com/maps?q=ul.+Dolnej+Wsi+57,+44-100+Gliwice&amp;output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <img class="footer-mark" src="logo-kompletne.svg" alt="">
+        <span class="brand-wordmark">
+          <span class="brand-name">Twój Kosmetolog</span>
+          <span class="brand-owner">Magdalena Marędziak</span>
+        </span>
+      </div>
+      <div class="footer-meta">
+        <div>© <span id="current-year">2026</span> Twój Kosmetolog · Gliwice</div>
+        <div><a href="tel:512166250">+48 512 166 250</a></div>
+        <a href="#start">Wróć na górę ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-action-bar" aria-label="Szybki kontakt">
+    <a class="button booking-link" href="tel:512166250">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6.6 3.8 9 3.3l1.5 4-1.7 1.5a15.2 15.2 0 0 0 6.4 6.4l1.5-1.7 4 1.5-.5 2.4a2 2 0 0 1-2.1 1.6A16.8 16.8 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"/></svg>
+      Zadzwoń i umów wizytę: 512 166 250
+    </a>
+  </div>
+
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Informacja o plikach cookies" hidden>
+    <div>
+      <p>Strona korzysta z pamięci przeglądarki oraz usług zewnętrznych, w tym Map Google, które mogą używać plików cookies.</p>
+      <p class="cookie-error" id="cookie-error" role="status" hidden></p>
+    </div>
+    <button class="cookie-dismiss" type="button">Rozumiem</button>
+  </div>
+
+  <script>
+    document.documentElement.classList.add("js");
+
+    const cookieBanner = document.querySelector("#cookie-banner");
+    const cookieError = document.querySelector("#cookie-error");
+    const cookieDismiss = document.querySelector(".cookie-dismiss");
+
+    function showCookieStorageError(error) {
+      if (!(error instanceof DOMException) || !["SecurityError", "QuotaExceededError"].includes(error.name)) throw error;
+      cookieError.textContent = "Nie można zapisać ustawienia w przeglądarce. Informacja może pojawić się ponownie.";
+      cookieError.hidden = false;
+      cookieDismiss.textContent = "Zamknij";
+    }
+
+    try {
+      cookieBanner.hidden = localStorage.getItem("cookies_accepted") === "true";
+    } catch (error) {
+      cookieBanner.hidden = false;
+      showCookieStorageError(error);
+    }
+
+    cookieDismiss.addEventListener("click", () => {
+      if (!cookieError.hidden) {
+        cookieBanner.hidden = true;
+        return;
+      }
+      try {
+        localStorage.setItem("cookies_accepted", "true");
+        cookieBanner.hidden = true;
+      } catch (error) {
+        showCookieStorageError(error);
+      }
+    });
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const primaryNav = document.querySelector("#primary-nav");
+
+    function closeMenu() {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Otwórz menu");
+      primaryNav.classList.remove("is-open");
+      document.body.classList.remove("menu-open");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpening = menuToggle.getAttribute("aria-expanded") !== "true";
+      menuToggle.setAttribute("aria-expanded", String(isOpening));
+      menuToggle.setAttribute("aria-label", isOpening ? "Zamknij menu" : "Otwórz menu");
+      primaryNav.classList.toggle("is-open", isOpening);
+      document.body.classList.toggle("menu-open", isOpening);
+    });
+
+    primaryNav.addEventListener("click", (event) => {
+      if (event.target.closest("a")) closeMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+        closeMenu();
+        menuToggle.focus();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1200 && menuToggle.getAttribute("aria-expanded") === "true") closeMenu();
+    });
+
+    const treatmentDetails = {
+      cosmetology: {
+        title: "Kosmetologia estetyczna",
+        description: "Zabiegi pielęgnacyjne dobierane indywidualnie do potrzeb skóry twarzy, szyi i dekoltu. Plan może obejmować oczyszczanie, nawilżanie, regenerację lub inne metody omówione podczas konsultacji.",
+        preparation: "Przyjdź bez makijażu, jeśli to możliwe. Przed wizytą nie wprowadzaj nowych, silnie działających kosmetyków. Zabierz listę stosowanych leków i kosmetyków, a o niedawnych zabiegach poinformuj podczas konsultacji.",
+        indications: [
+          "Skóra odwodniona, sucha lub pozbawiona blasku",
+          "Nierówny koloryt i potrzeba poprawy komfortu skóry",
+          "Indywidualnie określone potrzeby pielęgnacyjne"
+        ],
+        contraindications: [
+          "Aktywne infekcje, opryszczka lub uszkodzenia skóry w miejscu zabiegu",
+          "Uczulenie na składniki preparatów używanych podczas zabiegu",
+          "Ciąża, karmienie lub choroby przewlekłe — zależnie od wybranej metody, wymagają wcześniejszej konsultacji"
+        ]
+      },
+      laser: {
+        title: "Zabiegi na skórę i laseroterapia",
+        description: "Zabiegi z użyciem lasera diodowego MeDioStar mogą obejmować terapie zmian trądzikowych, rumienia i naczynek, wybranych przebarwień, fotoodmładzanie oraz depilację. Rodzaj i parametry zabiegu dobiera się po konsultacji i ocenie skóry.",
+        preparation: "Przed zabiegiem laserowym unikaj opalania i samoopalacza, nie stosuj ziół ani kosmetyków o działaniu fotouczulającym i poinformuj o wszystkich przyjmowanych lekach oraz suplementach. Szczegółowe zalecenia i czas przerwy od słońca potwierdź podczas kwalifikacji.",
+        indications: [
+          "Wybrane zmiany trądzikowe, rumień lub widoczne naczynka",
+          "Wybrane przebarwienia i nierówny koloryt skóry",
+          "Fotoodmładzanie lub depilacja laserowa po kwalifikacji"
+        ],
+        contraindications: [
+          "Ciąża lub karmienie piersią",
+          "Świeża opalenizna, samoopalacz lub planowane opalanie",
+          "Aktywne infekcje, stany zapalne lub przerwana ciągłość skóry",
+          "Choroba nowotworowa — konieczna konsultacja lekarska",
+          "Leki, zioła lub suplementy o działaniu fotouczulającym"
+        ]
+      },
+      massage: {
+        title: "Masaże i refleksoterapia twarzy",
+        description: "Specjalistyczny masaż lub refleksoterapia twarzy to czas na relaks i uważną pielęgnację. Technika, intensywność oraz preparaty są dobierane do komfortu i potrzeb klientki.",
+        preparation: "Przyjdź z czystą skórą lub bez makijażu. Jeśli niedawno wykonywano zabieg kosmetologiczny albo stomatologiczny, poinformuj o tym przed rozpoczęciem masażu.",
+        indications: [
+          "Potrzeba relaksu i odprężenia",
+          "Napięcie mięśni twarzy",
+          "Chęć włączenia masażu do indywidualnego planu pielęgnacji"
+        ],
+        contraindications: [
+          "Gorączka, ostre infekcje lub złe samopoczucie",
+          "Aktywna opryszczka, zmiany zapalne albo rany w miejscu masażu",
+          "Świeże zabiegi lub urazy w obrębie twarzy — do czasu uzyskania zgody specjalisty"
+        ]
+      },
+      manicure: {
+        title: "Manicure",
+        description: "Pielęgnacja dłoni i paznokci może obejmować opracowanie płytki, skórek oraz wybraną stylizację. Zakres i rodzaj produktów ustalane są przed rozpoczęciem usługi.",
+        preparation: "Nie musisz specjalnie przygotowywać dłoni. Jeśli masz na paznokciach stylizację do usunięcia lub wiesz o alergii na produkty do manicure, poinformuj o tym przed wizytą.",
+        indications: [
+          "Pielęgnacja i estetyczne opracowanie dłoni oraz paznokci",
+          "Stylizacja dopasowana do preferowanego efektu",
+          "Regularne dbanie o wygląd i komfort dłoni"
+        ],
+        contraindications: [
+          "Grzybica lub inne aktywne infekcje dłoni i paznokci",
+          "Otwarte rany, silne podrażnienia lub stan zapalny",
+          "Znana alergia na składniki produktów używanych podczas usługi"
+        ]
+      },
+      pedicure: {
+        title: "Pedicure",
+        description: "Kosmetyczna pielęgnacja stóp i paznokci. Usługa ma charakter estetyczny i pielęgnacyjny — nie zastępuje konsultacji podologicznej ani leczenia zmian chorobowych.",
+        preparation: "Przyjdź z czystymi stopami. Jeśli masz na paznokciach stylizację, zmiany skórne, cukrzycę lub problemy z krążeniem, poinformuj o tym przed wizytą, aby wspólnie ustalić bezpieczny zakres usługi.",
+        indications: [
+          "Pielęgnacja i estetyczne opracowanie stóp oraz paznokci",
+          "Przygotowanie paznokci do wybranej stylizacji",
+          "Regularna, kosmetyczna pielęgnacja stóp"
+        ],
+        contraindications: [
+          "Aktywne infekcje, grzybica, brodawki lub rany stóp",
+          "Stan zapalny albo silne podrażnienie w miejscu zabiegu",
+          "Cukrzyca lub zaburzenia krążenia — wymagają wcześniejszej informacji i indywidualnej oceny"
+        ]
+      },
+      brows: {
+        title: "Brwi, rzęsy i depilacja",
+        description: "Stylizacja brwi i rzęs oraz wybrane metody depilacji pomagają podkreślić naturalną oprawę oka. Dobór preparatów i metody zależy od stanu skóry, włosków oraz oczekiwanego efektu.",
+        preparation: "Przed stylizacją brwi lub rzęs unikaj nakładania tłustych kosmetyków w okolicy zabiegowej. Jeśli masz wrażliwe oczy, skłonność do alergii albo niedawno wykonywany makijaż permanentny, zgłoś to przed wizytą.",
+        indications: [
+          "Chęć podkreślenia kształtu brwi lub oprawy oka",
+          "Stylizacja dopasowana do naturalnych rysów",
+          "Usuwanie owłosienia wybraną metodą po ocenie skóry"
+        ],
+        contraindications: [
+          "Aktywne infekcje oczu, powiek lub skóry w miejscu zabiegu",
+          "Rany, podrażnienia albo stan zapalny w obszarze stylizacji lub depilacji",
+          "Znana alergia na barwniki, kleje lub inne używane preparaty"
+        ]
+      }
+    };
+
+    const treatmentDialog = document.querySelector("#treatment-dialog");
+    const modalTitle = document.querySelector("#modal-title");
+    const modalDescription = document.querySelector("#modal-description");
+    const modalPreparation = document.querySelector("#modal-preparation");
+    const modalIndications = document.querySelector("#modal-indications");
+    const modalContraindications = document.querySelector("#modal-contraindications");
+    const dialogClose = document.querySelector(".dialog-close");
+    let lastTreatmentTrigger = null;
+
+    function fillModalList(list, items, type) {
+      list.replaceChildren(...items.map((item) => {
+        const row = document.createElement("li");
+        const icon = document.createElement("span");
+        const text = document.createElement("span");
+        icon.className = `list-icon ${type}`;
+        icon.setAttribute("aria-hidden", "true");
+        icon.textContent = type === "positive" ? "✓" : "!";
+        text.textContent = item;
+        row.append(icon, text);
+        return row;
+      }));
+    }
+
+    document.querySelectorAll(".treatment-open").forEach((button) => {
+      button.addEventListener("click", () => {
+        const details = treatmentDetails[button.dataset.treatment];
+        if (!details) throw new Error(`Unknown treatment: ${button.dataset.treatment}`);
+
+        lastTreatmentTrigger = button;
+        modalTitle.textContent = details.title;
+        modalDescription.textContent = details.description;
+        modalPreparation.textContent = details.preparation;
+        fillModalList(modalIndications, details.indications, "positive");
+        fillModalList(modalContraindications, details.contraindications, "caution");
+        treatmentDialog.showModal();
+        document.body.classList.add("overflow-hidden");
+        treatmentDialog.scrollTop = 0;
+      });
+    });
+
+    dialogClose.addEventListener("click", () => treatmentDialog.close());
+
+    treatmentDialog.addEventListener("click", (event) => {
+      if (event.target === treatmentDialog) treatmentDialog.close();
+    });
+
+    treatmentDialog.addEventListener("close", () => {
+      document.body.classList.remove("overflow-hidden");
+      if (lastTreatmentTrigger) lastTreatmentTrigger.focus();
+    });
+
+    const priceTabs = [...document.querySelectorAll("[data-pricing-tab]")];
+    const priceRows = [...document.querySelectorAll(".price-row")];
+    const priceSearch = document.querySelector("#price-search");
+    const priceEmpty = document.querySelector("#price-empty");
+    const pricePanel = document.querySelector("#price-panel");
+    const priceSearchNote = document.querySelector("#price-search-note");
+    const priceCategoryLabels = new Map(priceTabs.map((tab) => [tab.dataset.pricingTab, tab.textContent.trim()]));
+    const priceSearchIndex = new Map();
+    let activePriceCategory = "eyes";
+
+    function normalizePriceSearch(text) {
+      return text.toLocaleLowerCase("pl").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ł/g, "l");
+    }
+
+    priceRows.forEach((row) => {
+      const categoryLabel = priceCategoryLabels.get(row.dataset.category);
+      if (!categoryLabel) throw new Error(`Unknown price category: ${row.dataset.category}`);
+
+      const category = document.createElement("span");
+      category.className = "price-category";
+      category.textContent = categoryLabel;
+      row.querySelector(".price-name").append(document.createTextNode(" "), category);
+
+      const textNodes = document.createTreeWalker(row, NodeFilter.SHOW_TEXT);
+      const parts = [];
+      while (textNodes.nextNode()) parts.push(textNodes.currentNode.textContent);
+      priceSearchIndex.set(row, normalizePriceSearch(parts.join(" ").replace(/\s+/g, " ").trim()));
+    });
+
+    function filterPrices() {
+      const searchTerm = normalizePriceSearch(priceSearch.value.trim().replace(/\s+/g, " "));
+      const isGlobalSearch = searchTerm.length > 0;
+      let visibleCount = 0;
+
+      priceRows.forEach((row) => {
+        const matchesCategory = row.dataset.category === activePriceCategory;
+        const searchableText = priceSearchIndex.get(row);
+        const matchesSearch = !searchTerm || searchableText.includes(searchTerm);
+        const isVisible = isGlobalSearch ? matchesSearch : matchesCategory;
+        row.hidden = !isVisible;
+        row.classList.toggle("is-global-search", isGlobalSearch && matchesSearch);
+        if (!row.hidden) visibleCount += 1;
+      });
+
+      priceEmpty.hidden = visibleCount > 0;
+      priceSearchNote.hidden = !isGlobalSearch;
+      if (isGlobalSearch) {
+        pricePanel.setAttribute("role", "region");
+        pricePanel.removeAttribute("aria-labelledby");
+        pricePanel.setAttribute("aria-label", "Wyniki wyszukiwania we wszystkich kategoriach");
+      } else {
+        pricePanel.setAttribute("role", "tabpanel");
+        pricePanel.removeAttribute("aria-label");
+        pricePanel.setAttribute("aria-labelledby", priceTabs.find((tab) => tab.dataset.pricingTab === activePriceCategory).id);
+      }
+    }
+
+    function activatePriceTab(tab, moveFocus = false) {
+      activePriceCategory = tab.dataset.pricingTab;
+      priceSearch.value = "";
+      priceTabs.forEach((item) => {
+        const isSelected = item === tab;
+        item.setAttribute("aria-selected", String(isSelected));
+        item.tabIndex = isSelected ? 0 : -1;
+      });
+      filterPrices();
+      if (moveFocus) tab.focus();
+    }
+
+    priceTabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => activatePriceTab(tab));
+      tab.addEventListener("keydown", (event) => {
+        let nextIndex = index;
+        if (event.key === "ArrowRight") nextIndex = (index + 1) % priceTabs.length;
+        else if (event.key === "ArrowLeft") nextIndex = (index - 1 + priceTabs.length) % priceTabs.length;
+        else if (event.key === "Home") nextIndex = 0;
+        else if (event.key === "End") nextIndex = priceTabs.length - 1;
+        else return;
+
+        event.preventDefault();
+        activatePriceTab(priceTabs[nextIndex], true);
+      });
+    });
+
+    priceSearch.addEventListener("input", filterPrices);
+    filterPrices();
+    document.querySelector("#current-year").textContent = String(new Date().getFullYear());
+
+    const reviewTrack = document.querySelector("#reviews-track");
+    const reviewViewport = document.querySelector("#review-viewport");
+    const reviewSlides = [...document.querySelectorAll("[data-review-slide]")];
+    const reviewDots = [...document.querySelectorAll("[data-review-index]")];
+    const reviewStatus = document.querySelector("#review-status");
+    let activeReviewIndex = 0;
+    let reviewGesture = null;
+
+    function showReview(index) {
+      activeReviewIndex = (index + reviewSlides.length) % reviewSlides.length;
+      reviewTrack.style.transform = `translateX(-${activeReviewIndex * 100}%)`;
+
+      reviewSlides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === activeReviewIndex;
+        slide.setAttribute("aria-hidden", String(!isActive));
+        slide.toggleAttribute("inert", !isActive);
+      });
+
+      reviewDots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === activeReviewIndex;
+        if (isActive) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
+        dot.tabIndex = isActive ? 0 : -1;
+      });
+
+      reviewStatus.textContent = `Opinia ${activeReviewIndex + 1} z ${reviewSlides.length}`;
+    }
+
+    document.querySelector("[data-review-prev]").addEventListener("click", () => {
+      showReview(activeReviewIndex - 1);
+    });
+
+    document.querySelector("[data-review-next]").addEventListener("click", () => {
+      showReview(activeReviewIndex + 1);
+    });
+
+    reviewDots.forEach((dot) => {
+      dot.addEventListener("click", () => showReview(Number(dot.dataset.reviewIndex)));
+    });
+
+    reviewViewport.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        showReview(activeReviewIndex - 1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        showReview(activeReviewIndex + 1);
+      }
+    });
+
+    reviewViewport.addEventListener("pointerdown", (event) => {
+      if (event.pointerType === "mouse" || !event.isPrimary) return;
+      reviewGesture = { id: event.pointerId, startX: event.clientX, startY: event.clientY, deltaX: 0, dragging: false };
+    });
+
+    reviewViewport.addEventListener("pointermove", (event) => {
+      if (!reviewGesture || event.pointerId !== reviewGesture.id) return;
+      const deltaX = event.clientX - reviewGesture.startX;
+      const deltaY = event.clientY - reviewGesture.startY;
+      if (!reviewGesture.dragging && Math.abs(deltaX) > 8 && Math.abs(deltaX) > Math.abs(deltaY)) {
+        reviewGesture.dragging = true;
+        reviewTrack.classList.add("is-dragging");
+      }
+      if (reviewGesture.dragging) {
+        reviewGesture.deltaX = deltaX;
+        reviewTrack.style.transform = `translateX(calc(-${activeReviewIndex * 100}% + ${deltaX}px))`;
+      }
+    });
+
+    function finishReviewGesture(event) {
+      if (!reviewGesture || event.pointerId !== reviewGesture.id) return;
+      const { dragging, deltaX } = reviewGesture;
+      reviewGesture = null;
+      reviewTrack.classList.remove("is-dragging");
+      const threshold = Math.min(80, reviewViewport.clientWidth * 0.2);
+      const direction = event.type === "pointerup" && dragging && Math.abs(deltaX) >= threshold
+        ? (deltaX < 0 ? 1 : -1)
+        : 0;
+      showReview(activeReviewIndex + direction);
+    }
+
+    reviewViewport.addEventListener("pointerup", finishReviewGesture);
+    reviewViewport.addEventListener("pointercancel", finishReviewGesture);
+
+    showReview(0);
+
+    const revealElements = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.12 });
+      revealElements.forEach((element) => revealObserver.observe(element));
+    } else {
+      revealElements.forEach((element) => element.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
