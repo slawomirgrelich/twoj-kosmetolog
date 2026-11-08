@@ -813,157 +813,96 @@
       line-height: 1.5;
     }
 
-    .brands-bar {
-      max-width: 64rem;
-      margin: 48px auto 0;
-      padding: 32px 16px;
-      border-block: 1px solid rgb(231 229 228 / 60%);
-      text-align: center;
-    }
-
-    .brands-caption {
-      margin-bottom: 16px;
-      color: #78716c;
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .brands-list {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 16px 24px;
-      margin: 0;
-      padding: 0;
-      color: #57534e;
-      font-family: var(--serif);
-      font-size: 1rem;
-      letter-spacing: 0.025em;
-      list-style: none;
-    }
-
-    .service-grid {
+    .treatment-list {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 23px;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 24px;
+      max-width: 72rem;
+      margin-inline: auto;
+      padding-inline: 16px;
     }
 
-    .service-card {
-      overflow: hidden;
-      background: linear-gradient(180deg, #fff 0%, rgb(250 250 249 / 80%) 100%);
-      border: 1px solid rgb(231 229 228 / 70%);
-      border-radius: 16px;
-      box-shadow: 0 8px 28px rgb(74 21 59 / 4%);
-      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-    }
-
-    .service-card:hover {
-      border-color: #e7e5e4;
-      box-shadow: 0 16px 32px rgb(74 21 59 / 10%);
-      transform: translateY(-4px);
-    }
-
-    .service-icon {
-      display: grid;
-      width: 44px;
-      height: 44px;
-      place-items: center;
-      color: var(--plum);
-      background: var(--rose-pale);
-      border-radius: 50%;
-    }
-
-    .service-card:nth-child(3n + 2) .service-icon {
-      color: #8d5c87;
-      background: #f5eef5;
-    }
-
-    .service-card:nth-child(3n) .service-icon {
-      color: #ad6574;
-      background: #faeef0;
-    }
-
-    .service-icon svg {
-      width: 23px;
-      height: 23px;
-      fill: none;
-      stroke: currentColor;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-width: 1.6;
-    }
-
-    .service-content {
+    .treatment-card {
       display: flex;
-      height: 100%;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 24px 24px 32px;
+      padding: 24px;
+      background: var(--paper);
+      border: 1px solid rgb(231 229 228 / 80%);
+      border-radius: 16px;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+      transition: background 180ms ease, box-shadow 180ms ease;
     }
 
-    .service-content h3 {
-      margin: 0;
-      font-family: var(--serif);
-      font-size: 1.38rem;
-      font-weight: 600;
-      line-height: 1.25;
+    .treatment-card:hover {
+      background: rgb(250 250 249 / 50%);
+      box-shadow: 0 8px 24px rgb(74 21 59 / 10%);
     }
 
-    .service-content .text-button {
-      gap: 4px;
-      margin-top: 16px;
+    .treatment-badge {
+      display: inline-flex;
+      max-width: 100%;
+      margin-bottom: 12px;
+      padding: 4px 10px;
       color: #581c87;
-      font-size: 0.75rem;
+      background: #faf5ff;
+      border: 1px solid rgb(233 213 255 / 50%);
+      border-radius: 999px;
+      font-size: 0.6875rem;
       font-weight: 500;
-      text-decoration: none;
+      line-height: 1.4;
     }
 
-    .service-content .text-button:hover {
-      gap: 4px;
-      color: #7e22ce;
+    .treatment-name {
+      margin: 0 0 4px;
+      color: #1c1917;
+      font-family: var(--serif);
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.3;
     }
 
-    .service-content .text-button svg {
-      flex: 0 0 auto;
+    .treatment-subtitle {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      margin: 0 0 16px;
+      color: #78716c;
+      font-size: 0.75rem;
+      line-height: 1.5;
     }
 
-    .text-button {
+    .treatment-open {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      margin-top: auto;
       padding: 0;
       color: var(--plum);
       background: none;
       border: 0;
       cursor: pointer;
-      font-size: 0.83rem;
-      font-weight: 700;
+      font-size: 0.75rem;
+      font-weight: 600;
       text-align: left;
-      text-decoration: underline;
-      text-decoration-color: rgb(106 46 97 / 28%);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 4px;
-      transition: color 180ms ease, gap 180ms ease;
+      transition: color 180ms ease;
     }
 
-    .text-button:hover {
-      gap: 11px;
-      color: var(--plum-deep);
+    .treatment-open:hover {
+      color: #7e22ce;
     }
 
-    .text-button svg {
-      width: 16px;
-      height: 16px;
-      transition: transform 180ms cubic-bezier(.2, .7, .3, 1);
+    @media (min-width: 768px) {
+      .treatment-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
-    .text-button:hover svg {
-      transform: translateX(4px);
+    @media (min-width: 1024px) {
+      .treatment-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
     }
 
     .service-footnote {
@@ -974,7 +913,7 @@
       text-align: center;
     }
 
-    .treatment-dialog {
+    .modal-overlay {
       position: fixed;
       inset: 0;
       width: 100%;
@@ -991,13 +930,13 @@
       backdrop-filter: blur(4px);
     }
 
-    .treatment-dialog[open] {
+    .modal-overlay[open] {
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .treatment-dialog::backdrop {
+    .modal-overlay::backdrop {
       background: transparent;
     }
 
@@ -1014,7 +953,7 @@
     }
 
     @media (min-width: 640px) {
-      .treatment-dialog {
+      .modal-overlay {
         padding: 24px;
       }
 
@@ -1065,25 +1004,16 @@
       color: var(--muted);
     }
 
-    .dialog-preparation {
-      margin-bottom: 25px;
-      padding: 17px 19px;
-      background: var(--soft);
-      border-left: 3px solid var(--rose);
-      border-radius: 0 10px 10px 0;
+    .modal-subtitle {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 0.875rem;
     }
 
-    .dialog-preparation h3,
     .dialog-list-section h3 {
       margin-bottom: 10px;
       font-family: var(--serif);
       font-size: 1.2rem;
-    }
-
-    .dialog-preparation p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: 0.91rem;
     }
 
     .dialog-lists {
@@ -1131,12 +1061,120 @@
       background: #fae9ec;
     }
 
+    .list-icon svg {
+      width: 13px;
+      height: 13px;
+    }
+
+    .dialog-contraindications {
+      margin-top: 24px;
+      padding: 16px;
+      background: rgb(255 241 242 / 50%);
+      border: 1px solid rgb(254 205 211 / 60%);
+      border-radius: 12px;
+    }
+
+    .dialog-contraindications h3 {
+      font-size: 1rem;
+    }
+
+    .dialog-contraindications li {
+      color: #44403c;
+      font-size: 0.75rem;
+    }
+
+    .treatment-booking {
+      width: 100%;
+      margin-top: 24px;
+    }
+
     .dialog-disclaimer {
       margin: 25px 0 0;
       padding-top: 16px;
       color: var(--muted);
       border-top: 1px solid var(--line);
       font-size: 0.78rem;
+    }
+
+    .rules-dialog .dialog-inner {
+      border: 1px solid rgb(231 229 228 / 80%);
+    }
+
+    .rules-dialog .dialog-topline {
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f5f5f4;
+    }
+
+    .rules-kicker {
+      margin: 0 0 4px;
+      color: #6b21a8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .rules-dialog h2 {
+      margin: 0;
+      color: #1c1917;
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 4vw, 1.875rem);
+      line-height: 1.2;
+    }
+
+    .rules-dialog .dialog-close {
+      width: 36px;
+      height: 36px;
+      color: #78716c;
+      background: #f5f5f4;
+      border: 0;
+    }
+
+    .rules-dialog .dialog-close:hover {
+      background: #e7e5e4;
+    }
+
+    .rules-section + .rules-section {
+      margin-top: 24px;
+    }
+
+    .rules-section h3 {
+      margin-bottom: 10px;
+      color: var(--plum-deep);
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      line-height: 1.35;
+    }
+
+    .rules-section p,
+    .rules-section li {
+      color: #57534e;
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+
+    .rules-section p {
+      margin: 0;
+    }
+
+    .rules-section p + p {
+      margin-top: 10px;
+    }
+
+    .rules-section ul {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .rules-section li::marker {
+      color: var(--plum);
+    }
+
+    .rules-section strong {
+      color: #292524;
     }
 
     @keyframes dialog-enter {
@@ -1218,11 +1256,6 @@
     }
 
     @media (min-width: 640px) {
-      .brands-list {
-        column-gap: 40px;
-        font-size: 1.125rem;
-      }
-
       .gift-card {
         padding: 32px;
       }
@@ -1416,6 +1449,45 @@
       line-height: 1.45;
     }
 
+    .price-row:has(.price-variants--face) .price-name {
+      flex: 1 1 100%;
+    }
+
+    .price-variants--face {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      max-width: 430px;
+    }
+
+    .price-variants--face > span {
+      flex-direction: column;
+      padding: 8px 10px;
+      background: var(--soft);
+      border-radius: 8px;
+    }
+
+    .price-variants--face > span::after {
+      display: none;
+    }
+
+    .price-variants--face strong {
+      text-align: left;
+    }
+
+    .price-variants--face .price-extra {
+      grid-column: 1 / -1;
+    }
+
+    .price-subcategory {
+      margin-top: 16px;
+      padding: 12px;
+      color: var(--plum-deep);
+      background: #faf5ff;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
     .price-subnote {
       display: block;
       margin-top: 4px;
@@ -1462,14 +1534,6 @@
       margin: 0 auto 12px;
       color: var(--muted);
       font-size: 0.83rem;
-    }
-
-    .pricing-note {
-      max-width: 56rem;
-      margin: 16px auto 0;
-      color: var(--muted);
-      font-size: 0.79rem;
-      text-align: center;
     }
 
     .review-carousel {
@@ -1646,75 +1710,57 @@
       padding-block: 64px;
     }
 
-    .faq-section {
-      width: min(56rem, calc(100% - 32px));
-      margin-inline: auto;
-      padding-block: 64px;
+    .updates-section {
+      width: min(64rem, calc(100% - 32px));
+      margin: 32px auto;
     }
 
-    .faq-heading {
-      margin-bottom: 32px;
-      text-align: center;
-    }
-
-    .faq-heading .eyebrow {
-      justify-content: center;
-      margin-bottom: 8px;
-    }
-
-    .faq-heading h2 {
-      margin-bottom: 0;
-      color: #1c1917;
-      font-family: var(--serif);
-      font-size: clamp(2rem, 5vw, 2.5rem);
-      line-height: 1.2;
-    }
-
-    .faq-item {
-      margin-bottom: 16px;
-      padding: 20px;
-      background: var(--paper);
-      border: 1px solid rgb(231 229 228 / 80%);
+    .updates-card {
+      padding: 24px;
+      background: #fafaf9;
+      border-left: 4px solid #581c87;
       border-radius: 16px;
-      transition: box-shadow 180ms ease;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
     }
 
-    .faq-item[open] {
-      box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+    .updates-card h2 {
+      margin-bottom: 8px;
+      font-family: var(--serif);
+      font-size: clamp(1.45rem, 3vw, 1.8rem);
+      line-height: 1.25;
     }
 
-    .faq-item summary {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      color: #292524;
-      cursor: pointer;
-      font-weight: 600;
-      line-height: 1.4;
-      list-style: none;
-    }
-
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq-item summary svg {
-      width: 20px;
-      height: 20px;
-      flex: 0 0 auto;
-      color: var(--plum);
-      transition: transform 180ms ease;
-    }
-
-    .faq-item[open] summary svg {
-      transform: rotate(180deg);
-    }
-
-    .faq-item p {
-      margin: 12px 0 0;
+    .updates-card p {
+      margin-bottom: 12px;
       color: #57534e;
       font-size: 0.875rem;
+    }
+
+    .rules-open {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      color: #581c87;
+      background: var(--paper);
+      border: 1px solid #e9d5ff;
+      border-radius: 12px;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-align: left;
+      transition: border-color 180ms ease;
+    }
+
+    .rules-open:hover {
+      border-color: #d8b4fe;
+    }
+
+    .rules-open svg {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 auto;
     }
 
     .contact-section {
@@ -2194,10 +2240,6 @@
         gap: 48px;
       }
 
-      .service-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
       .contact-grid {
         grid-template-columns: minmax(0, 1fr);
       }
@@ -2349,19 +2391,6 @@
         padding: 9px 6px;
       }
 
-      .service-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .service-content {
-        gap: 12px;
-      }
-
-      .service-content h3 {
-        font-size: 1.15rem;
-      }
-
       .dialog-lists {
         grid-template-columns: minmax(0, 1fr);
         gap: 20px;
@@ -2443,10 +2472,6 @@
         height: 42px;
       }
 
-      .service-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
       .mobile-action-bar .button {
         padding-inline: 8px;
         font-size: 0.75rem;
@@ -2499,7 +2524,7 @@
         "addressCountry": "PL"
       },
       "sameAs": [
-        "https://www.facebook.com/twojkosmetolog"
+        "https://www.facebook.com/magdakosmetolog"
       ]
     }
   </script>
@@ -2544,17 +2569,17 @@
               </svg>
               <span>Gliwice, ul. Dolnej Wsi 57</span>
             </span>
-            <a class="nav-contact-facebook" href="https://www.facebook.com/twojkosmetolog" target="_blank" rel="noopener noreferrer" aria-label="Otwórz Facebooka gabinetu w nowej karcie">
+            <a class="nav-contact-facebook" href="https://www.facebook.com/magdakosmetolog" target="_blank" rel="noopener noreferrer" aria-label="Otwórz Facebooka gabinetu w nowej karcie">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M13.55 21v-8.2h2.76l.41-3.2h-3.17V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14c-.3-.04-1.34-.14-2.55-.14-2.52 0-4.25 1.54-4.25 4.37V9.6H7.2v3.2h2.84V21h3.51Z"/>
               </svg>
               <span>Facebook</span>
             </a>
           </address>
-          <a class="button button-sm nav-cta booking-link" href="tel:512166250">
-            Rezerwacja telefoniczna
+          <a class="button button-sm nav-cta booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">
+            Rezerwacja online
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M6.6 3.8 9 3.3l1.5 4-1.7 1.5a15.2 15.2 0 0 0 6.4 6.4l1.5-1.7 4 1.5-.5 2.4a2 2 0 0 1-2.1 1.6A16.8 16.8 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"/>
+              <rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/>
             </svg>
           </a>
         </nav>
@@ -2567,7 +2592,7 @@
       <div class="shell hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">Twój czas. Twoja skóra. Twoje piękno.</p>
-          <p class="hero-lead">Szukasz gabinetu kosmetycznego, w którym mogłabyś się odprężyć? Gabinetu, który zadba o Twoje piękno, o zdrowie Twojej skóry, a przede wszystkim zadba o Twoje samopoczucie?</p>
+          <p class="hero-lead">Szukasz gabinetu kosmetycznego? Tu zadbamy o piękno i zdrowy wygląd Twojej skóry.</p>
           <h1 id="hero-title">Dobrze<br>trafiłaś!</h1>
           <p class="hero-description">Profesjonalne zabiegi kosmetologiczne i chwila wytchnienia w kameralnym gabinecie w Gliwicach.</p>
           <div class="hero-actions">
@@ -2577,8 +2602,8 @@
                 <path d="M12 5v14m-7-7 7 7 7-7"/>
               </svg>
             </a>
-            <a class="button button-light booking-link" href="tel:512166250">
-              Umów wizytę telefonicznie
+            <a class="button button-light booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">
+              Rezerwacja online
             </a>
           </div>
           <p class="hero-note">
@@ -2641,7 +2666,7 @@
             <img
               class="about-photo"
               src="magda.jpg"
-              alt="Magdalena Marędziak w fartuszku kosmetologicznym"
+              alt="Magdalena Nowicz w fartuszku kosmetologicznym"
               width="680"
               height="453"
               loading="lazy"
@@ -2653,7 +2678,7 @@
             <h2 id="about-title">Z troską o Ciebie i Twoją skórę</h2>
             <p>Zapraszam do gabinetu kosmetologicznego na profesjonalne zabiegi wykonywane na najwyższej klasie kosmetykach. Jestem fizjoterapeutką i kosmetologiem. Systematycznie podnoszę kwalifikacje na kursach i szkoleniach.</p>
             <p>Oferuję Państwu zabiegi z zakresu kosmetyki i kosmetologii twarzy, szyi i dekoltu. W ofercie znajdują się również specjalistyczne masaże i refleksoterapia twarzy. Zapraszam do zapoznania się z pełną ofertą gabinetu.</p>
-            <span class="signature">Magdalena Marędziak – Twój Kosmetolog</span>
+            <span class="signature">Magdalena Nowicz – Twój Kosmetolog</span>
           </div>
         </div>
 
@@ -2707,18 +2732,55 @@
             </ul>
           </div>
         </div>
-        <div class="brands-bar reveal" aria-label="Marki i sprzęt wykorzystywane w gabinecie">
-          <p class="brands-caption">Pracuję wyłącznie na certyfikowanych markach i sprzęcie medycznym</p>
-          <ul class="brands-list">
-            <li>estGen</li>
-            <li>Thalgo</li>
-            <li>Jadwiga Polska</li>
-            <li>MeDioStar Laser</li>
-            <li>Tropocollagen Medical</li>
-          </ul>
-        </div>
       </div>
     </section>
+
+    <section class="updates-section" id="aktualnosci" aria-labelledby="updates-title">
+      <div class="updates-card">
+        <p class="eyebrow">Aktualności i komunikaty</p>
+        <h2 id="updates-title">Ważne informacje i aktualności gabinetu</h2>
+        <p>W tym miejscu pojawią się bieżące promocje i komunikaty. Zapoznaj się z regulaminem gabinetu przed wizytą.</p>
+        <button class="rules-open" id="open-rules-btn" type="button" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg>
+          Przeczytaj regulamin gabinetu →
+        </button>
+      </div>
+    </section>
+
+    <dialog class="modal-overlay rules-dialog" id="rules-modal" aria-labelledby="rules-title">
+      <div class="dialog-inner">
+        <div class="dialog-topline">
+          <div>
+            <p class="rules-kicker">Informacje formalne</p>
+            <h2 id="rules-title">Regulamin Gabinetu</h2>
+          </div>
+          <button class="dialog-close" id="close-rules-btn" type="button" aria-label="Zamknij regulamin">×</button>
+        </div>
+        <section class="rules-section" aria-labelledby="rules-general">
+          <h3 id="rules-general">§ 1 Postanowienia ogólne</h3>
+          <p>Regulamin określa warunki korzystania z usług kosmetologicznych świadczonych w gabinecie Twój Kosmetolog przez Magdalenę Nowicz.</p>
+        </section>
+        <section class="rules-section" aria-labelledby="rules-booking">
+          <h3 id="rules-booking">§ 2 Rezerwacje i wizyty</h3>
+          <ul>
+            <li><strong>Rezerwacja online:</strong> Odbywa się przez dedykowany system i wiąże się z pobraniem bezzwrotnego zadatku. Istnieje możliwość zmiany terminu wizyty maksymalnie 2 razy, najpóźniej na 24h przed planowanym zabiegiem.</li>
+            <li><strong>Rezerwacja telefoniczna:</strong> Dostępna pod numerem <a href="tel:512166250">512 166 250</a> od poniedziałku do piątku w godzinach 10:00–18:00.</li>
+            <li><strong>Odwoływanie wizyt:</strong> W przypadku nieodwołania wizyty na minimum 24h przed terminem, kolejna rezerwacja wymaga przedpłaty 50% wartości zabiegu lub skorzystania wyłącznie z rezerwacji online.</li>
+            <li><strong>Punktualność:</strong> Spóźnienie może skutkować skróceniem czasu zabiegu lub odmową jego wykonania w trosce o komfort kolejnych klientek.</li>
+          </ul>
+        </section>
+        <section class="rules-section" aria-labelledby="rules-vouchers">
+          <h3 id="rules-vouchers">§ 3 Bony podarunkowe i promocje</h3>
+          <p>Każdy bon podarunkowy posiada określony termin ważności (standardowo 2 miesiące od zakupu). Po upływie terminu bon traci ważność.</p>
+          <p>Promocje oraz rabaty obowiązujące w gabinecie nie łączą się.</p>
+        </section>
+        <section class="rules-section" aria-labelledby="rules-privacy">
+          <h3 id="rules-privacy">§ 4 Ochrona danych i postanowienia końcowe</h3>
+          <p>Dane osobowe przekazywane podczas rezerwacji są przetwarzane wyłącznie w celu prawidłowej realizacji usługi zgodnie z obowiązującymi przepisami prawa.</p>
+          <p>Skorzystanie z usług gabinetu jest równoznaczne ze złożeniem oświadczenia o braku przeciwwskazań zdrowotnych oraz akceptacją niniejszego regulaminu, oferty i cennika.</p>
+        </section>
+      </div>
+    </dialog>
 
     <section class="section section-soft" id="oferta" aria-labelledby="services-title">
       <div class="shell">
@@ -2728,83 +2790,54 @@
           <p>Każdy zabieg dobieramy do potrzeb, kondycji skóry i Twojego komfortu. Poznaj zakres usług i ważne informacje przed wizytą.</p>
         </div>
 
-        <div class="service-grid">
-          <article class="service-card reveal">
-            <div class="service-content">
-              <span class="service-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="m12 3 2.2 6.8L21 12l-6.8 2.2L12 21l-2.2-6.8L3 12l6.8-2.2L12 3Z"/><path d="m19 3 .6 1.8 1.9.7-1.9.7L19 8l-.6-1.8-1.9-.7 1.9-.7L19 3Z"/></svg>
-              </span>
-              <h3>Kosmetologia estetyczna</h3>
-              <button class="text-button treatment-open" type="button" data-treatment="cosmetology">
-                Opis i przeciwwskazania
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-              </button>
-            </div>
+        <div class="treatment-list">
+          <article class="treatment-card">
+            <span class="treatment-badge">Rewitalizacja</span>
+            <h3 class="treatment-name">Mezoterapia igłowa</h3>
+            <p class="treatment-subtitle">Odżywienie, nawilżenie i biorewitalizacja skóry</p>
+            <button class="treatment-open" type="button" data-treatment="mezoterapia-iglowa" aria-label="Poznaj szczegóły i wskazania: Mezoterapia igłowa">Poznaj szczegóły i wskazania →</button>
           </article>
-
-          <article class="service-card reveal">
-            <div class="service-content">
-              <span class="service-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 3.5a7.5 7.5 0 0 0-7.5 7.5c0 3.1 1.4 5.1 3.2 6.6.7.6 1.3 1.4 1.3 2.4V21h6v-1c0-1 .6-1.8 1.3-2.4 1.8-1.5 3.2-3.5 3.2-6.6A7.5 7.5 0 0 0 12 3.5Z"/><path d="M9 10.5h.01M15 10.5h.01M9.5 14.5c.7.7 1.5 1 2.5 1s1.8-.3 2.5-1M4 4l1.2 1.2M20 4l-1.2 1.2"/></svg>
-              </span>
-              <h3>Zabiegi na skórę i laseroterapia</h3>
-              <button class="text-button treatment-open" type="button" data-treatment="laser">
-                Opis i przeciwwskazania
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-              </button>
-            </div>
+          <article class="treatment-card">
+            <span class="treatment-badge">Biostymulacja</span>
+            <h3 class="treatment-name">Mezoterapia mikroigłowa</h3>
+            <p class="treatment-subtitle">Mechaniczna stymulacja skóry i mikronakłuwanie</p>
+            <button class="treatment-open" type="button" data-treatment="mezoterapia-mikroiglowa" aria-label="Poznaj szczegóły i wskazania: Mezoterapia mikroigłowa">Poznaj szczegóły i wskazania →</button>
           </article>
-
-          <article class="service-card reveal">
-            <div class="service-content">
-              <span class="service-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M20.2 8.8c0 4.7-8.2 10.2-8.2 10.2S3.8 13.5 3.8 8.8a4.4 4.4 0 0 1 8.2-2.3 4.4 4.4 0 0 1 8.2 2.3Z"/><path d="M6.5 12h3l1.5-2.4 2.2 4.2 1.4-2.3h2.9"/></svg>
-              </span>
-              <h3>Masaże i refleksoterapia twarzy</h3>
-              <button class="text-button treatment-open" type="button" data-treatment="massage">
-                Opis i przeciwwskazania
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-              </button>
-            </div>
+          <article class="treatment-card">
+            <span class="treatment-badge">Medycyna regeneracyjna</span>
+            <h3 class="treatment-name">Tropokolagen</h3>
+            <p class="treatment-subtitle">Terapia kolagenowa – regeneracja i poprawa kondycji skóry</p>
+            <button class="treatment-open" type="button" data-treatment="tropokolagen" aria-label="Poznaj szczegóły i wskazania: Tropokolagen">Poznaj szczegóły i wskazania →</button>
           </article>
-
-          <article class="service-card reveal">
-            <div class="service-content">
-              <span class="service-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M9 7h6l1 14H8L9 7Z"/><path d="M10 7V4h4v3M9 10h6M12 3V1.8"/></svg>
-              </span>
-              <h3>Manicure</h3>
-              <button class="text-button treatment-open" type="button" data-treatment="manicure">
-                Opis i przeciwwskazania
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-              </button>
-            </div>
+          <article class="treatment-card">
+            <span class="treatment-badge">Termolifting</span>
+            <h3 class="treatment-name">Radiofrekwencja mikroigłowa</h3>
+            <p class="treatment-subtitle">Połączenie mikronakłuwania z falą radiową</p>
+            <button class="treatment-open" type="button" data-treatment="radiofrekwencja-mikroiglowa" aria-label="Poznaj szczegóły i wskazania: Radiofrekwencja mikroigłowa">Poznaj szczegóły i wskazania →</button>
           </article>
-
-          <article class="service-card reveal">
-            <div class="service-content">
-              <span class="service-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M20 4c-9.2.3-14 4.6-14 10a5.8 5.8 0 0 0 5.8 5.8C17.2 19.8 20 13.2 20 4Z"/><path d="M5 21c2.4-5.1 6.6-8.4 11.6-11.3M8.8 15.1c1 .2 2.1.1 3.3-.2M12.1 11.7c.1-1.1-.1-2.1-.6-3"/></svg>
-              </span>
-              <h3>Pedicure</h3>
-              <button class="text-button treatment-open" type="button" data-treatment="pedicure">
-                Opis i przeciwwskazania
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-              </button>
-            </div>
+          <article class="treatment-card">
+            <span class="treatment-badge">Zaawansowana aparatura</span>
+            <h3 class="treatment-name">Zabiegi laserowe</h3>
+            <p class="treatment-subtitle">Laseroterapia skóry – lifting, naczynka i depilacja</p>
+            <button class="treatment-open" type="button" data-treatment="zabiegi-laserowe" aria-label="Poznaj szczegóły i wskazania: Zabiegi laserowe">Poznaj szczegóły i wskazania →</button>
           </article>
-
-          <article class="service-card reveal">
-            <div class="service-content">
-              <span class="service-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/><path d="m6.3 6.3-1.2-1.5m12.6 1.5 1.2-1.5"/></svg>
-              </span>
-              <h3>Brwi, rzęsy i depilacja</h3>
-              <button class="text-button treatment-open" type="button" data-treatment="brows">
-                Opis i przeciwwskazania
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-              </button>
-            </div>
+          <article class="treatment-card">
+            <span class="treatment-badge">Wskazówki przed wizytą</span>
+            <h3 class="treatment-name">Przygotowanie do lasera</h3>
+            <p class="treatment-subtitle">Zasady przygotowania i pielęgnacji po laseroterapii</p>
+            <button class="treatment-open" type="button" data-treatment="laser-przygotowanie" aria-label="Poznaj szczegóły: Przygotowanie do lasera">Poznaj szczegóły i wskazania →</button>
+          </article>
+          <article class="treatment-card">
+            <span class="treatment-badge">Usuwanie zmian</span>
+            <h3 class="treatment-name">Elektrokoagulacja</h3>
+            <p class="treatment-subtitle">Usuwanie wybranych, ocenionych zmian skórnych</p>
+            <button class="treatment-open" type="button" data-treatment="elektrokoagulacja" aria-label="Poznaj szczegóły i wskazania: Elektrokoagulacja">Poznaj szczegóły i wskazania →</button>
+          </article>
+          <article class="treatment-card">
+            <span class="treatment-badge">Fizjoterapia estetyczna</span>
+            <h3 class="treatment-name">NeuroFace &amp; NeuroBody</h3>
+            <p class="treatment-subtitle">Neurorehabilitacja estetyczna twarzy i ciała</p>
+            <button class="treatment-open" type="button" data-treatment="neurorehabilitacja" aria-label="Poznaj szczegóły i wskazania: NeuroFace i NeuroBody">Poznaj szczegóły i wskazania →</button>
           </article>
         </div>
 
@@ -2812,31 +2845,33 @@
       </div>
     </section>
 
-    <dialog class="treatment-dialog" id="treatment-dialog" aria-labelledby="modal-title" aria-describedby="modal-description">
+    <dialog class="modal-overlay treatment-dialog" id="treatment-modal" aria-labelledby="modal-title" aria-describedby="modal-description">
       <div class="dialog-inner">
         <div class="dialog-topline">
           <div>
-            <p class="eyebrow">Informacje o zabiegu</p>
+            <span class="treatment-badge" id="modal-badge"></span>
             <h2 id="modal-title">Opis zabiegu</h2>
+            <p class="modal-subtitle" id="modal-subtitle"></p>
           </div>
           <button class="dialog-close" type="button" aria-label="Zamknij okno">×</button>
         </div>
         <p class="dialog-description" id="modal-description"></p>
-        <section class="dialog-preparation" aria-labelledby="modal-preparation-title">
-          <h3 id="modal-preparation-title">Jak przygotować się do wizyty?</h3>
-          <p id="modal-preparation"></p>
-        </section>
         <div class="dialog-lists">
+          <section class="dialog-list-section" aria-labelledby="modal-effects-title">
+            <h3 id="modal-effects-title">Efekty zabiegu</h3>
+            <ul id="modal-effects"></ul>
+          </section>
           <section class="dialog-list-section" aria-labelledby="modal-indications-title">
             <h3 id="modal-indications-title">Wskazania</h3>
             <ul id="modal-indications"></ul>
           </section>
-          <section class="dialog-list-section" aria-labelledby="modal-contraindications-title">
-            <h3 id="modal-contraindications-title">Przeciwwskazania</h3>
-            <ul id="modal-contraindications"></ul>
-          </section>
         </div>
+        <section class="dialog-list-section dialog-contraindications" aria-labelledby="modal-contraindications-title">
+          <h3 id="modal-contraindications-title">Przeciwwskazania</h3>
+          <ul id="modal-contraindications"></ul>
+        </section>
         <p class="dialog-disclaimer">Przeciwwskazania mogą różnić się zależnie od wybranej metody i stanu zdrowia. Przed zabiegiem poinformuj kosmetologa o chorobach, przyjmowanych lekach i suplementach. W razie wątpliwości zabieg należy odłożyć i skonsultować się z lekarzem.</p>
+        <a class="button treatment-booking booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">Zarezerwuj ten zabieg online</a>
       </div>
     </dialog>
 
@@ -2845,11 +2880,11 @@
         <div>
           <p class="gift-eyebrow">Podaruj chwilę relaksu</p>
           <h2 id="gift-title">Eleganckie Bony Podarunkowe</h2>
-          <p class="gift-description">Szukasz wyjątkowego prezentu dla bliskiej osoby? W gabinecie zakupisz imienny bon na dowolną kwotę lub wybrany zabieg z oferty. Poinformuj o chęci zakupu bonu podczas kontaktu telefonicznego.</p>
+          <p class="gift-description">W gabinecie zakupisz imienny bon na dowolną kwotę lub wybrany zabieg z oferty. BON ważny 2 miesiące od zakupu. Masz bon? Wybierz termin w rezerwacji online i wskaż usługę BON.</p>
         </div>
-        <a class="button gift-link" href="tel:512166250">
+        <a class="button gift-link booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8H8.5a2.5 2.5 0 1 1 2.4-3.2L12 8Zm0 0h3.5a2.5 2.5 0 1 0-2.4-3.2L12 8Z"/></svg>
-          Zapytaj o bon
+          Rezerwacja online
         </a>
       </div>
     </section>
@@ -2859,7 +2894,7 @@
         <div class="section-heading reveal">
           <p class="eyebrow">Przejrzyste ceny</p>
           <h2 id="pricing-title">Cennik zabiegów</h2>
-          <p>Wybierz kategorię lub wyszukaj zabieg w całym cenniku. Ostateczna cena może zależeć od zakresu i indywidualnego planu pielęgnacji.</p>
+          <p>PODANE CENY DOTYCZĄ PODSTAWOWEJ WERSJI ZABIEGU.</p>
         </div>
 
         <div class="pricing-toolbar reveal">
@@ -2907,20 +2942,20 @@
             <li class="price-row" data-category="manual"><span class="price-name">Masaż twarzy 3D / Transbukkalny</span><span class="price-value">230 zł</span></li>
 
             <li class="price-row" data-category="face"><span class="price-name">Konsultacja</span><span class="price-value">100 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Mikrodermabrazja<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span><span><span>Z kwasem</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Mikrodermabrazja<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>Z kwasem</span><strong>200 zł</strong></span></span></span></li>
             <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie twarzy</span><span class="price-value">180 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Peelingi chemiczne<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span><span><span>Retinol / TCA</span><strong>220 zł / 320 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Fale radiowe z laserem biostymulującym<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg z papryką chili<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Peeling ziołowy Jadwiga</span><span class="price-value">180 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie wodorowe<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span><span><span>+ fale radiowe</span><strong>300 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg Glow Skin<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>210 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg kolagenowy z masażem<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Peelingi chemiczne<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>Retinol / TCA</span><strong>220 zł / 320 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Fale radiowe z laserem biostymulującym<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg z papryką chili<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Peeling ziołowy Jadwiga<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>Cena niepodana</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie wodorowe<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>+ fale radiowe</span><strong>300 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg Glow Skin<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>210 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg kolagenowy z masażem<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span></span></span></li>
             <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry wrażliwej / naczyniowej / AZS</span><span class="price-value">200 zł</span></li>
             <li class="price-row" data-category="face"><span class="price-name">Zabieg z drenażem limfatycznym</span><span class="price-value">200 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg Anty Aging estGen<span class="price-variants"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>240 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg Anty Aging estGen<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>240 zł</strong></span></span></span></li>
             <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry trądzikowej</span><span class="price-value">200 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg z biomikroigłami<span class="price-variants"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>240 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg z biomikroigłami<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>240 zł</strong></span></span></span></li>
             <li class="price-row" data-category="face"><span class="price-name">Biopeptydowy lifting</span><span class="price-value">270 zł</span></li>
             <li class="price-row" data-category="face"><span class="price-name">Zabieg personalizowany z masażem Energy Chi</span><span class="price-value">240 zł</span></li>
 
@@ -2949,9 +2984,11 @@
             <li class="price-row" data-category="laser"><span class="price-name">Zamykanie naczynek</span><span class="price-value">230 zł</span></li>
             <li class="price-row" data-category="laser"><span class="price-name">Laserowy lifting powiek</span><span class="price-value">250 zł</span></li>
             <li class="price-row" data-category="laser"><span class="price-name">Laserowy lifting twarzy</span><span class="price-value">550 zł</span></li>
-            <li class="price-row" data-category="laser"><span class="price-name">Terapia zmian trądzikowych</span><span class="price-value">300–400 zł</span></li>
-            <li class="price-row" data-category="laser"><span class="price-name">Fotoodmładzanie, rumień<span class="price-variants"><span><span>Twarz</span><strong>350 zł</strong></span><span><span>Twarz + szyja</span><strong>400 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>450 zł</strong></span></span></span></li>
+            <li class="price-subcategory" data-external-heading="laser">Zabiegi dodatkowe (świadczone przez firmę zewnętrzną)</li>
+            <li class="price-row" data-category="laser" data-external-service><span class="price-name">Terapia zmian trądzikowych</span><span class="price-value">300–400 zł</span></li>
+            <li class="price-row" data-category="laser" data-external-service><span class="price-name">Fotoodmładzanie, rumień<span class="price-variants"><span><span>Twarz</span><strong>350 zł</strong></span><span><span>Twarz + szyja</span><strong>400 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>450 zł</strong></span></span></span></li>
 
+            <li class="price-subcategory" data-external-heading="laser-hair">Zabiegi dodatkowe (świadczone przez firmę zewnętrzną) – depilacja laserowa</li>
             <li class="price-row" data-category="laser-hair"><span class="price-name">1 okolica (uszy / skronie / broda / policzki)</span><span class="price-value">120 zł</span></li>
             <li class="price-row" data-category="laser-hair"><span class="price-name">1 okolica (wąsik / szyja / kark)</span><span class="price-value">170 zł</span></li>
             <li class="price-row" data-category="laser-hair"><span class="price-name">Wewnętrzna część ud / pachwiny / bikini</span><span class="price-value">200–220 zł</span></li>
@@ -3011,7 +3048,6 @@
           </ul>
           <p class="price-empty" id="price-empty" hidden>Nie znaleziono zabiegów pasujących do tego hasła.</p>
         </div>
-        <p class="pricing-note">Cennik z listopada 2026 r. Cena może zależeć od zakresu zabiegu.</p>
       </div>
     </section>
 
@@ -3056,29 +3092,6 @@
       </div>
     </section>
 
-    <section class="faq-section" id="faq" aria-labelledby="faq-title">
-      <div class="faq-heading">
-        <p class="eyebrow">Warto wiedzieć</p>
-        <h2 id="faq-title">Często zadawane pytania</h2>
-      </div>
-      <details class="faq-item">
-        <summary>Jak przygotować się do pierwszej wizyty kosmetologicznej?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-        <p>Na pierwszą wizytę przyjdź bez makijażu (jeśli to możliwe). Przed zabiegiem nie wykonuj mocnych peelingów domowych i nie wprowadzaj silnie działających nowych kosmetyków. Zabierz ze sobą listę aktualnie stosowanych leków i preparatów do pielęgnacji.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Czy przed zabiegiem odbywa się kwalifikacja i wywiad?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-        <p>Tak, każda wizyta rozpoczyna się wywiadem kosmetologicznym oraz oceną stanu skóry. Na tej podstawie wykluczamy ewentualne przeciwwskazania i dobieramy bezpieczną procedurę dopasowaną do Twoich potrzeb.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Gdzie znajduje się gabinet i jak wygląda kwestia parkowania?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-        <p>Gabinet mieści się w Gliwicach przy ul. Dolnej Wsi 57 (I piętro, naprzeciwko restauracji Pod Wiązem). Bezpłatne miejsca parkingowe znajdują się wzdłuż budynku po prawej stronie, tuż przed schodkami wejściowymi.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Jak umówić wizytę lub zrealizować bon podarunkowy?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-        <p>Wizyty umawiane są telefonicznie pod numerem <a href="tel:512166250">+48 512 166 250</a> w godzinach 10:00–18:00 (Pn–Pt). Jeśli posiadasz bon podarunkowy, poinformuj o tym w trakcie rozmowy.</p>
-      </details>
-    </section>
-
     <section class="section contact-section" id="kontakt" aria-labelledby="contact-title">
       <div class="shell">
         <div class="section-heading reveal">
@@ -3101,7 +3114,7 @@
                 <span class="contact-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
                 </span>
-                <span><strong>Rezerwacja telefoniczna</strong><span>Pn–Pt, 10:00–18:00</span><a href="tel:512166250">+48 512 166 250</a></span>
+                <span><strong>Kontakt telefoniczny</strong><span>Pn–Pt, 10:00–18:00</span><a href="tel:512166250">+48 512 166 250</a></span>
               </li>
               <li class="contact-item">
                 <span class="contact-icon" aria-hidden="true">
@@ -3110,10 +3123,10 @@
                 <span><strong>E-mail</strong><a href="mailto:gabinettwojkosmetolog@gmail.com">gabinettwojkosmetolog@gmail.com</a></span>
               </li>
             </ul>
-            <p class="appointment-note"><strong>Ważne:</strong> Gabinet czynny jest wyłącznie na wcześniej umówione wizyty. Jeśli masz bon podarunkowy, poinformuj o nim podczas rezerwacji.</p>
-            <a class="button contact-cta booking-link" href="tel:512166250">
-              Rezerwuj wizytę telefonicznie
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6.6 3.8 9 3.3l1.5 4-1.7 1.5a15.2 15.2 0 0 0 6.4 6.4l1.5-1.7 4 1.5-.5 2.4a2 2 0 0 1-2.1 1.6A16.8 16.8 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"/></svg>
+            <p class="appointment-note"><strong>Ważne:</strong> Gabinet czynny jest wyłącznie na wcześniej umówione wizyty. Jeśli masz bon podarunkowy, wybierz usługę BON podczas rezerwacji online.</p>
+            <a class="button contact-cta booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">
+              Rezerwacja online
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
             </a>
           </div>
 
@@ -3149,9 +3162,9 @@
   </footer>
 
   <div class="mobile-action-bar" aria-label="Szybki kontakt">
-    <a class="button booking-link" href="tel:512166250">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6.6 3.8 9 3.3l1.5 4-1.7 1.5a15.2 15.2 0 0 0 6.4 6.4l1.5-1.7 4 1.5-.5 2.4a2 2 0 0 1-2.1 1.6A16.8 16.8 0 0 1 4.9 6a2 2 0 0 1 1.7-2.2Z"/></svg>
-      Zadzwoń i umów wizytę: 512 166 250
+    <a class="button booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+      Rezerwacja online
     </a>
   </div>
 
@@ -3230,109 +3243,237 @@
       if (window.innerWidth > 1200 && menuToggle.getAttribute("aria-expanded") === "true") closeMenu();
     });
 
-    const treatmentDetails = {
-      cosmetology: {
-        title: "Kosmetologia estetyczna",
-        description: "Zabiegi pielęgnacyjne dobierane indywidualnie do potrzeb skóry twarzy, szyi i dekoltu. Plan może obejmować oczyszczanie, nawilżanie, regenerację lub inne metody omówione podczas konsultacji.",
-        preparation: "Przyjdź bez makijażu, jeśli to możliwe. Przed wizytą nie wprowadzaj nowych, silnie działających kosmetyków. Zabierz listę stosowanych leków i kosmetyków, a o niedawnych zabiegach poinformuj podczas konsultacji.",
+    const treatmentsData = {
+      "mezoterapia-iglowa": {
+        title: "Mezoterapia igłowa",
+        subtitle: "Odżywienie, nawilżenie i biorewitalizacja skóry",
+        badge: "Rewitalizacja",
+        description: "Zabieg polega na podaniu mikrodawek dobranego preparatu za pomocą iniekcji. W zależności od potrzeb skóry stosuje się preparaty zawierające m.in. kwas hialuronowy, witaminy lub aminokwasy.",
+        effects: [
+          "Poprawa nawilżenia skóry",
+          "Możliwe wygładzenie drobnych zmarszczek",
+          "Poprawa wyglądu i kolorytu skóry",
+          "Wsparcie kondycji skóry"
+        ],
         indications: [
-          "Skóra odwodniona, sucha lub pozbawiona blasku",
-          "Nierówny koloryt i potrzeba poprawy komfortu skóry",
-          "Indywidualnie określone potrzeby pielęgnacyjne"
+          "Skóra przesuszona i zmęczona",
+          "Pierwsze oznaki starzenia i utrata jędrności",
+          "Drobne zmarszczki – po ocenie obszaru zabiegowego",
+          "Profilaktyka przeciwstarzeniowa"
         ],
         contraindications: [
-          "Aktywne infekcje, opryszczka lub uszkodzenia skóry w miejscu zabiegu",
-          "Uczulenie na składniki preparatów używanych podczas zabiegu",
-          "Ciąża, karmienie lub choroby przewlekłe — zależnie od wybranej metody, wymagają wcześniejszej konsultacji"
+          "Ciąża i okres karmienia piersią",
+          "Aktywne infekcje lub stany zapalne w miejscu zabiegu",
+          "Choroby nowotworowe i autoimmunologiczne – wymagana konsultacja",
+          "Uczulenie na składniki preparatu",
+          "Zaburzenia krzepnięcia lub leki wpływające na krzepliwość – wymagana konsultacja"
         ]
       },
-      laser: {
-        title: "Zabiegi na skórę i laseroterapia",
-        description: "Zabiegi z użyciem lasera diodowego MeDioStar mogą obejmować terapie zmian trądzikowych, rumienia i naczynek, wybranych przebarwień, fotoodmładzanie oraz depilację. Rodzaj i parametry zabiegu dobiera się po konsultacji i ocenie skóry.",
-        preparation: "Przed zabiegiem laserowym unikaj opalania i samoopalacza, nie stosuj ziół ani kosmetyków o działaniu fotouczulającym i poinformuj o wszystkich przyjmowanych lekach oraz suplementach. Szczegółowe zalecenia i czas przerwy od słońca potwierdź podczas kwalifikacji.",
+      "mezoterapia-mikroiglowa": {
+        title: "Mezoterapia mikroigłowa",
+        subtitle: "Mechaniczna stymulacja skóry i mikronakłuwanie",
+        badge: "Biostymulacja",
+        description: "Kontrolowane mikronakłucia skóry są wykorzystywane do stymulacji jej odnowy. Zakres zabiegu i preparaty dobierane są po ocenie skóry.",
+        effects: [
+          "Możliwa poprawa wyglądu blizn potrądzikowych i rozstępów",
+          "Wygładzenie tekstury i zmniejszenie widoczności porów",
+          "Poprawa napięcia i elastyczności skóry",
+          "Możliwa poprawa nierównego kolorytu"
+        ],
         indications: [
-          "Wybrane zmiany trądzikowe, rumień lub widoczne naczynka",
-          "Wybrane przebarwienia i nierówny koloryt skóry",
-          "Fotoodmładzanie lub depilacja laserowa po kwalifikacji"
+          "Blizny potrądzikowe i nierówności skóry",
+          "Rozszerzone pory i wiotkość skóry",
+          "Drobne zmarszczki i utrata elastyczności",
+          "Nierównomierny koloryt – po kwalifikacji"
         ],
         contraindications: [
+          "Aktywny trądzik ze zmianami ropnymi",
+          "Aktywna infekcja, opryszczka lub uszkodzenia skóry",
+          "Skłonność do powstawania bliznowców",
+          "Ciąża i karmienie piersią",
+          "Stany zapalne i inne przeciwwskazania ustalone podczas konsultacji"
+        ]
+      },
+      tropokolagen: {
+        title: "Tropokolagen",
+        subtitle: "Terapia kolagenowa – regeneracja i poprawa kondycji skóry",
+        badge: "Medycyna regeneracyjna",
+        description: "Zabieg z użyciem preparatu kolagenowego dobieranego do potrzeb skóry, ukierunkowany na wsparcie jej regeneracji. Efekty zależą od preparatu, stanu skóry i indywidualnej reakcji.",
+        effects: [
+          "Wsparcie regeneracji skóry",
+          "Możliwa poprawa sprężystości i napięcia",
+          "Poprawa wyglądu skóry bez zmiany rysów twarzy",
+          "Wsparcie pielęgnacji skóry wymagającej odnowy"
+        ],
+        indications: [
+          "Utrata jędrności skóry",
+          "Zmarszczki szyi i dekoltu",
+          "Skóra twarzy, szyi, dekoltu lub dłoni wymagająca pielęgnacji",
+          "Wybrane blizny i rozstępy – po konsultacji"
+        ],
+        contraindications: [
+          "Uczulenie na składniki preparatu",
+          "Aktywna infekcja lub stan zapalny w obszarze zabiegu",
+          "Choroby autoimmunologiczne i nowotworowe – wymagana konsultacja",
+          "Ciąża i karmienie piersią"
+        ]
+      },
+      "radiofrekwencja-mikroiglowa": {
+        title: "Radiofrekwencja mikroigłowa",
+        subtitle: "Połączenie mikronakłuwania z falą radiową",
+        badge: "Termolifting",
+        description: "Metoda łącząca mikronakłucia z energią fal radiowych, stosowana w celu stymulacji skóry. Parametry i obszar zabiegu dobierane są indywidualnie.",
+        effects: [
+          "Możliwa poprawa napięcia i jędrności skóry",
+          "Wygładzenie drobnych zmarszczek",
+          "Poprawa wyglądu porów i wybranych blizn",
+          "Wsparcie poprawy konturu twarzy i szyi"
+        ],
+        indications: [
+          "Wiotkość skóry twarzy, szyi i dekoltu",
+          "Blizny potrądzikowe i pourazowe – po kwalifikacji",
+          "Utrata jędrności skóry",
+          "Drobne zmarszczki – po ocenie obszaru zabiegowego"
+        ],
+        contraindications: [
+          "Rozrusznik serca lub implanty – konieczna ocena podczas konsultacji",
           "Ciąża lub karmienie piersią",
-          "Świeża opalenizna, samoopalacz lub planowane opalanie",
-          "Aktywne infekcje, stany zapalne lub przerwana ciągłość skóry",
-          "Choroba nowotworowa — konieczna konsultacja lekarska",
-          "Leki, zioła lub suplementy o działaniu fotouczulającym"
+          "Aktywne infekcje i choroby skóry",
+          "Choroby nowotworowe i cukrzyca – wymagana konsultacja"
         ]
       },
-      massage: {
-        title: "Masaże i refleksoterapia twarzy",
-        description: "Specjalistyczny masaż lub refleksoterapia twarzy to czas na relaks i uważną pielęgnację. Technika, intensywność oraz preparaty są dobierane do komfortu i potrzeb klientki.",
-        preparation: "Przyjdź z czystą skórą lub bez makijażu. Jeśli niedawno wykonywano zabieg kosmetologiczny albo stomatologiczny, poinformuj o tym przed rozpoczęciem masażu.",
+      "zabiegi-laserowe": {
+        title: "Zabiegi laserowe",
+        subtitle: "Laseroterapia skóry – lifting, naczynka i depilacja",
+        badge: "Zaawansowana aparatura",
+        description: "Zabiegi laserowe dobierane są po konsultacji i ocenie skóry. Fotoodmładzanie, terapia zmian trądzikowych oraz depilacja laserowa są świadczone przez firmę zewnętrzną.",
+        effects: [
+          "Możliwa redukcja widoczności wybranych naczynek",
+          "Poprawa wyglądu nierównego kolorytu i rumienia",
+          "Możliwa poprawa jędrności skóry",
+          "Długotrwała redukcja owłosienia po serii zabiegów"
+        ],
         indications: [
-          "Potrzeba relaksu i odprężenia",
-          "Napięcie mięśni twarzy",
-          "Chęć włączenia masażu do indywidualnego planu pielęgnacji"
+          "Widoczne naczynka lub rumień po kwalifikacji",
+          "Wybrane przebarwienia i oznaki fotostarzenia",
+          "Utrata jędrności skóry",
+          "Wybrane zmiany trądzikowe po konsultacji"
         ],
         contraindications: [
-          "Gorączka, ostre infekcje lub złe samopoczucie",
-          "Aktywna opryszczka, zmiany zapalne albo rany w miejscu masażu",
-          "Świeże zabiegi lub urazy w obrębie twarzy — do czasu uzyskania zgody specjalisty"
+          "Świeża opalenizna lub samoopalacz",
+          "Leki, zioła i suplementy fotouczulające – konieczna konsultacja",
+          "Ciąża i karmienie piersią",
+          "Aktywna infekcja lub opryszczka",
+          "Choroby nowotworowe i epilepsja – konieczna konsultacja"
         ]
       },
-      manicure: {
-        title: "Manicure",
-        description: "Pielęgnacja dłoni i paznokci może obejmować opracowanie płytki, skórek oraz wybraną stylizację. Zakres i rodzaj produktów ustalane są przed rozpoczęciem usługi.",
-        preparation: "Nie musisz specjalnie przygotowywać dłoni. Jeśli masz na paznokciach stylizację do usunięcia lub wiesz o alergii na produkty do manicure, poinformuj o tym przed wizytą.",
+      "laser-przygotowanie": {
+        title: "Jak przygotować się do zabiegu laserowego?",
+        subtitle: "Zasady przygotowania i pielęgnacji po laseroterapii",
+        badge: "Wskazówki przed wizytą",
+        description: "Przygotowanie zmniejsza ryzyko powikłań, ale nie eliminuje go całkowicie. Szczegółowe zalecenia zależą od rodzaju lasera, obszaru zabiegowego oraz indywidualnej kwalifikacji.",
+        effects: [
+          "Przed zabiegiem unikaj opalania i samoopalacza; wymagany odstęp potwierdź w gabinecie",
+          "Poinformuj o lekach, ziołach i suplementach, zwłaszcza fotouczulających",
+          "Omów z gabinetem stosowanie kosmetyków z retinolem, kwasami i witaminą C",
+          "Po zabiegu stosuj zaleconą pielęgnację i ochronę przeciwsłoneczną, w tym SPF 50+"
+        ],
         indications: [
-          "Pielęgnacja i estetyczne opracowanie dłoni oraz paznokci",
-          "Stylizacja dopasowana do preferowanego efektu",
-          "Regularne dbanie o wygląd i komfort dłoni"
+          "Wskazówki dotyczą zabiegów laserowych po indywidualnej konsultacji",
+          "W razie wątpliwości skontaktuj się z gabinetem przed wizytą",
+          "Nie odstawiaj przepisanych leków bez konsultacji z lekarzem"
         ],
         contraindications: [
-          "Grzybica lub inne aktywne infekcje dłoni i paznokci",
-          "Otwarte rany, silne podrażnienia lub stan zapalny",
-          "Znana alergia na składniki produktów używanych podczas usługi"
+          "Świeża opalenizna, aktywna infekcja lub inne przeciwwskazania mogą wymagać odłożenia zabiegu",
+          "O możliwości wykonania zabiegu decyduje kwalifikacja"
         ]
       },
-      pedicure: {
-        title: "Pedicure",
-        description: "Kosmetyczna pielęgnacja stóp i paznokci. Usługa ma charakter estetyczny i pielęgnacyjny — nie zastępuje konsultacji podologicznej ani leczenia zmian chorobowych.",
-        preparation: "Przyjdź z czystymi stopami. Jeśli masz na paznokciach stylizację, zmiany skórne, cukrzycę lub problemy z krążeniem, poinformuj o tym przed wizytą, aby wspólnie ustalić bezpieczny zakres usługi.",
+      elektrokoagulacja: {
+        title: "Elektrokoagulacja",
+        subtitle: "Usuwanie wybranych, ocenionych zmian skórnych",
+        badge: "Usuwanie zmian",
+        description: "Metoda wykorzystująca prąd o wysokiej częstotliwości do opracowania wybranych, uprzednio ocenionych zmian skórnych, na przykład włókniaków. Zmiany o nieustalonym charakterze wymagają oceny lekarskiej.",
+        effects: [
+          "Możliwość usunięcia wybranych zmian po kwalifikacji",
+          "Precyzyjne opracowanie niewielkiego obszaru",
+          "Po zabiegu może powstać strupek",
+          "Istnieje ryzyko blizny lub przebarwienia"
+        ],
         indications: [
-          "Pielęgnacja i estetyczne opracowanie stóp oraz paznokci",
-          "Przygotowanie paznokci do wybranej stylizacji",
-          "Regularna, kosmetyczna pielęgnacja stóp"
+          "Wybrane włókniaki po ocenie i kwalifikacji",
+          "Inne drobne zmiany po ocenie specjalisty"
         ],
         contraindications: [
-          "Aktywne infekcje, grzybica, brodawki lub rany stóp",
-          "Stan zapalny albo silne podrażnienie w miejscu zabiegu",
-          "Cukrzyca lub zaburzenia krążenia — wymagają wcześniejszej informacji i indywidualnej oceny"
+          "Zmiany skórne o nieustalonym charakterze",
+          "Aktywne infekcje lub stan zapalny w miejscu zabiegu",
+          "Rozrusznik serca lub inne urządzenia elektroniczne",
+          "Zaburzenia krzepnięcia, cukrzyca lub skłonność do bliznowców – wymagana konsultacja",
+          "Ciąża"
         ]
       },
-      brows: {
-        title: "Brwi, rzęsy i depilacja",
-        description: "Stylizacja brwi i rzęs oraz wybrane metody depilacji pomagają podkreślić naturalną oprawę oka. Dobór preparatów i metody zależy od stanu skóry, włosków oraz oczekiwanego efektu.",
-        preparation: "Przed stylizacją brwi lub rzęs unikaj nakładania tłustych kosmetyków w okolicy zabiegowej. Jeśli masz wrażliwe oczy, skłonność do alergii albo niedawno wykonywany makijaż permanentny, zgłoś to przed wizytą.",
+      neurorehabilitacja: {
+        title: "NeuroFace & NeuroBody",
+        subtitle: "Neurorehabilitacja estetyczna twarzy i ciała",
+        badge: "Fizjoterapia estetyczna",
+        description: "Indywidualnie dobierane procedury NeuroFace i NeuroBody obejmują pracę z obszarami twarzy lub ciała. Ich zakres ustalany jest po konsultacji.",
+        effects: [
+          "Możliwe zmniejszenie napięcia mięśniowego",
+          "Wsparcie relaksu i komfortu",
+          "Poprawa odczucia lekkości w obszarze zabiegowym",
+          "Indywidualna praca z napięciami twarzy lub ciała"
+        ],
         indications: [
-          "Chęć podkreślenia kształtu brwi lub oprawy oka",
-          "Stylizacja dopasowana do naturalnych rysów",
-          "Usuwanie owłosienia wybraną metodą po ocenie skóry"
+          "Napięcia mięśniowe twarzy po konsultacji",
+          "Stres związany z napięciem mięśni",
+          "Potrzeba indywidualnej pracy z obszarem twarzy lub ciała",
+          "Dolegliwości stawu skroniowo-żuchwowego – po konsultacji ze specjalistą"
         ],
         contraindications: [
-          "Aktywne infekcje oczu, powiek lub skóry w miejscu zabiegu",
-          "Rany, podrażnienia albo stan zapalny w obszarze stylizacji lub depilacji",
-          "Znana alergia na barwniki, kleje lub inne używane preparaty"
+          "Aktywna infekcja, gorączka lub stan zapalny",
+          "Świeże zabiegi stomatologiczne lub operacje – konieczna konsultacja",
+          "Uszkodzenia skóry lub zmiany ropne",
+          "Przeciwwskazania zależne od wybranej procedury, ustalane podczas konsultacji"
         ]
       }
     };
 
-    const treatmentDialog = document.querySelector("#treatment-dialog");
+    const treatmentDialog = document.querySelector("#treatment-modal");
     const modalTitle = document.querySelector("#modal-title");
+    const modalBadge = document.querySelector("#modal-badge");
+    const modalSubtitle = document.querySelector("#modal-subtitle");
     const modalDescription = document.querySelector("#modal-description");
-    const modalPreparation = document.querySelector("#modal-preparation");
+    const modalEffectsTitle = document.querySelector("#modal-effects-title");
+    const modalEffects = document.querySelector("#modal-effects");
     const modalIndications = document.querySelector("#modal-indications");
     const modalContraindications = document.querySelector("#modal-contraindications");
-    const dialogClose = document.querySelector(".dialog-close");
+    const dialogClose = treatmentDialog.querySelector(".dialog-close");
+    const rulesDialog = document.querySelector("#rules-modal");
+    const rulesOpen = document.querySelector("#open-rules-btn");
+    const rulesClose = document.querySelector("#close-rules-btn");
     let lastTreatmentTrigger = null;
+
+    function openSiteDialog(dialog) {
+      dialog.showModal();
+      document.body.classList.add("overflow-hidden");
+      dialog.scrollTop = 0;
+    }
+
+    function setupSiteDialog(dialog, closeButton, getTrigger) {
+      closeButton.addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      dialog.addEventListener("close", () => {
+        if (document.querySelector(".modal-overlay[open]")) return;
+        document.body.classList.remove("overflow-hidden");
+        const trigger = getTrigger();
+        if (trigger) trigger.focus();
+      });
+    }
+
+    setupSiteDialog(treatmentDialog, dialogClose, () => lastTreatmentTrigger);
+    setupSiteDialog(rulesDialog, rulesClose, () => rulesOpen);
+    rulesOpen.addEventListener("click", () => openSiteDialog(rulesDialog));
 
     function fillModalList(list, items, type) {
       list.replaceChildren(...items.map((item) => {
@@ -3341,43 +3482,50 @@
         const text = document.createElement("span");
         icon.className = `list-icon ${type}`;
         icon.setAttribute("aria-hidden", "true");
-        icon.textContent = type === "positive" ? "✓" : "!";
+        if (type === "positive") {
+          const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+          const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+          svg.setAttribute("viewBox", "0 0 24 24");
+          svg.setAttribute("fill", "none");
+          svg.setAttribute("stroke", "currentColor");
+          svg.setAttribute("stroke-width", "2.5");
+          path.setAttribute("d", "m5 12 4 4L19 6");
+          svg.append(path);
+          icon.append(svg);
+        } else {
+          icon.textContent = "!";
+        }
         text.textContent = item;
         row.append(icon, text);
         return row;
       }));
     }
 
+    function openTreatmentModal(id, trigger = document.activeElement) {
+      const details = treatmentsData[id];
+      if (!details) throw new Error(`Unknown treatment: ${id}`);
+
+      lastTreatmentTrigger = trigger;
+      modalBadge.textContent = details.badge;
+      modalTitle.textContent = details.title;
+      modalSubtitle.textContent = details.subtitle;
+      modalDescription.textContent = details.description;
+      modalEffectsTitle.textContent = id === "laser-przygotowanie" ? "Zalecenia przed i po zabiegu" : "Efekty zabiegu";
+      fillModalList(modalEffects, details.effects, "positive");
+      fillModalList(modalIndications, details.indications, "positive");
+      fillModalList(modalContraindications, details.contraindications, "caution");
+      openSiteDialog(treatmentDialog);
+    }
+
     document.querySelectorAll(".treatment-open").forEach((button) => {
       button.addEventListener("click", () => {
-        const details = treatmentDetails[button.dataset.treatment];
-        if (!details) throw new Error(`Unknown treatment: ${button.dataset.treatment}`);
-
-        lastTreatmentTrigger = button;
-        modalTitle.textContent = details.title;
-        modalDescription.textContent = details.description;
-        modalPreparation.textContent = details.preparation;
-        fillModalList(modalIndications, details.indications, "positive");
-        fillModalList(modalContraindications, details.contraindications, "caution");
-        treatmentDialog.showModal();
-        document.body.classList.add("overflow-hidden");
-        treatmentDialog.scrollTop = 0;
+        openTreatmentModal(button.dataset.treatment, button);
       });
-    });
-
-    dialogClose.addEventListener("click", () => treatmentDialog.close());
-
-    treatmentDialog.addEventListener("click", (event) => {
-      if (event.target === treatmentDialog) treatmentDialog.close();
-    });
-
-    treatmentDialog.addEventListener("close", () => {
-      document.body.classList.remove("overflow-hidden");
-      if (lastTreatmentTrigger) lastTreatmentTrigger.focus();
     });
 
     const priceTabs = [...document.querySelectorAll("[data-pricing-tab]")];
     const priceRows = [...document.querySelectorAll(".price-row")];
+    const externalPriceHeadings = [...document.querySelectorAll("[data-external-heading]")];
     const priceSearch = document.querySelector("#price-search");
     const priceEmpty = document.querySelector("#price-empty");
     const pricePanel = document.querySelector("#price-panel");
@@ -3396,7 +3544,10 @@
 
       const category = document.createElement("span");
       category.className = "price-category";
-      category.textContent = categoryLabel;
+      const isExternal = row.hasAttribute("data-external-service") || row.dataset.category === "laser-hair";
+      category.textContent = isExternal
+        ? `${categoryLabel} · Zabiegi dodatkowe (świadczone przez firmę zewnętrzną)`
+        : categoryLabel;
       row.querySelector(".price-name").append(document.createTextNode(" "), category);
 
       const textNodes = document.createTreeWalker(row, NodeFilter.SHOW_TEXT);
@@ -3418,6 +3569,14 @@
         row.hidden = !isVisible;
         row.classList.toggle("is-global-search", isGlobalSearch && matchesSearch);
         if (!row.hidden) visibleCount += 1;
+      });
+
+      externalPriceHeadings.forEach((heading) => {
+        heading.hidden = !priceRows.some((row) =>
+          !row.hidden &&
+          row.dataset.category === heading.dataset.externalHeading &&
+          (row.hasAttribute("data-external-service") || row.dataset.category === "laser-hair")
+        );
       });
 
       priceEmpty.hidden = visibleCount > 0;
