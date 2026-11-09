@@ -1469,7 +1469,7 @@
     }
 
     .price-variants--face {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: minmax(0, 1fr) minmax(min-content, 1.4fr);
       gap: 8px;
       max-width: 430px;
     }
@@ -1487,6 +1487,25 @@
 
     .price-variants--face strong {
       text-align: left;
+      overflow-wrap: anywhere;
+    }
+
+    .price-variants--face .font-medium {
+      font-weight: 500;
+    }
+
+    .price-variants--face .text-xs {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+
+    .price-variants--face .text-purple-900 {
+      color: #581c87;
+    }
+
+    .price-variants--face .tracking-wide {
+      letter-spacing: 0.025em;
+      white-space: nowrap;
     }
 
     .price-variants--face .price-extra {
@@ -2988,22 +3007,22 @@
             <li class="price-row" data-category="manual"><span class="price-name">Masaż twarzy 3D / Transbukkalny</span><span class="price-value">230 zł</span></li>
 
             <li class="price-row" data-category="face"><span class="price-name">Konsultacja</span><span class="price-value">100 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Mikrodermabrazja<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>Z kwasem</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie twarzy</span><span class="price-value">180 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Peelingi chemiczne<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>Retinol / TCA</span><strong>220 zł / 320 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Fale radiowe z laserem biostymulującym<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg z papryką chili<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Peeling ziołowy Jadwiga<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>Cena niepodana</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie wodorowe<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>+ fale radiowe</span><strong>300 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg Glow Skin<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>210 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg kolagenowy z masażem<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry wrażliwej / naczyniowej / AZS</span><span class="price-value">200 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg z drenażem limfatycznym</span><span class="price-value">200 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg Anty Aging estGen<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>240 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry trądzikowej</span><span class="price-value">200 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg z biomikroigłami<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>+ Szyja, dekolt</span><strong>240 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Biopeptydowy lifting</span><span class="price-value">270 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg personalizowany z masażem Energy Chi</span><span class="price-value">240 zł</span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Mikrodermabrazja<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>Z kwasem</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie twarzy<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong class="font-medium text-xs text-purple-900 tracking-wide">Wycena indywidualna</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Peelingi chemiczne<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>Retinol / TCA</span><strong>220 zł / 320 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Fale radiowe z laserem biostymulującym<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg z papryką chili<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Peeling ziołowy Jadwiga<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong class="font-medium text-xs text-purple-900 tracking-wide">Wycena indywidualna</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie wodorowe<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>+ fale radiowe</span><strong>300 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg Glow Skin<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>210 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg kolagenowy z masażem<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry wrażliwej / naczyniowej / AZS<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong class="font-medium text-xs text-purple-900 tracking-wide">Wycena indywidualna</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg z drenażem limfatycznym<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong class="font-medium text-xs text-purple-900 tracking-wide">Wycena indywidualna</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg Anty Aging estGen<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>240 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry trądzikowej<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong class="font-medium text-xs text-purple-900 tracking-wide">Wycena indywidualna</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg z biomikroigłami<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>240 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Biopeptydowy lifting<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>270 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong class="font-medium text-xs text-purple-900 tracking-wide">Wycena indywidualna</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg personalizowany z masażem Energy Chi<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>240 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong class="font-medium text-xs text-purple-900 tracking-wide">Wycena indywidualna</strong></span></span></span></li>
 
             <li class="price-row" data-category="aesthetic"><span class="price-name">Konsultacja</span><span class="price-value">100 zł</span></li>
             <li class="price-row" data-category="aesthetic"><span class="price-name">Elektrokoagulacja (usuwanie włókniaków)</span><span class="price-value">200 zł</span></li>
@@ -3022,6 +3041,7 @@
             <li class="price-row" data-category="neuro"><span class="price-name">Neuro Inflamacja (trądzik, trądzik różowaty, bruksizm)</span><span class="price-value">550 zł</span></li>
             <li class="price-row" data-category="neuro"><span class="price-name">Neuro Body (ujędrnianie, redukcja tkanki tłuszczowej)</span><span class="price-value">550 zł</span></li>
 
+            <li class="price-subcategory" data-price-heading="laser" data-service-group="in-house">W stałej ofercie gabinetu</li>
             <li class="price-row" data-category="laser"><span class="price-name">Usuwanie brodawek, rubinków</span><span class="price-value">50 zł / szt.</span></li>
             <li class="price-row" data-category="laser"><span class="price-name">Usuwanie włókniaków</span><span class="price-value">70 zł / szt.</span></li>
             <li class="price-row" data-category="laser"><span class="price-name">Zmiany bólowe / opryszczka</span><span class="price-value">50 zł</span></li>
@@ -3030,11 +3050,11 @@
             <li class="price-row" data-category="laser"><span class="price-name">Zamykanie naczynek</span><span class="price-value">230 zł</span></li>
             <li class="price-row" data-category="laser"><span class="price-name">Laserowy lifting powiek</span><span class="price-value">250 zł</span></li>
             <li class="price-row" data-category="laser"><span class="price-name">Laserowy lifting twarzy</span><span class="price-value">550 zł</span></li>
-            <li class="price-subcategory" data-external-heading="laser">Zabiegi dodatkowe (świadczone przez firmę zewnętrzną)</li>
+            <li class="price-subcategory" data-price-heading="laser" data-service-group="external">Sesje laserowe z firmą zewnętrzną</li>
             <li class="price-row" data-category="laser" data-external-service><span class="price-name">Terapia zmian trądzikowych</span><span class="price-value">300–400 zł</span></li>
             <li class="price-row" data-category="laser" data-external-service><span class="price-name">Fotoodmładzanie, rumień<span class="price-variants"><span><span>Twarz</span><strong>350 zł</strong></span><span><span>Twarz + szyja</span><strong>400 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>450 zł</strong></span></span></span></li>
 
-            <li class="price-subcategory" data-external-heading="laser-hair">Zabiegi dodatkowe (świadczone przez firmę zewnętrzną) – depilacja laserowa</li>
+            <li class="price-subcategory" data-price-heading="laser-hair" data-service-group="external">Sesje laserowe z firmą zewnętrzną – depilacja laserowa</li>
             <li class="price-row" data-category="laser-hair"><span class="price-name">1 okolica (uszy / skronie / broda / policzki)</span><span class="price-value">120 zł</span></li>
             <li class="price-row" data-category="laser-hair"><span class="price-name">1 okolica (wąsik / szyja / kark)</span><span class="price-value">170 zł</span></li>
             <li class="price-row" data-category="laser-hair"><span class="price-name">Wewnętrzna część ud / pachwiny / bikini</span><span class="price-value">200–220 zł</span></li>
@@ -3063,7 +3083,7 @@
             <li class="price-row" data-category="body"><span class="price-name">Zabieg termoaktywny<span class="price-variants"><span><span>Brzuch</span><strong>50 zł</strong></span><span><span>Uda</span><strong>80 zł</strong></span></span></span></li>
             <li class="price-row" data-category="body"><span class="price-name">Fale radiowe / dermomasaż</span><span class="price-value">85 zł</span></li>
             <li class="price-row" data-category="body"><span class="price-name">Oczyszczanie pleców</span><span class="price-value">120 zł</span></li>
-            <li class="price-row" data-category="body"><span class="price-name">Peeling ziołowy Jadwigi</span><span class="price-value">200 zł</span></li>
+            <li class="price-row" data-category="body"><span class="price-name">Peeling ziołowy Jadwigi (ciało)</span><span class="price-value">200 zł</span></li>
             <li class="price-row" data-category="body"><span class="price-name">Kwasy na ciało</span><span class="price-value">230 zł</span></li>
 
             <li class="price-row" data-category="hands-feet"><span class="price-name">Parafina</span><span class="price-value">40 zł</span></li>
@@ -3743,7 +3763,7 @@
 
     const priceTabs = [...document.querySelectorAll("[data-pricing-tab]")];
     const priceRows = [...document.querySelectorAll(".price-row")];
-    const externalPriceHeadings = [...document.querySelectorAll("[data-external-heading]")];
+    const priceHeadings = [...document.querySelectorAll("[data-price-heading]")];
     const priceSearch = document.querySelector("#price-search");
     const priceEmpty = document.querySelector("#price-empty");
     const pricePanel = document.querySelector("#price-panel");
@@ -3756,16 +3776,21 @@
       return text.toLocaleLowerCase("pl").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ł/g, "l");
     }
 
+    function priceServiceGroup(row) {
+      if (row.hasAttribute("data-external-service") || row.dataset.category === "laser-hair") return "external";
+      if (row.dataset.category === "laser") return "in-house";
+      return "";
+    }
+
     priceRows.forEach((row) => {
       const categoryLabel = priceCategoryLabels.get(row.dataset.category);
       if (!categoryLabel) throw new Error(`Unknown price category: ${row.dataset.category}`);
 
       const category = document.createElement("span");
       category.className = "price-category";
-      const isExternal = row.hasAttribute("data-external-service") || row.dataset.category === "laser-hair";
-      category.textContent = isExternal
-        ? `${categoryLabel} · Zabiegi dodatkowe (świadczone przez firmę zewnętrzną)`
-        : categoryLabel;
+      const group = priceServiceGroup(row);
+      const groupLabel = group === "external" ? "Sesje laserowe z firmą zewnętrzną" : "W stałej ofercie gabinetu";
+      category.textContent = group ? `${categoryLabel} · ${groupLabel}` : categoryLabel;
       row.querySelector(".price-name").append(document.createTextNode(" "), category);
 
       const textNodes = document.createTreeWalker(row, NodeFilter.SHOW_TEXT);
@@ -3780,7 +3805,8 @@
       let visibleCount = 0;
 
       priceRows.forEach((row) => {
-        const matchesCategory = row.dataset.category === activePriceCategory;
+        const matchesCategory = row.dataset.category === activePriceCategory ||
+          (activePriceCategory === "laser" && row.dataset.category === "laser-hair");
         const searchableText = priceSearchIndex.get(row);
         const matchesSearch = !searchTerm || searchableText.includes(searchTerm);
         const isVisible = isGlobalSearch ? matchesSearch : matchesCategory;
@@ -3789,11 +3815,13 @@
         if (!row.hidden) visibleCount += 1;
       });
 
-      externalPriceHeadings.forEach((heading) => {
-        heading.hidden = !priceRows.some((row) =>
+      priceHeadings.forEach((heading) => {
+        const isNestedHairHeading = !isGlobalSearch && activePriceCategory === "laser" &&
+          heading.dataset.priceHeading === "laser-hair";
+        heading.hidden = isNestedHairHeading || !priceRows.some((row) =>
           !row.hidden &&
-          row.dataset.category === heading.dataset.externalHeading &&
-          (row.hasAttribute("data-external-service") || row.dataset.category === "laser-hair")
+          row.dataset.category === heading.dataset.priceHeading &&
+          priceServiceGroup(row) === heading.dataset.serviceGroup
         );
       });
 
