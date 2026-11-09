@@ -2809,7 +2809,7 @@
           <article class="treatment-card">
             <span class="treatment-badge">Rewitalizacja</span>
             <h3 class="treatment-name">Mezoterapia igłowa</h3>
-            <p class="treatment-subtitle">Odżywienie, nawilżenie i biorewitalizacja skóry</p>
+            <p class="treatment-subtitle">Dostarczanie substancji aktywnych w głąb skóry właściwej</p>
             <button class="treatment-open" type="button" data-treatment="mezoterapia-iglowa" aria-label="Poznaj szczegóły i wskazania: Mezoterapia igłowa">Poznaj szczegóły i wskazania →</button>
           </article>
           <article class="treatment-card">
@@ -3269,27 +3269,41 @@
     const treatmentsData = {
       "mezoterapia-iglowa": {
         title: "Mezoterapia igłowa",
-        subtitle: "Odżywienie, nawilżenie i biorewitalizacja skóry",
+        subtitle: "Dostarczanie substancji aktywnych w głąb skóry właściwej",
         badge: "Rewitalizacja",
-        description: "Zabieg polega na podaniu mikrodawek dobranego preparatu za pomocą iniekcji. W zależności od potrzeb skóry stosuje się preparaty zawierające m.in. kwas hialuronowy, witaminy lub aminokwasy.",
-        effects: [
-          "Poprawa nawilżenia skóry",
-          "Możliwe wygładzenie drobnych zmarszczek",
-          "Poprawa wyglądu i kolorytu skóry",
-          "Wsparcie kondycji skóry"
-        ],
-        indications: [
-          "Skóra przesuszona i zmęczona",
-          "Pierwsze oznaki starzenia i utrata jędrności",
-          "Drobne zmarszczki – po ocenie obszaru zabiegowego",
-          "Profilaktyka przeciwstarzeniowa"
+        description: "Mezoterapia igłowa jest jednym z najpopularniejszych zabiegów kosmetologii estetycznej. Zabieg polega na dostarczaniu do skóry właściwej wielu substancji odżywczych, takich jak witaminy, aminokwasy, mikroelementy, peptydy oraz kwas hialuronowy. Przy użyciu strzykawki i igły dostarcza się składniki aktywne w wybrane okolice twarzy lub ciała.",
+        effectGroups: [
+          {
+            title: "Efekty zabiegu",
+            items: [
+              "Skuteczne i głębokie nawilżenie skóry",
+              "Uzupełnienie niedoboru witamin i minerałów",
+              "Wspomaganie mikrokrążenia",
+              "Stymulacja komórek do produkcji kolagenu i elastyny",
+              "Zwiększenie napięcia i elastyczności, rozjaśnienie, odmłodzenie skóry",
+              "Pogrubienie naskórka i poprawa jego funkcji",
+              "Redukcja zmarszczek i zasinień pod oczami",
+              "Odżywienie skóry, redukcja uszkodzeń posłonecznych i przebarwień",
+              "Wsparcie przy zaburzeniach rogowacenia, bliznach potrądzikowych i pourazowych"
+            ]
+          },
+          {
+            title: "Wskazówki i mechanizm",
+            items: [
+              "Dwa mechanizmy działania: substancje odżywcze oraz samoregeneracja po nakłuciach.",
+              "Zabieg można rozważyć przez cały rok, także dla cer cienkich i naczyniowych, po indywidualnej kwalifikacji.",
+              "Wrażliwość na słońce i zalecenia po zabiegu zależą od skóry oraz użytego preparatu. Stosuj ochronę przeciwsłoneczną zgodnie z zaleceniami gabinetu."
+            ]
+          }
         ],
         contraindications: [
-          "Ciąża i okres karmienia piersią",
-          "Aktywne infekcje lub stany zapalne w miejscu zabiegu",
-          "Choroby nowotworowe i autoimmunologiczne – wymagana konsultacja",
-          "Uczulenie na składniki preparatu",
-          "Zaburzenia krzepnięcia lub leki wpływające na krzepliwość – wymagana konsultacja"
+          "Ciąża i karmienie piersią",
+          "Stany zapalne skóry i infekcje bakteryjne, wirusowe lub grzybicze",
+          "Opryszczka",
+          "Leki przeciwzakrzepowe i zaburzenia krzepnięcia krwi",
+          "Nowotwory",
+          "Alergie na składniki koktajlu",
+          "Skłonność do powstawania bliznowców"
         ]
       },
       "mezoterapia-mikroiglowa": {
