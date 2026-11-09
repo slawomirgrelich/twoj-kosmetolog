@@ -1751,8 +1751,21 @@
       font-size: 0.875rem;
     }
 
+    .updates-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .updates-content > p {
+      flex: 1 1 auto;
+      margin-bottom: 0;
+    }
+
     .rules-open {
       display: inline-flex;
+      min-height: 44px;
+      flex: 0 0 auto;
       align-items: center;
       gap: 8px;
       padding: 10px 20px;
@@ -1776,6 +1789,14 @@
       width: 17px;
       height: 17px;
       flex: 0 0 auto;
+    }
+
+    @media (max-width: 680px) {
+      .updates-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+      }
     }
 
     .contact-section {
@@ -2754,11 +2775,13 @@
       <div class="updates-card">
         <p class="eyebrow">Aktualności i komunikaty</p>
         <h2 id="updates-title">Ważne informacje i aktualności gabinetu</h2>
-        <p>W tym miejscu pojawią się bieżące promocje i komunikaty. Zapoznaj się z regulaminem gabinetu przed wizytą.</p>
-        <button class="rules-open" id="open-rules-btn" type="button" aria-haspopup="dialog">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg>
-          Przeczytaj regulamin gabinetu →
-        </button>
+        <div class="updates-content">
+          <p>W dniu 11 listopada (Święto Niepodległości) gabinet będzie nieczynny. W pozostałe dni zapraszamy zgodnie ze standardowym grafikiem. Rezerwacja wizyt na zabiegi jesienno-zimowe oraz terminy przedświąteczne dostępna jest całodobowo w systemie rezerwacji online.</p>
+          <button class="rules-open" id="open-rules-btn" type="button" aria-haspopup="dialog" aria-controls="rules-modal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg>
+            Regulamin gabinetu →
+          </button>
+        </div>
       </div>
     </section>
 
@@ -2838,9 +2861,9 @@
           </article>
           <article class="treatment-card">
             <span class="treatment-badge">Wskazówki przed wizytą</span>
-            <h3 class="treatment-name">Przygotowanie do lasera</h3>
-            <p class="treatment-subtitle">Zasady przygotowania i pielęgnacji po laseroterapii</p>
-            <button class="treatment-open" type="button" data-treatment="laser-przygotowanie" aria-label="Poznaj szczegóły: Przygotowanie do lasera">Poznaj szczegóły i wskazania →</button>
+            <h3 class="treatment-name">Jak się przygotować do zabiegu z zastosowaniem lasera</h3>
+            <p class="treatment-subtitle">Zasady przygotowania, przeciwwskazania i zalecenia pozabiegowe</p>
+            <button class="treatment-open" type="button" data-treatment="laser-przygotowanie" aria-label="Poznaj szczegóły: Jak się przygotować do zabiegu z zastosowaniem lasera">Poznaj szczegóły i wskazania →</button>
           </article>
           <article class="treatment-card">
             <span class="treatment-badge">Usuwanie zmian</span>
@@ -3461,7 +3484,8 @@
         ],
         guidanceTitle: "Ważne przed zabiegiem",
         guidance: [
-          "Nie odstawiaj przepisanych leków bez konsultacji z lekarzem. Omów stosowane leki, zioła i kosmetyki podczas kwalifikacji do zabiegu."
+          "Nie odstawiaj przepisanych leków bez konsultacji z lekarzem. Omów stosowane leki, zioła i kosmetyki podczas kwalifikacji do zabiegu.",
+          "Podane odstępy dla retinolu, kwasów i niektórych ziół różnią się między opisem laseroterapii a instrukcją przygotowania. Potwierdź właściwy termin z gabinetem przed zabiegiem."
         ],
         contraindications: [
           "Ciąża i laktacja",
@@ -3481,24 +3505,52 @@
         ]
       },
       "laser-przygotowanie": {
-        title: "Jak przygotować się do zabiegu laserowego?",
-        subtitle: "Zasady przygotowania i pielęgnacji po laseroterapii",
+        title: "Jak się przygotować do zabiegu z zastosowaniem lasera",
+        subtitle: "Zasady przygotowania, przeciwwskazania i zalecenia pozabiegowe",
         badge: "Wskazówki przed wizytą",
-        description: "Przygotowanie zmniejsza ryzyko powikłań, ale nie eliminuje go całkowicie. Szczegółowe zalecenia zależą od rodzaju lasera, obszaru zabiegowego oraz indywidualnej kwalifikacji.",
-        effects: [
-          "Przed zabiegiem unikaj opalania i samoopalacza; wymagany odstęp potwierdź w gabinecie",
-          "Poinformuj o lekach, ziołach i suplementach, zwłaszcza fotouczulających",
-          "Omów z gabinetem stosowanie kosmetyków z retinolem, kwasami i witaminą C",
-          "Po zabiegu stosuj zaleconą pielęgnację i ochronę przeciwsłoneczną, w tym SPF 50+"
+        description: "Sprawdź, czy możesz skorzystać z zabiegów z zastosowaniem lasera. Prawidłowe przygotowanie pomaga zmniejszyć ryzyko powikłań i wspiera skuteczność procedury.",
+        effectGroups: [
+          {
+            title: "Zasady przed zabiegiem",
+            items: [
+              "Świeża opalenizna / korzystanie z solarium: zaprzestać na miesiąc przed serią.",
+              "Retinol, wit. C, kwasy AHA/BHA oraz zioła: dziurawiec, nagietek, rumianek, skrzyp i pokrzywa – omów z gabinetem przerwę przed serią; w instrukcji przygotowania podano minimum tydzień.",
+              "Tetracykliny i inne leki światłouczulające: omów z lekarzem i gabinetem przed zabiegiem.",
+              "Retinoidy: omów z lekarzem i gabinetem wymaganą przerwę przed serią; w instrukcji przygotowania podano co najmniej 3 miesiące.",
+              "Zakaz głębokich zabiegów złuszczających w przeciągu ostatniego miesiąca.",
+              "Nici wchłanialne do 6 miesięcy po zabiegu, nici niewchłanialne – przeciwwskazanie bezwzględne. Poinformuj także o wypełniaczach i implantach w obszarze zabiegu.",
+              "Przed depilacją laserową: koniecznie ogolić miejsce zabiegowe."
+            ]
+          },
+          {
+            title: "Zalecenia po zabiegu",
+            items: [
+              "Bezwzględne stosowanie filtrów SPF 50 i brak ekspozycji na słońce do miesiąca.",
+              "Zakaz intensywnego sportu, siłowni, fitnessu, tańca i basenu min. tydzień po zabiegu.",
+              "Zakaz przegrzewania (sauna, gorące kąpiele) min. miesiąc po zabiegu.",
+              "Zakaz spożywania alkoholu min. tydzień po zabiegu.",
+              "Zakaz drażnienia mechanicznego, kosmetyków na alkoholu oraz zdrapywania strupków/pęcherzyków.",
+              "Nawilżanie i natłuszczanie skóry zgodnie z zaleceniami kosmetologa."
+            ]
+          }
         ],
-        indications: [
-          "Wskazówki dotyczą zabiegów laserowych po indywidualnej konsultacji",
-          "W razie wątpliwości skontaktuj się z gabinetem przed wizytą",
-          "Nie odstawiaj przepisanych leków bez konsultacji z lekarzem"
+        guidanceTitle: "Ważne przed wizytą",
+        guidance: [
+          "Nie odstawiaj przepisanych leków bez konsultacji z lekarzem.",
+          "Podane odstępy dla retinolu, kwasów i niektórych ziół różnią się między opisem laseroterapii a instrukcją przygotowania. Potwierdź właściwy termin z gabinetem przed zabiegiem."
         ],
         contraindications: [
-          "Świeża opalenizna, aktywna infekcja lub inne przeciwwskazania mogą wymagać odłożenia zabiegu",
-          "O możliwości wykonania zabiegu decyduje kwalifikacja"
+          "Ciąża i karmienie piersią",
+          "Ciemne fototypy skóry",
+          "Rozrusznik serca",
+          "Zmiany nowotworowe",
+          "Zaburzenia krzepnięcia, czucia i krążenia (przeciwwskazanie względne)",
+          "Uczulenie na światło",
+          "Epilepsja",
+          "Skłonność do keloidów",
+          "Infekcje bakteryjne / grzybicze / wirusowe",
+          "Choroby autoimmunologiczne",
+          "Choroby tkanki łącznej – wymagana konsultacja"
         ]
       },
       "elektrokoagulacja": {
@@ -3667,7 +3719,7 @@
         fillModalList(modalEffects, details.effectGroups[0].items, "positive");
         fillModalList(modalIndications, details.effectGroups[1].items, "positive");
       } else {
-        modalEffectsTitle.textContent = id === "laser-przygotowanie" ? "Zalecenia przed i po zabiegu" : "Efekty zabiegu";
+        modalEffectsTitle.textContent = "Efekty zabiegu";
         modalIndicationsTitle.textContent = "Wskazania";
         fillModalList(modalEffects, details.effects, "positive");
         fillModalList(modalIndications, details.indications, "positive");
