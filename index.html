@@ -940,6 +940,11 @@
       background: transparent;
     }
 
+    .treatment-dialog {
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
     .dialog-inner {
       position: relative;
       width: 100%;
@@ -973,6 +978,10 @@
       margin-bottom: 10px;
     }
 
+    .dialog-topline > div {
+      min-width: 0;
+    }
+
     .dialog-close {
       display: grid;
       width: 42px;
@@ -996,6 +1005,7 @@
       margin-bottom: 14px;
       font-size: clamp(2rem, 5vw, 2.8rem);
       line-height: 1.12;
+      overflow-wrap: anywhere;
     }
 
     .dialog-description {
@@ -2834,7 +2844,7 @@
           <article class="treatment-card">
             <span class="treatment-badge">Usuwanie zmian</span>
             <h3 class="treatment-name">Elektrokoagulacja</h3>
-            <p class="treatment-subtitle">Usuwanie wybranych, ocenionych zmian skórnych</p>
+            <p class="treatment-subtitle">Usuwanie zmian skórnych prądem wysokiej częstotliwości</p>
             <button class="treatment-open" type="button" data-treatment="elektrokoagulacja" aria-label="Poznaj szczegóły i wskazania: Elektrokoagulacja">Poznaj szczegóły i wskazania →</button>
           </article>
           <article class="treatment-card">
@@ -3396,27 +3406,34 @@
           "O możliwości wykonania zabiegu decyduje kwalifikacja"
         ]
       },
-      elektrokoagulacja: {
+      "elektrokoagulacja": {
         title: "Elektrokoagulacja",
-        subtitle: "Usuwanie wybranych, ocenionych zmian skórnych",
+        subtitle: "Usuwanie zmian skórnych prądem wysokiej częstotliwości",
         badge: "Usuwanie zmian",
-        description: "Metoda wykorzystująca prąd o wysokiej częstotliwości do opracowania wybranych, uprzednio ocenionych zmian skórnych, na przykład włókniaków. Zmiany o nieustalonym charakterze wymagają oceny lekarskiej.",
+        description: "Elektrokoagulacja to metoda oparta na działaniu prądu, znana od wielu lat. Taka technologia idealnie sprawdza się do usuwania nieestetycznych zmian skórnych takich jak włókniaki miękkie, przerośnięte gruczoły łojowe czy kępki żółte.",
         effects: [
-          "Możliwość usunięcia wybranych zmian po kwalifikacji",
-          "Precyzyjne opracowanie niewielkiego obszaru",
-          "Po zabiegu może powstać strupek",
-          "Istnieje ryzyko blizny lub przebarwienia"
+          "Trwałe i natychmiastowe usunięcie zmian skórnych",
+          "Skuteczne usuwanie włókniaków miękkich, przerośniętych gruczołów łojowych i kępek żółtych",
+          "Bezkrwawa i bezpieczna procedura zabiegowa",
+          "Minimalne ryzyko powstawania blizn przy prawidłowej pielęgnacji"
         ],
         indications: [
-          "Wybrane włókniaki po ocenie i kwalifikacji",
-          "Inne drobne zmiany po ocenie specjalisty"
+          "Włókniaki miękkie (twarz, szyja, dekolt, pachy)",
+          "Przerośnięte gruczoły łojowe oraz kępki żółte"
+        ],
+        guidanceTitle: "Wskazówki i gojenie pozabiegowe",
+        guidance: [
+          "Jeśli borykasz się z tego typu niedoskonałościami, koniecznie trzeba wzmocnić odporność twojej skóry. Uzupełnić o niedobory mikro/makroelementów i witamin – wtedy uzyskasz lepsze efekty zabiegu!",
+          "Bezpośrednio po zabiegu może wystąpić niewielki obrzęk, rumień (zaczerwienienie). Najczęściej pojawia się mały strupek, który zaniknie w ciągu 5 – 21 dni.",
+          "Nie wolno zdrapywać strupka."
         ],
         contraindications: [
-          "Zmiany skórne o nieustalonym charakterze",
-          "Aktywne infekcje lub stan zapalny w miejscu zabiegu",
-          "Rozrusznik serca lub inne urządzenia elektroniczne",
-          "Zaburzenia krzepnięcia, cukrzyca lub skłonność do bliznowców – wymagana konsultacja",
-          "Ciąża"
+          "Wszczepiony rozrusznik serca lub inne elektroniczne implanty",
+          "Zaburzenia krzepnięcia krwi i przyjmowanie leków przeciwzakrzepowych",
+          "Ciąża i okres karmienia piersią",
+          "Nieuregulowana cukrzyca",
+          "Skłonność do powstawania bliznowców (keloidów)",
+          "Aktywne infekcje wirusowe lub bakteryjne w miejscu zabiegu"
         ]
       },
       "neurorehabilitacja": {
@@ -3479,6 +3496,7 @@
     const modalIndicationsTitle = document.querySelector("#modal-indications-title");
     const modalIndications = document.querySelector("#modal-indications");
     const modalGuidanceSection = document.querySelector("#modal-guidance-section");
+    const modalGuidanceTitle = document.querySelector("#modal-guidance-title");
     const modalGuidance = document.querySelector("#modal-guidance");
     const modalContraindications = document.querySelector("#modal-contraindications");
     const dialogClose = treatmentDialog.querySelector(".dialog-close");
@@ -3490,7 +3508,7 @@
     function openSiteDialog(dialog) {
       dialog.showModal();
       document.body.classList.add("overflow-hidden");
-      dialog.scrollTop = 0;
+      dialog.scrollTo({ top: 0, behavior: "instant" });
     }
 
     function setupSiteDialog(dialog, closeButton, getTrigger) {
@@ -3557,6 +3575,7 @@
         fillModalList(modalIndications, details.indications, "positive");
       }
       modalGuidanceSection.hidden = !details.guidance;
+      modalGuidanceTitle.textContent = details.guidanceTitle || "Wskazówki i serie zabiegów";
       fillModalList(modalGuidance, details.guidance || [], "positive");
       fillModalList(modalContraindications, details.contraindications, "caution");
       openSiteDialog(treatmentDialog);
