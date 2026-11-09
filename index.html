@@ -1084,6 +1084,7 @@
       border-radius: 12px;
     }
 
+    .dialog-additional-effects,
     .dialog-guidance {
       margin-top: 24px;
     }
@@ -2826,13 +2827,13 @@
           <article class="treatment-card">
             <span class="treatment-badge">Termolifting</span>
             <h3 class="treatment-name">Radiofrekwencja mikroigłowa</h3>
-            <p class="treatment-subtitle">Połączenie mikronakłuwania z falą radiową</p>
+            <p class="treatment-subtitle">Frakcyjny termolifting RF z mikronakłuwaniem (alternatywa dla lasera CO2)</p>
             <button class="treatment-open" type="button" data-treatment="radiofrekwencja-mikroiglowa" aria-label="Poznaj szczegóły i wskazania: Radiofrekwencja mikroigłowa">Poznaj szczegóły i wskazania →</button>
           </article>
           <article class="treatment-card">
-            <span class="treatment-badge">Zaawansowana aparatura</span>
+            <span class="treatment-badge">Laseroterapia</span>
             <h3 class="treatment-name">Zabiegi laserowe</h3>
-            <p class="treatment-subtitle">Laseroterapia skóry – lifting, naczynka i depilacja</p>
+            <p class="treatment-subtitle">Aparaturowa laseroterapia: naczynka, lifting, przebarwienia i rewitalizacja</p>
             <button class="treatment-open" type="button" data-treatment="zabiegi-laserowe" aria-label="Poznaj szczegóły i wskazania: Zabiegi laserowe">Poznaj szczegóły i wskazania →</button>
           </article>
           <article class="treatment-card">
@@ -2880,6 +2881,10 @@
             <ul id="modal-indications"></ul>
           </section>
         </div>
+        <section class="dialog-list-section dialog-additional-effects" id="modal-additional-effects-section" aria-labelledby="modal-additional-effects-title" hidden>
+          <h3 id="modal-additional-effects-title"></h3>
+          <ul id="modal-additional-effects"></ul>
+        </section>
         <section class="dialog-list-section dialog-guidance" id="modal-guidance-section" aria-labelledby="modal-guidance-title" hidden>
           <h3 id="modal-guidance-title">Wskazówki i serie zabiegów</h3>
           <ul id="modal-guidance"></ul>
@@ -3338,51 +3343,95 @@
       },
       "radiofrekwencja-mikroiglowa": {
         title: "Radiofrekwencja mikroigłowa",
-        subtitle: "Połączenie mikronakłuwania z falą radiową",
+        subtitle: "Frakcyjny termolifting RF z mikronakłuwaniem (alternatywa dla lasera CO2)",
         badge: "Termolifting",
-        description: "Metoda łącząca mikronakłucia z energią fal radiowych, stosowana w celu stymulacji skóry. Parametry i obszar zabiegu dobierane są indywidualnie.",
-        effects: [
-          "Możliwa poprawa napięcia i jędrności skóry",
-          "Wygładzenie drobnych zmarszczek",
-          "Poprawa wyglądu porów i wybranych blizn",
-          "Wsparcie poprawy konturu twarzy i szyi"
+        description: "Zabieg będący alternatywą dla zabiegów laserem frakcyjnym CO2, z krótszym okresem rekonwalescencji. Polega na wprowadzaniu bezpośrednio do wewnątrz tkanki wiązki fali elektromagnetycznej o częstotliwości radiowej z automatycznie ustawianą głębokością wkłucia igieł w zakresie 0,3 – 3 mm. Mikronakłuwanie stymuluje procesy naprawcze oraz pobudza fibroblasty do tworzenia nowego kolagenu, a podgrzanie warstw skóry aż do tkanki podskórnej zapewnia wyjątkową precyzję i bezpieczeństwo.",
+        effectGroups: [
+          {
+            title: "Bezpośrednio po zabiegu",
+            items: [
+              "Obkurczanie się włókien kolagenowych i napięcie skóry."
+            ]
+          },
+          {
+            title: "W ciągu kolejnych tygodni (do 3 miesięcy)",
+            items: [
+              "Stymulacja powstawania nowego kolagenu, zagęszczanie włókien i budowanie nowych wiązań tkankowych."
+            ]
+          },
+          {
+            title: "Pozostałe efekty",
+            items: [
+              "Wygładzenie drobnych zmarszczek twarzy, szyi, dekoltu oraz okolic oczu.",
+              "Podniesienie owalu skóry i poprawa elastyczności.",
+              "Redukcja porów, rozstępów oraz blizn potrądzikowych, zanikowych, pooperacyjnych i poparzeniowych."
+            ]
+          }
         ],
-        indications: [
-          "Wiotkość skóry twarzy, szyi i dekoltu",
-          "Blizny potrądzikowe i pourazowe – po kwalifikacji",
-          "Utrata jędrności skóry",
-          "Drobne zmarszczki – po ocenie obszaru zabiegowego"
+        guidanceTitle: "Seria i zalecenia",
+        guidance: [
+          "Zalecane wykonanie 2–4 zabiegów w 4–6 tygodniowych odstępach. Efekty są w pełni widoczne około 3 miesięcy po zabiegu."
         ],
         contraindications: [
-          "Rozrusznik serca lub implanty – konieczna ocena podczas konsultacji",
-          "Ciąża lub karmienie piersią",
-          "Aktywne infekcje i choroby skóry",
-          "Choroby nowotworowe i cukrzyca – wymagana konsultacja"
+          "Wszczepiony rozrusznik serca lub inne metalowe/elektroniczne implanty w ciele",
+          "Ciąża oraz okres karmienia piersią",
+          "Choroby nowotworowe",
+          "Stany zapalne skóry",
+          "Aktywne infekcje bakteryjne, wirusowe (opryszczka) i grzybicze w obszarze zabiegowym",
+          "Skłonność do powstawania bliznowców (keloidów)",
+          "Nieleczona cukrzyca i zaburzenia krzepnięcia krwi"
         ]
       },
       "zabiegi-laserowe": {
         title: "Zabiegi laserowe",
-        subtitle: "Laseroterapia skóry – lifting, naczynka i depilacja",
-        badge: "Zaawansowana aparatura",
-        description: "Zabiegi laserowe dobierane są po konsultacji i ocenie skóry. Fotoodmładzanie, terapia zmian trądzikowych oraz depilacja laserowa są świadczone przez firmę zewnętrzną.",
-        effects: [
-          "Możliwa redukcja widoczności wybranych naczynek",
-          "Poprawa wyglądu nierównego kolorytu i rumienia",
-          "Możliwa poprawa jędrności skóry",
-          "Długotrwała redukcja owłosienia po serii zabiegów"
+        subtitle: "Aparaturowa laseroterapia: naczynka, lifting, przebarwienia i rewitalizacja",
+        badge: "Laseroterapia",
+        description: "Zabiegi laserowe dobierane są po konsultacji i ocenie skóry. W przypadku infekcji skóry, w tym opryszczki, o kwalifikacji do zabiegu decyduje specjalista.",
+        effectGroups: [
+          {
+            title: "Zakres zabiegów",
+            items: [
+              "Zamykanie naczynek, rubinków",
+              "Usuwanie włókniaków i przerośniętych gruczołów łojowych",
+              "Redukcja przebarwień",
+              "Lifting laserowy twarzy i okolicy oczu",
+              "Zabieg dla skóry ze zmianami AZS, łojotok",
+              "Działanie przeciwbólowe",
+              "Rewitalizacja laserowa skóry (stymulacja kolagenu i elastyny)",
+              "Terapia opryszczki/egzemy"
+            ]
+          },
+          {
+            title: "Wskazówki i pielęgnacja pozabiegowa",
+            items: [
+              "Bezwzględne stosowanie filtrów SPF 50 i brak ekspozycji na słońce do miesiąca.",
+              "Zakaz intensywnego sportu i basenu min. tydzień po zabiegu.",
+              "Zakaz sauny i gorących kąpieli min. miesiąc po zabiegu.",
+              "Zakaz spożywania alkoholu min. tydzień po zabiegu.",
+              "Zakaz drażnienia mechanicznego, kosmetyków na alkoholu oraz zdrapywania strupków.",
+              "Nawilżanie i natłuszczanie zgodnie z zaleceniami kosmetologa."
+            ]
+          }
         ],
-        indications: [
-          "Widoczne naczynka lub rumień po kwalifikacji",
-          "Wybrane przebarwienia i oznaki fotostarzenia",
-          "Utrata jędrności skóry",
-          "Wybrane zmiany trądzikowe po konsultacji"
+        guidanceTitle: "Ważne przed zabiegiem",
+        guidance: [
+          "Nie odstawiaj przepisanych leków bez konsultacji z lekarzem. Omów stosowane leki, zioła i kosmetyki podczas kwalifikacji do zabiegu."
         ],
         contraindications: [
-          "Świeża opalenizna lub samoopalacz",
-          "Leki, zioła i suplementy fotouczulające – konieczna konsultacja",
-          "Ciąża i karmienie piersią",
-          "Aktywna infekcja lub opryszczka",
-          "Choroby nowotworowe i epilepsja – konieczna konsultacja"
+          "Ciąża i laktacja",
+          "Ciemne fototypy skóry",
+          "Rozrusznik serca",
+          "Nowotwory",
+          "Wrażliwość / uczulenie na światło",
+          "Świeża opalenizna / solarium (min. miesiąc)",
+          "Zioła i leki światłouczulające (retinol, kwasy, dziurawiec, nagietek – 1 miesiąc; retinoidy – 3 miesiące)",
+          "Epilepsja",
+          "Skłonność do keloidów",
+          "Nici i wypełniacze w obszarze zabiegu (nici wchłanialne do 6 mies., niewchłanialne – bezwzględne)",
+          "Infekcje skóry",
+          "Zaburzenia krzepnięcia, czucia i krążenia – przeciwwskazanie względne",
+          "Głębokie zabiegi złuszczające w ciągu ostatniego miesiąca",
+          "Choroby tkanki łącznej i choroby autoimmunologiczne – przeciwwskazanie względne"
         ]
       },
       "laser-przygotowanie": {
@@ -3495,6 +3544,9 @@
     const modalEffects = document.querySelector("#modal-effects");
     const modalIndicationsTitle = document.querySelector("#modal-indications-title");
     const modalIndications = document.querySelector("#modal-indications");
+    const modalAdditionalEffectsSection = document.querySelector("#modal-additional-effects-section");
+    const modalAdditionalEffectsTitle = document.querySelector("#modal-additional-effects-title");
+    const modalAdditionalEffects = document.querySelector("#modal-additional-effects");
     const modalGuidanceSection = document.querySelector("#modal-guidance-section");
     const modalGuidanceTitle = document.querySelector("#modal-guidance-title");
     const modalGuidance = document.querySelector("#modal-guidance");
@@ -3574,6 +3626,10 @@
         fillModalList(modalEffects, details.effects, "positive");
         fillModalList(modalIndications, details.indications, "positive");
       }
+      const additionalEffects = details.effectGroups && details.effectGroups[2];
+      modalAdditionalEffectsSection.hidden = !additionalEffects;
+      modalAdditionalEffectsTitle.textContent = additionalEffects ? additionalEffects.title : "";
+      fillModalList(modalAdditionalEffects, additionalEffects ? additionalEffects.items : [], "positive");
       modalGuidanceSection.hidden = !details.guidance;
       modalGuidanceTitle.textContent = details.guidanceTitle || "Wskazówki i serie zabiegów";
       fillModalList(modalGuidance, details.guidance || [], "positive");
