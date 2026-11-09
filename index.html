@@ -1074,6 +1074,10 @@
       border-radius: 12px;
     }
 
+    .dialog-guidance {
+      margin-top: 24px;
+    }
+
     .dialog-contraindications h3 {
       font-size: 1rem;
     }
@@ -2834,9 +2838,9 @@
             <button class="treatment-open" type="button" data-treatment="elektrokoagulacja" aria-label="Poznaj szczegóły i wskazania: Elektrokoagulacja">Poznaj szczegóły i wskazania →</button>
           </article>
           <article class="treatment-card">
-            <span class="treatment-badge">Fizjoterapia estetyczna</span>
-            <h3 class="treatment-name">NeuroFace &amp; NeuroBody</h3>
-            <p class="treatment-subtitle">Neurorehabilitacja estetyczna twarzy i ciała</p>
+            <span class="treatment-badge">Nowe zabiegi</span>
+            <h3 class="treatment-name">NeuroFace i NeuroBody</h3>
+            <p class="treatment-subtitle">Zabiegi oparte na stymulacji częstotliwościami Nogeira</p>
             <button class="treatment-open" type="button" data-treatment="neurorehabilitacja" aria-label="Poznaj szczegóły i wskazania: NeuroFace i NeuroBody">Poznaj szczegóły i wskazania →</button>
           </article>
         </div>
@@ -2866,12 +2870,16 @@
             <ul id="modal-indications"></ul>
           </section>
         </div>
+        <section class="dialog-list-section dialog-guidance" id="modal-guidance-section" aria-labelledby="modal-guidance-title" hidden>
+          <h3 id="modal-guidance-title">Wskazówki i serie zabiegów</h3>
+          <ul id="modal-guidance"></ul>
+        </section>
         <section class="dialog-list-section dialog-contraindications" aria-labelledby="modal-contraindications-title">
           <h3 id="modal-contraindications-title">Przeciwwskazania</h3>
           <ul id="modal-contraindications"></ul>
         </section>
         <p class="dialog-disclaimer">Przeciwwskazania mogą różnić się zależnie od wybranej metody i stanu zdrowia. Przed zabiegiem poinformuj kosmetologa o chorobach, przyjmowanych lekach i suplementach. W razie wątpliwości zabieg należy odłożyć i skonsultować się z lekarzem.</p>
-        <a class="button treatment-booking booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">Zarezerwuj ten zabieg online</a>
+        <a class="button treatment-booking booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">Rezerwacja online</a>
       </div>
     </dialog>
 
@@ -3411,28 +3419,52 @@
           "Ciąża"
         ]
       },
-      neurorehabilitacja: {
-        title: "NeuroFace & NeuroBody",
-        subtitle: "Neurorehabilitacja estetyczna twarzy i ciała",
-        badge: "Fizjoterapia estetyczna",
-        description: "Indywidualnie dobierane procedury NeuroFace i NeuroBody obejmują pracę z obszarami twarzy lub ciała. Ich zakres ustalany jest po konsultacji.",
-        effects: [
-          "Możliwe zmniejszenie napięcia mięśniowego",
-          "Wsparcie relaksu i komfortu",
-          "Poprawa odczucia lekkości w obszarze zabiegowym",
-          "Indywidualna praca z napięciami twarzy lub ciała"
+      "neurorehabilitacja": {
+        title: "NeuroFace i NeuroBody",
+        subtitle: "Zabiegi oparte na stymulacji częstotliwościami Nogeira",
+        badge: "Nowe zabiegi",
+        description: "Zabiegi NEUROFACE i NEUROBODY oparte są na stymulacji częstotliwościami Nogeira. Oddziałują na zakończenia nerwowe i nerw błędny, co pomaga wyciszyć układ nerwowy i zredukować stres. Zabiegi idealnie sprawdzą się przy stanach napięciowych stawu skroniowo-żuchwowego (bruksizm), wspomagająco przy migrenach. Pobudzają fibroblasty do produkcji kolagenu i elastyny oraz poprawiają mikrokrążenie oraz drenaż limfatyczny. Efekty widoczne już po pierwszym zabiegu.",
+        effectGroups: [
+          {
+            title: "Efekty NeuroFace",
+            items: [
+              "Uniesienie owalu twarzy i poprawa gęstości skóry",
+              "Wygładzenie zmarszczek mimicznych i bruzd",
+              "Redukcja obrzęków i stanów zapalnych",
+              "Rozluźnienie nadmiernie napiętych mięśni twarzy (np. przy bruksizmie)",
+              "Głęboki relaks, redukcja napięcia i poprawa samopoczucia"
+            ]
+          },
+          {
+            title: "Efekty NeuroBody",
+            items: [
+              "Rozluźnienie zrostów i blizn",
+              "Redukcja blizn",
+              "Ujędrnienie skóry",
+              "Redukcja adipocytów",
+              "Redukcja rozstępów",
+              "Zastoje limfatyczne",
+              "Drenaż tkanek"
+            ]
+          }
         ],
-        indications: [
-          "Napięcia mięśniowe twarzy po konsultacji",
-          "Stres związany z napięciem mięśni",
-          "Potrzeba indywidualnej pracy z obszarem twarzy lub ciała",
-          "Dolegliwości stawu skroniowo-żuchwowego – po konsultacji ze specjalistą"
+        guidance: [
+          "Czas trwania: około 60 do 90 minut.",
+          "Seria zabiegów na twarz: 5–7 zabiegów co 3–4 tygodnie.",
+          "Seria zabiegów na ciało: 4–6 zabiegów co 2–4 tygodnie.",
+          "Zabiegi przypominające: co 3–6 miesięcy.",
+          "Zalecenia: Do 7 dni po zabiegu nie korzystamy z basenu, sauny, solarium. Przed i po zabiegu nawodnienie + elektrolity."
         ],
         contraindications: [
-          "Aktywna infekcja, gorączka lub stan zapalny",
-          "Świeże zabiegi stomatologiczne lub operacje – konieczna konsultacja",
-          "Uszkodzenia skóry lub zmiany ropne",
-          "Przeciwwskazania zależne od wybranej procedury, ustalane podczas konsultacji"
+          "Ciąża i okres karmienia piersią",
+          "Wszczepiony rozrusznik serca lub inne implanty elektroniczne, pompa insulinowa",
+          "Padaczka (epilepsja)",
+          "Aktywne infekcje, stany zapalne lub opryszczka w miejscu zabiegu",
+          "Nieleczone nadciśnienie, arytmia",
+          "Toczeń",
+          "Stany gorączkowe",
+          "Choroby nowotworowe – przeciwwskazanie względne",
+          "Uczulenie na nikiel"
         ]
       }
     };
@@ -3444,7 +3476,10 @@
     const modalDescription = document.querySelector("#modal-description");
     const modalEffectsTitle = document.querySelector("#modal-effects-title");
     const modalEffects = document.querySelector("#modal-effects");
+    const modalIndicationsTitle = document.querySelector("#modal-indications-title");
     const modalIndications = document.querySelector("#modal-indications");
+    const modalGuidanceSection = document.querySelector("#modal-guidance-section");
+    const modalGuidance = document.querySelector("#modal-guidance");
     const modalContraindications = document.querySelector("#modal-contraindications");
     const dialogClose = treatmentDialog.querySelector(".dialog-close");
     const rulesDialog = document.querySelector("#rules-modal");
@@ -3510,9 +3545,19 @@
       modalTitle.textContent = details.title;
       modalSubtitle.textContent = details.subtitle;
       modalDescription.textContent = details.description;
-      modalEffectsTitle.textContent = id === "laser-przygotowanie" ? "Zalecenia przed i po zabiegu" : "Efekty zabiegu";
-      fillModalList(modalEffects, details.effects, "positive");
-      fillModalList(modalIndications, details.indications, "positive");
+      if (details.effectGroups) {
+        modalEffectsTitle.textContent = details.effectGroups[0].title;
+        modalIndicationsTitle.textContent = details.effectGroups[1].title;
+        fillModalList(modalEffects, details.effectGroups[0].items, "positive");
+        fillModalList(modalIndications, details.effectGroups[1].items, "positive");
+      } else {
+        modalEffectsTitle.textContent = id === "laser-przygotowanie" ? "Zalecenia przed i po zabiegu" : "Efekty zabiegu";
+        modalIndicationsTitle.textContent = "Wskazania";
+        fillModalList(modalEffects, details.effects, "positive");
+        fillModalList(modalIndications, details.indications, "positive");
+      }
+      modalGuidanceSection.hidden = !details.guidance;
+      fillModalList(modalGuidance, details.guidance || [], "positive");
       fillModalList(modalContraindications, details.contraindications, "caution");
       openSiteDialog(treatmentDialog);
     }
