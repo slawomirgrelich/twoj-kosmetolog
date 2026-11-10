@@ -584,43 +584,9 @@
       pointer-events: none;
     }
 
-    .hero-photo,
-    .hero-badge {
+    .hero-photo {
       position: relative;
       z-index: 1;
-    }
-
-    .hero-badge {
-      position: absolute;
-      right: -14px;
-      bottom: 1px;
-      display: grid;
-      width: 148px;
-      height: 148px;
-      align-content: center;
-      padding: 18px;
-      color: var(--paper);
-      background: var(--plum);
-      border: 7px solid var(--soft);
-      border-radius: 50%;
-      text-align: center;
-      transform: rotate(5deg);
-    }
-
-    .hero-badge strong {
-      display: block;
-      font-family: var(--serif);
-      font-size: 1.8rem;
-      font-weight: 600;
-      line-height: 1.05;
-    }
-
-    .hero-badge span {
-      display: block;
-      margin-top: 5px;
-      color: #f6e5e8;
-      font-size: 0.69rem;
-      line-height: 1.35;
     }
 
     .section {
@@ -2280,16 +2246,6 @@
         height: 460px;
       }
 
-      .hero-badge {
-        right: -8px;
-        width: 126px;
-        height: 126px;
-      }
-
-      .hero-badge strong {
-        font-size: 1.55rem;
-      }
-
       .section {
         padding-block: 96px;
       }
@@ -2390,22 +2346,6 @@
       .hero-media::before {
         top: 18px;
         left: 24px;
-      }
-
-      .hero-badge {
-        right: -4px;
-        bottom: -2px;
-        width: 110px;
-        height: 110px;
-        border-width: 5px;
-      }
-
-      .hero-badge strong {
-        font-size: 1.35rem;
-      }
-
-      .hero-badge span {
-        font-size: 0.61rem;
       }
 
       .section {
@@ -2682,10 +2622,6 @@
             height="684"
             fetchpriority="high"
           >
-          <div class="hero-badge" aria-label="Ponad 25 certyfikatów i szkoleń">
-            <strong>25+</strong>
-            <span>certyfikatów<br>i szkoleń</span>
-          </div>
         </div>
       </div>
     </section>
