@@ -1467,29 +1467,38 @@
 
     .price-row {
       display: flex;
-      align-items: baseline;
+      align-items: center;
       justify-content: space-between;
       gap: 0;
-      padding: 17px 3px;
-      border-bottom: 1px solid rgb(231 229 228 / 70%);
+      padding: 10px 8px;
+      border-bottom: 1px solid #f5f5f4;
+      border-radius: 8px;
+      transition: background 180ms ease;
+    }
+
+    .price-row:hover {
+      background: rgb(250 250 249 / 50%);
     }
 
     .price-row::after {
-      min-width: 16px;
-      flex: 1 1 20px;
-      align-self: flex-end;
+      min-width: 0;
+      flex: 1 1 0;
+      align-self: center;
       order: 1;
-      margin: 0 12px 6px;
+      margin-inline: 12px;
       border-bottom: 1px dotted #d6d3d1;
       content: "";
     }
 
-    .price-row:has(.price-variants)::after,
-    .price-row.is-global-search::after {
+    .price-row:has(.price-variants) {
+      display: block;
+    }
+
+    .price-row:has(.price-variants)::after {
       display: none;
     }
 
-    .price-row:last-child {
+    .price-row:not(:has(~ .price-row:not([hidden]))) {
       border-bottom: 0;
     }
 
@@ -1503,8 +1512,14 @@
       min-width: 0;
       flex: 0 1 auto;
       order: 0;
-      color: #514853;
+      color: #292524;
       font-size: 0.94rem;
+      font-weight: 500;
+      overflow-wrap: anywhere;
+    }
+
+    .price-row:has(.price-variants) .price-name {
+      width: 100%;
     }
 
     .price-category {
@@ -1516,10 +1531,6 @@
       line-height: 1.35;
     }
 
-    .price-row.is-global-search {
-      align-items: flex-start;
-    }
-
     .price-row.is-global-search .price-category {
       display: block;
     }
@@ -1527,71 +1538,21 @@
     .price-value {
       flex: 0 0 auto;
       order: 2;
-      color: var(--plum-deep);
-      font-size: 0.96rem;
-      font-weight: 700;
+      color: #1c1917;
+      font-size: 0.94rem;
+      font-weight: 600;
       text-align: right;
+      white-space: nowrap;
     }
 
     .price-variants {
       display: grid;
-      gap: 5px;
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 0.88em;
+      gap: 0;
+      margin-top: 4px;
+      padding-left: clamp(12px, 3vw, 20px);
+      color: #44403c;
+      font-size: 0.95em;
       line-height: 1.45;
-    }
-
-    .price-row:has(.price-variants--face) .price-name {
-      flex: 1 1 100%;
-    }
-
-    .price-variants--face {
-      grid-template-columns: minmax(0, 1fr) minmax(min-content, 1.4fr);
-      gap: 8px;
-      max-width: 430px;
-    }
-
-    .price-variants--single {
-      grid-template-columns: minmax(0, 1fr);
-    }
-
-    .price-variants--face > span {
-      flex-direction: column;
-      padding: 8px 10px;
-      background: var(--soft);
-      border-radius: 8px;
-    }
-
-    .price-variants--face > span::after {
-      display: none;
-    }
-
-    .price-variants--face strong {
-      text-align: left;
-      overflow-wrap: anywhere;
-    }
-
-    .price-variants--face .font-medium {
-      font-weight: 500;
-    }
-
-    .price-variants--face .text-xs {
-      font-size: 0.75rem;
-      line-height: 1rem;
-    }
-
-    .price-variants--face .text-purple-900 {
-      color: #581c87;
-    }
-
-    .price-variants--face .tracking-wide {
-      letter-spacing: 0.025em;
-      white-space: nowrap;
-    }
-
-    .price-variants--face .price-extra {
-      grid-column: 1 / -1;
     }
 
     .price-subcategory {
@@ -1608,22 +1569,36 @@
       display: block;
       margin-top: 4px;
       color: var(--muted);
-      font-size: 0.88em;
+      font-size: 0.75rem;
+      font-weight: 400;
       line-height: 1.45;
     }
 
     .price-variants > span {
       display: flex;
-      align-items: baseline;
+      min-width: 0;
+      align-items: center;
       gap: 0;
+      padding-block: 7px;
+      border-bottom: 1px solid #f5f5f4;
+    }
+
+    .price-variants > span:last-child {
+      border-bottom: 0;
+    }
+
+    .price-variants > span > span {
+      min-width: 0;
+      flex: 0 1 auto;
+      overflow-wrap: anywhere;
     }
 
     .price-variants > span::after {
-      min-width: 16px;
-      flex: 1 1 20px;
-      align-self: flex-end;
+      min-width: 0;
+      flex: 1 1 0;
+      align-self: center;
       order: 1;
-      margin: 0 12px 5px;
+      margin-inline: 12px;
       border-bottom: 1px dotted #d6d3d1;
       content: "";
     }
@@ -1631,9 +1606,11 @@
     .price-variants strong {
       flex: 0 0 auto;
       order: 2;
-      color: var(--plum-deep);
-      font-weight: 700;
+      color: #1c1917;
+      font-size: 0.94rem;
+      font-weight: 600;
       text-align: right;
+      white-space: nowrap;
     }
 
     .price-empty {
@@ -2501,14 +2478,9 @@
         padding: 5px 16px;
       }
 
-      .price-row {
-        align-items: flex-start;
-        gap: 12px;
-        padding-block: 15px;
-      }
-
       .price-name,
-      .price-value {
+      .price-value,
+      .price-variants strong {
         font-size: 0.84rem;
       }
 
@@ -3140,37 +3112,37 @@
             <li class="price-row" data-category="manual"><span class="price-name">Masaż twarzy 3D / Transbukkalny</span><span class="price-value">230 zł</span></li>
 
             <li class="price-row" data-category="face"><span class="price-name">Konsultacja</span><span class="price-value">100 zł</span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Mikrodermabrazja<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>Z kwasem</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie twarzy<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong class="font-medium text-xs text-purple-900 tracking-wide">Wycena indywidualna</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Peelingi chemiczne<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>Retinol / TCA</span><strong>220 zł / 320 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Fale radiowe z laserem biostymulującym<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg z papryką chili<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Peeling ziołowy Jadwiga<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong class="font-medium text-xs text-purple-900 tracking-wide">Wycena indywidualna</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie wodorowe<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span><span class="price-extra"><span>+ fale radiowe</span><strong>300 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg Glow Skin<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>210 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg kolagenowy z masażem<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry wrażliwej / naczyniowej / AZS<span class="price-variants price-variants--face price-variants--single"><span><span>Twarz</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg z drenażem limfatycznym<span class="price-variants price-variants--face price-variants--single"><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg Anty Aging estGen<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>240 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry trądzikowej<span class="price-variants price-variants--face price-variants--single"><span><span>Twarz</span><strong>200 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg z biomikroigłami<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>240 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Biopeptydowy lifting<span class="price-variants price-variants--face price-variants--single"><span><span>Twarz + szyja + dekolt</span><strong>270 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="face"><span class="price-name">Zabieg personalizowany z masażem Energy Chi<span class="price-variants price-variants--face price-variants--single"><span><span>Twarz + szyja + dekolt</span><strong>240 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Mikrodermabrazja<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span><span><span>Z kwasem</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie twarzy<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>Wycena indywidualna</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Peelingi chemiczne<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span><span><span>Retinol / TCA</span><strong>220 zł / 320 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Fale radiowe z laserem biostymulującym<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg z papryką chili<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Peeling ziołowy Jadwiga<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>Wycena indywidualna</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Oczyszczanie wodorowe<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span><span><span>+ fale radiowe</span><strong>300 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg Glow Skin<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>210 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg kolagenowy z masażem<span class="price-variants"><span><span>Twarz</span><strong>180 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry wrażliwej / naczyniowej / AZS<span class="price-variants"><span><span>Twarz</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg z drenażem limfatycznym<span class="price-variants"><span><span>Twarz + szyja + dekolt</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg Anty Aging estGen<span class="price-variants"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>240 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg dla skóry trądzikowej<span class="price-variants"><span><span>Twarz</span><strong>200 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg z biomikroigłami<span class="price-variants"><span><span>Twarz</span><strong>200 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>240 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Biopeptydowy lifting<span class="price-variants"><span><span>Twarz + szyja + dekolt</span><strong>270 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="face"><span class="price-name">Zabieg personalizowany z masażem Energy Chi<span class="price-variants"><span><span>Twarz + szyja + dekolt</span><strong>240 zł</strong></span></span></span></li>
 
             <li class="price-row" data-category="aesthetic"><span class="price-name">Konsultacja</span><span class="price-value">100 zł</span></li>
             <li class="price-row" data-category="aesthetic"><span class="price-name">Elektrokoagulacja (usuwanie włókniaków)</span><span class="price-value">200 zł</span></li>
             <li class="price-row" data-category="aesthetic"><span class="price-name">Mezoterapia skóry głowy</span><span class="price-value">185 zł</span></li>
             <li class="price-row" data-category="aesthetic"><span class="price-name">Mezoterapia igłowa koktajl<span class="price-variants"><span><span>Twarz</span><strong>250 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>300 zł</strong></span></span></span></li>
             <li class="price-row" data-category="aesthetic"><span class="price-name">Mezoterapia mikroigłowa<span class="price-variants"><span><span>Twarz</span><strong>280 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>330 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="aesthetic"><span class="price-name">estGen mezoterapia mikroigłowa<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>300 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>350 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="aesthetic"><span class="price-name">Mezoterapia mikroigłowa z biopeptydami<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>350 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>390 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">estGen mezoterapia mikroigłowa<span class="price-variants"><span><span>Twarz</span><strong>300 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>350 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="aesthetic"><span class="price-name">Mezoterapia mikroigłowa z biopeptydami<span class="price-variants"><span><span>Twarz</span><strong>350 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>390 zł</strong></span></span></span></li>
             <li class="price-row" data-category="aesthetic"><span class="price-name">Mezoterapia igłowa kwasem hialuronowym / Ampułkostrzykawka</span><span class="price-value">350 zł</span></li>
             <li class="price-row" data-category="aesthetic"><span class="price-name">Lipoliza iniekcyjna<span class="price-variants"><span><span>Brzuch</span><strong>250 zł</strong></span><span><span>Uda</span><strong>300 zł</strong></span><span><span>Ramiona</span><strong>250 zł</strong></span></span></span></li>
             <li class="price-row" data-category="aesthetic"><span class="price-name">Tropokolagen<span class="price-variants"><span><span>2 ml</span><strong>300 zł</strong></span><span><span>4 ml</span><strong>550 zł</strong></span><span><span>6 ml</span><strong>790 zł</strong></span></span></span></li>
             <li class="price-row" data-category="aesthetic"><span class="price-name">Radiofrekwencja mikroigłowa<span class="price-variants"><span><span>Twarz</span><strong>590 zł</strong></span><span><span>Twarz + szyja</span><strong>690 zł</strong></span><span><span>Twarz + szyja i dekolt</span><strong>800 zł</strong></span><span><span>Biust</span><strong>490 zł</strong></span><span><span>Ramiona</span><strong>390 zł</strong></span><span><span>Brzuch</span><strong>490 zł</strong></span><span><span>Pośladki (rozstępy, wiotka skóra)</span><strong>550 zł</strong></span><span><span>Redukcja blizny</span><strong>350 zł</strong></span></span></span></li>
 
             <li class="price-row" data-category="neuro"><span class="price-name">Neuro Scars (redukcja blizny)<span class="price-variants"><span><span>Mała</span><strong>300 zł</strong></span><span><span>Średnia</span><strong>400 zł</strong></span><span><span>Duża</span><strong>500 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="neuro"><span class="price-name">Neuro Face – Neuro Lifting<span class="price-variants price-variants--face"><span><span>Twarz</span><strong>550 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>600 zł</strong></span></span></span></li>
+            <li class="price-row" data-category="neuro"><span class="price-name">Neuro Face – Neuro Lifting<span class="price-variants"><span><span>Twarz</span><strong>550 zł</strong></span><span><span>Twarz + szyja + dekolt</span><strong>600 zł</strong></span></span></span></li>
             <li class="price-row" data-category="neuro"><span class="price-name">Neuro Inflamacja (trądzik, trądzik różowaty, bruksizm)</span><span class="price-value">550 zł</span></li>
             <li class="price-row" data-category="neuro"><span class="price-name">Neuro Body (ujędrnianie, redukcja tkanki tłuszczowej)</span><span class="price-value">550 zł</span></li>
 
@@ -3238,11 +3210,11 @@
 
             <li class="price-row" data-category="permanent"><span class="price-name">Konsultacja</span><span class="price-value">50 zł</span></li>
             <li class="price-row" data-category="permanent"><span class="price-name">Kreska dolna<span class="price-variants"><span><span>Kreska dolna</span><strong>500 zł</strong></span><span><span>Cieniowana</span><strong>600 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="permanent"><span class="price-name">Kreska górna w linii rzęs<span class="price-subnote">500 zł + 150 zł</span></span><span class="price-value">650 zł</span></li>
-            <li class="price-row" data-category="permanent"><span class="price-name">Kreska górna cieniowana<span class="price-subnote">600 zł + 150 zł</span></span><span class="price-value">750 zł</span></li>
-            <li class="price-row" data-category="permanent"><span class="price-name">Kreska górna eyeliner<span class="price-subnote">600 zł + 200 zł</span></span><span class="price-value">800 zł</span></li>
-            <li class="price-row" data-category="permanent"><span class="price-name">Brwi (dowolna metoda)<span class="price-subnote">750 zł + 200 zł</span></span><span class="price-value">950 zł</span></li>
-            <li class="price-row" data-category="permanent"><span class="price-name">Usta (dowolna metoda)<span class="price-subnote">800 zł + 200 zł</span></span><span class="price-value">1000 zł</span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Kreska górna w linii rzęs</span><span class="price-value">650 zł<span class="price-subnote">500 zł + 150 zł</span></span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Kreska górna cieniowana</span><span class="price-value">750 zł<span class="price-subnote">600 zł + 150 zł</span></span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Kreska górna eyeliner</span><span class="price-value">800 zł<span class="price-subnote">600 zł + 200 zł</span></span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Brwi (dowolna metoda)</span><span class="price-value">950 zł<span class="price-subnote">750 zł + 200 zł</span></span></li>
+            <li class="price-row" data-category="permanent"><span class="price-name">Usta (dowolna metoda)</span><span class="price-value">1000 zł<span class="price-subnote">800 zł + 200 zł</span></span></li>
             <li class="price-row" data-category="permanent"><span class="price-name">Odświeżenie brwi / ust<span class="price-variants"><span><span>Do roku</span><strong>550 zł</strong></span><span><span>Do 2 lat</span><strong>650 zł</strong></span></span></span></li>
           </ul>
           <p class="price-empty" id="price-empty" hidden>Nie znaleziono zabiegów pasujących do tego hasła.</p>
