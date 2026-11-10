@@ -680,53 +680,25 @@
       font-style: italic;
     }
 
-    .credentials {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 58px;
-      padding: 22px;
-      background: var(--soft);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+    .certificate-open {
+      gap: 8px;
+      margin-top: 24px;
+      padding: 12px 24px;
+      background: #581c87;
+      border-color: #581c87;
+      font-size: 0.875rem;
+      font-weight: 500;
     }
 
-    .credential {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      padding: 10px 14px;
+    .certificate-open:hover {
+      color: var(--paper);
+      background: #6b21a8;
+      border-color: #6b21a8;
     }
 
-    .credential-icon {
-      display: grid;
-      width: 46px;
-      height: 46px;
-      flex: 0 0 auto;
-      place-items: center;
-      color: var(--plum);
-      background: var(--rose-pale);
-      border-radius: 50%;
-    }
-
-    .credential-icon svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .credential strong {
-      display: block;
-      color: var(--plum-deep);
-      font-size: 0.88rem;
-      line-height: 1.35;
-    }
-
-    .credential span:last-child {
-      display: block;
-      margin-top: 3px;
-      color: var(--muted);
-      font-size: 0.76rem;
-      line-height: 1.45;
+    .certificate-open svg {
+      width: 16px;
+      height: 16px;
     }
 
     .qualifications {
@@ -964,6 +936,147 @@
 
     .dialog-close:hover {
       background: var(--rose-pale);
+    }
+
+    .certificates-dialog .dialog-inner {
+      max-width: 62rem;
+    }
+
+    .certificates-dialog h2 {
+      margin-bottom: 12px;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+    }
+
+    .certificates-subtitle {
+      margin-bottom: 12px;
+      color: var(--muted);
+    }
+
+    .certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      padding: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .certificate-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .certificate-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    .certificate-tile {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      gap: 10px;
+      padding: 12px;
+      color: var(--plum-deep);
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+      text-align: left;
+    }
+
+    .certificate-tile:hover {
+      border-color: var(--rose);
+    }
+
+    .certificate-tile img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      background: var(--paper);
+      border-radius: 6px;
+    }
+
+    .certificate-error {
+      color: var(--red);
+      font-size: 0.8rem;
+    }
+
+    .certificate-lightbox.modal-overlay {
+      padding: 0;
+    }
+
+    .certificate-lightbox.modal-overlay[open] {
+      align-items: flex-start;
+    }
+
+    .certificate-lightbox-inner {
+      display: flex;
+      width: 100%;
+      height: 100dvh;
+      flex-direction: column;
+      margin: 0;
+      padding: clamp(16px, 3vw, 24px);
+      background: var(--paper);
+    }
+
+    .certificate-lightbox-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .certificate-lightbox-header h2 {
+      margin: 0;
+      font-size: clamp(1.25rem, 3vw, 1.7rem);
+      line-height: 1.3;
+    }
+
+    .certificate-lightbox-view {
+      display: flex;
+      min-height: 0;
+      max-height: calc(100dvh - 180px);
+      flex: 1 1 auto;
+      overflow: auto;
+      overscroll-behavior: contain;
+      background: var(--soft);
+      border-radius: 8px;
+    }
+
+    .certificate-lightbox-view img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: calc(100dvh - 180px);
+      margin: auto;
+      object-fit: contain;
+    }
+
+    .certificate-lightbox-view.is-zoomed img {
+      flex: 0 0 auto;
+      align-self: flex-start;
+      max-width: none;
+      max-height: none;
+      margin: 0;
+    }
+
+    .certificate-zoom {
+      margin-top: 12px;
+    }
+
+    @media (max-width: 680px) {
+      .certificate-tile {
+        padding: 8px;
+        font-size: 0.78rem;
+      }
     }
 
     .treatment-dialog h2 {
@@ -2378,17 +2491,6 @@
         font-size: 2.55rem;
       }
 
-      .credentials {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 3px;
-        margin-top: 38px;
-        padding: 12px;
-      }
-
-      .credential {
-        padding: 9px 6px;
-      }
-
       .dialog-lists {
         grid-template-columns: minmax(0, 1fr);
         gap: 20px;
@@ -2658,7 +2760,7 @@
         <div class="about-grid">
           <div class="about-media reveal">
             <img
-              class="about-photo"
+              class="about-photo rounded-3xl shadow object-cover w-full h-full"
               src="magda.jpg"
               alt="Magdalena Nowicz w fartuszku kosmetologicznym"
               width="680"
@@ -2673,37 +2775,15 @@
             <p>Zapraszam do gabinetu kosmetologicznego na profesjonalne zabiegi wykonywane na najwyższej klasie kosmetykach. Jestem fizjoterapeutką i kosmetologiem. Systematycznie podnoszę kwalifikacje na kursach i szkoleniach.</p>
             <p>Oferuję Państwu zabiegi z zakresu kosmetyki i kosmetologii twarzy, szyi i dekoltu. W ofercie znajdują się również specjalistyczne masaże i refleksoterapia twarzy. Zapraszam do zapoznania się z pełną ofertą gabinetu.</p>
             <span class="signature">Magdalena Nowicz – Twój Kosmetolog</span>
+            <div>
+              <button id="open-cert-modal" class="button certificate-open mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-900 text-white font-medium hover:bg-purple-800 transition shadow" type="button" aria-haspopup="dialog" aria-controls="certificates-modal">
+                <span>Zobacz certyfikaty i dyplomy</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="credentials reveal" aria-label="Kwalifikacje i atuty gabinetu">
-          <div class="credential">
-            <span class="credential-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M12 3 19 6v5c0 4.4-2.7 7.8-7 10-4.3-2.2-7-5.6-7-10V6l7-3Z"/>
-                <path d="m9 12 2 2 4-4"/>
-              </svg>
-            </span>
-            <span><strong>Ponad 25 certyfikatów i szkoleń</strong><span>Stały rozwój i aktualna wiedza</span></span>
-          </div>
-          <div class="credential">
-            <span class="credential-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M12 3 14.8 8.7 21 9.6l-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/>
-              </svg>
-            </span>
-            <span><strong>Kosmetolog i fizjoterapeuta</strong><span>Wykształcenie i indywidualne podejście</span></span>
-          </div>
-          <div class="credential">
-            <span class="credential-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M4 20V9l8-5 8 5v11H4Z"/>
-                <path d="M9 20v-6h6v6M8 10h.01M12 10h.01M16 10h.01"/>
-              </svg>
-            </span>
-            <span><strong>Laser diodowy MeDioStar</strong><span>Nowoczesny sprzęt zabiegowy</span></span>
-          </div>
-        </div>
         <div class="qualifications reveal" aria-label="Wykształcenie i specjalizacje">
           <div class="qualification-group">
             <h3>Wykształcenie</h3>
@@ -2728,6 +2808,84 @@
         </div>
       </div>
     </section>
+
+    <dialog class="modal-overlay certificates-dialog" id="certificates-modal" aria-labelledby="certificates-title" aria-describedby="certificates-subtitle">
+      <div class="dialog-inner">
+        <div class="dialog-topline">
+          <div>
+            <h2 id="certificates-title">Kwalifikacje i certyfikaty zawodowe</h2>
+            <p class="certificates-subtitle" id="certificates-subtitle">Nieustanny rozwój, regularne szkolenia oraz praktyczna wiedza poparta certyfikacją w kosmetologii estetycznej.</p>
+          </div>
+          <button class="dialog-close" id="close-certificates-btn" type="button" aria-label="Zamknij certyfikaty">×</button>
+        </div>
+        <div class="certificate-grid">
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/galeria/kosmetologia-estetyczna-duzy.jpg" data-certificate-title="Kosmetologia estetyczna" data-certificate-type="Świadectwo" aria-label="Powiększ świadectwo: kosmetologia estetyczna">
+            <img src="certyfikaty/galeria/kosmetologia-estetyczna-podglad.jpg" alt="" width="423" height="600" loading="lazy" decoding="async">
+            <span>Studia podyplomowe – kosmetologia estetyczna</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/galeria/fizjoterapia-duzy.jpg" data-certificate-title="Fizjoterapia" data-certificate-type="Dyplom" aria-label="Powiększ dyplom: fizjoterapia">
+            <img src="certyfikaty/galeria/fizjoterapia-podglad.jpg" alt="" width="600" height="439" loading="lazy" decoding="async">
+            <span>Dyplom – fizjoterapia</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/galeria/naturoterapia-duzy.jpg" data-certificate-title="Naturoterapia" data-certificate-type="Świadectwo" aria-label="Powiększ świadectwo: naturoterapia">
+            <img src="certyfikaty/galeria/naturoterapia-podglad.jpg" alt="" width="421" height="600" loading="lazy" decoding="async">
+            <span>Studia podyplomowe – naturoterapia</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/galeria/laseroterapia-duzy.jpg" data-certificate-title="Laseroterapia w kosmetologii" aria-label="Powiększ certyfikat: laseroterapia w kosmetologii">
+            <img src="certyfikaty/galeria/laseroterapia-podglad.jpg" alt="" width="424" height="600" loading="lazy" decoding="async">
+            <span>Laseroterapia w kosmetologii</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/galeria/kosmetologia-holistyczna-duzy.jpg" data-certificate-title="Kosmetologia holistyczna" aria-label="Powiększ certyfikat: kosmetologia holistyczna">
+            <img src="certyfikaty/galeria/kosmetologia-holistyczna-podglad.jpg" alt="" width="600" height="424" loading="lazy" decoding="async">
+            <span>Kosmetologia holistyczna</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/galeria/mezoterapia-duzy.jpg" data-certificate-title="Mezoterapia" aria-label="Powiększ certyfikat: mezoterapia">
+            <img src="certyfikaty/galeria/mezoterapia-podglad.jpg" alt="" width="600" height="424" loading="lazy" decoding="async">
+            <span>Mezoterapia</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/galeria/mezoterapia-iglowa-duzy.jpg" data-certificate-title="Mezoterapia igłowa" aria-label="Powiększ certyfikat: mezoterapia igłowa">
+            <img src="certyfikaty/galeria/mezoterapia-iglowa-podglad.jpg" alt="" width="600" height="424" loading="lazy" decoding="async">
+            <span>Mezoterapia igłowa</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/galeria/thalgolift-duzy.jpg" data-certificate-title="Masaż Thalgolift" aria-label="Powiększ certyfikat: masaż Thalgolift">
+            <img src="certyfikaty/galeria/thalgolift-podglad.jpg" alt="" width="600" height="424" loading="lazy" decoding="async">
+            <span>Masaż Thalgolift</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/galeria/laser-podologia-oryginal.png" data-certificate-title="Laseroterapia w podologii i kosmetologii" aria-label="Powiększ certyfikat: laseroterapia w podologii i kosmetologii">
+            <img src="certyfikaty/galeria/laser-podologia-podglad.jpg" alt="" width="600" height="412" loading="lazy" decoding="async">
+            <span>Laseroterapia w podologii i kosmetologii</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/galeria/neuro-face-oryginal.png" data-certificate-title="Neuro Face estGen" aria-label="Powiększ certyfikat: Neuro Face estGen">
+            <img src="certyfikaty/galeria/neuro-face-podglad.jpg" alt="" width="600" height="421" loading="lazy" decoding="async">
+            <span>Neuro Face estGen</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="modal-overlay certificate-lightbox" id="certificate-lightbox" aria-labelledby="certificate-lightbox-title">
+      <div class="certificate-lightbox-inner">
+        <div class="certificate-lightbox-header">
+          <h2 id="certificate-lightbox-title">Certyfikat</h2>
+          <button class="dialog-close" id="close-certificate-lightbox" type="button" aria-label="Zamknij powiększenie">×</button>
+        </div>
+        <p class="certificate-error" id="certificate-lightbox-error" role="status" hidden>Nie udało się załadować certyfikatu.</p>
+        <div class="certificate-lightbox-view" id="certificate-lightbox-view" tabindex="0" aria-label="Podgląd certyfikatu">
+          <img id="certificate-lightbox-image" alt="" decoding="async">
+        </div>
+        <button class="button button-light certificate-zoom" id="certificate-zoom" type="button" aria-pressed="false">Powiększ zdjęcie</button>
+      </div>
+    </dialog>
 
     <section class="updates-section" id="aktualnosci" aria-labelledby="updates-title">
       <div class="updates-card">
@@ -3612,7 +3770,18 @@
     const rulesDialog = document.querySelector("#rules-modal");
     const rulesOpen = document.querySelector("#open-rules-btn");
     const rulesClose = document.querySelector("#close-rules-btn");
+    const certificatesDialog = document.querySelector("#certificates-modal");
+    const certificatesOpen = document.querySelector("#open-cert-modal");
+    const certificatesClose = document.querySelector("#close-certificates-btn");
+    const certificateLightbox = document.querySelector("#certificate-lightbox");
+    const certificateLightboxClose = document.querySelector("#close-certificate-lightbox");
+    const certificateLightboxTitle = document.querySelector("#certificate-lightbox-title");
+    const certificateLightboxImage = document.querySelector("#certificate-lightbox-image");
+    const certificateLightboxView = document.querySelector("#certificate-lightbox-view");
+    const certificateLightboxError = document.querySelector("#certificate-lightbox-error");
+    const certificateZoom = document.querySelector("#certificate-zoom");
     let lastTreatmentTrigger = null;
+    let lastCertificateTrigger = null;
 
     function openSiteDialog(dialog) {
       dialog.showModal();
@@ -3626,16 +3795,65 @@
         if (event.target === dialog) dialog.close();
       });
       dialog.addEventListener("close", () => {
-        if (document.querySelector(".modal-overlay[open]")) return;
-        document.body.classList.remove("overflow-hidden");
+        const openDialog = document.querySelector(".modal-overlay[open]");
+        if (!openDialog) document.body.classList.remove("overflow-hidden");
         const trigger = getTrigger();
-        if (trigger) trigger.focus();
+        if (trigger && (!openDialog || openDialog.contains(trigger))) trigger.focus();
       });
     }
 
     setupSiteDialog(treatmentDialog, dialogClose, () => lastTreatmentTrigger);
     setupSiteDialog(rulesDialog, rulesClose, () => rulesOpen);
+    setupSiteDialog(certificatesDialog, certificatesClose, () => certificatesOpen);
+    setupSiteDialog(certificateLightbox, certificateLightboxClose, () => lastCertificateTrigger);
     rulesOpen.addEventListener("click", () => openSiteDialog(rulesDialog));
+    certificatesOpen.addEventListener("click", () => openSiteDialog(certificatesDialog));
+
+    document.querySelectorAll(".certificate-tile").forEach((button) => {
+      const thumbnail = button.querySelector("img");
+      const error = button.querySelector(".certificate-error");
+      thumbnail.addEventListener("load", () => {
+        error.hidden = true;
+      });
+      thumbnail.addEventListener("error", () => {
+        error.hidden = false;
+      });
+      if (thumbnail.complete && !thumbnail.naturalWidth) error.hidden = false;
+
+      button.addEventListener("click", () => {
+        const title = button.dataset.certificateTitle;
+        const src = button.dataset.certificateSrc;
+        if (!title || !src) throw new Error("Missing certificate title or image source");
+
+        lastCertificateTrigger = button;
+        certificateLightboxTitle.textContent = title;
+        const type = button.dataset.certificateType || "Certyfikat";
+        certificateLightboxImage.alt = `${type}: ${title}`;
+        certificateLightboxError.hidden = true;
+        certificateLightboxView.hidden = false;
+        certificateZoom.hidden = false;
+        certificateLightboxView.classList.remove("is-zoomed");
+        certificateZoom.setAttribute("aria-pressed", "false");
+        certificateZoom.textContent = "Powiększ zdjęcie";
+        certificateLightboxImage.src = src;
+        certificateLightboxView.scrollTo({ top: 0, left: 0, behavior: "instant" });
+        openSiteDialog(certificateLightbox);
+      });
+    });
+
+    certificateLightboxImage.addEventListener("error", () => {
+      certificateLightboxError.hidden = false;
+      certificateLightboxView.hidden = true;
+      certificateZoom.hidden = true;
+    });
+
+    certificateZoom.addEventListener("click", () => {
+      const isZoomed = certificateZoom.getAttribute("aria-pressed") !== "true";
+      certificateLightboxView.classList.toggle("is-zoomed", isZoomed);
+      certificateZoom.setAttribute("aria-pressed", String(isZoomed));
+      certificateZoom.textContent = isZoomed ? "Dopasuj zdjęcie" : "Powiększ zdjęcie";
+      if (!isZoomed) certificateLightboxView.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    });
 
     function fillModalList(list, items, type) {
       list.replaceChildren(...items.map((item) => {
