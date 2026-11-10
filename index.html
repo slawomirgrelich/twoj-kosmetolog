@@ -2993,6 +2993,12 @@
             <p class="treatment-subtitle">Zabiegi oparte na stymulacji częstotliwościami Nogeira</p>
             <button class="treatment-open" type="button" data-treatment="neurorehabilitacja" aria-label="Poznaj szczegóły i wskazania: NeuroFace i NeuroBody">Poznaj szczegóły i wskazania →</button>
           </article>
+          <article class="treatment-card">
+            <span class="treatment-badge">Informacje o usłudze</span>
+            <h3 class="treatment-name">Biorezonans komórkowy</h3>
+            <p class="treatment-subtitle">Usługa uzupełniająca, która nie zastępuje badań medycznych ani diagnostyki.</p>
+            <button class="treatment-open" id="open-biorezonans-btn" type="button" aria-haspopup="dialog" aria-controls="biorezonans-modal">Poznaj szczegóły i wskazania →</button>
+          </article>
         </div>
 
         <p class="service-footnote">Opis ma charakter informacyjny. Ostateczny wybór zabiegu i kwalifikacja odbywają się po konsultacji oraz wywiadzie przed wizytą.</p>
@@ -3033,6 +3039,36 @@
           <ul id="modal-contraindications"></ul>
         </section>
         <p class="dialog-disclaimer">Przeciwwskazania mogą różnić się zależnie od wybranej metody i stanu zdrowia. Przed zabiegiem poinformuj kosmetologa o chorobach, przyjmowanych lekach i suplementach. W razie wątpliwości zabieg należy odłożyć i skonsultować się z lekarzem.</p>
+        <a class="button treatment-booking booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">Rezerwacja online</a>
+      </div>
+    </dialog>
+
+    <dialog class="modal-overlay treatment-dialog" id="biorezonans-modal" aria-labelledby="biorezonans-title" aria-describedby="biorezonans-description biorezonans-disclaimer">
+      <div class="dialog-inner">
+        <div class="dialog-topline">
+          <div>
+            <span class="treatment-badge">Informacje o usłudze</span>
+            <h2 id="biorezonans-title">Biorezonans komórkowy</h2>
+            <p class="modal-subtitle">Informacje o usłudze i przygotowanie do wizyty</p>
+          </div>
+          <button class="dialog-close" id="close-biorezonans-btn" type="button" aria-label="Zamknij okno biorezonansu">×</button>
+        </div>
+        <p class="dialog-description" id="biorezonans-description">Wypadają Ci włosy, łamią się paznokcie lub pojawiają się zmiany skórne? Przyczyny mogą być różnorodne. Ich ocenę i dobór odpowiednich badań warto omówić z lekarzem.</p>
+        <div class="dialog-lists">
+          <section class="dialog-list-section" aria-labelledby="biorezonans-information-title">
+            <h3 id="biorezonans-information-title">Informacje o usłudze</h3>
+            <ul id="biorezonans-information"></ul>
+          </section>
+          <section class="dialog-list-section" aria-labelledby="biorezonans-preparation-title">
+            <h3 id="biorezonans-preparation-title">Jak przygotować się do wizyty</h3>
+            <ul id="biorezonans-preparation"></ul>
+          </section>
+        </div>
+        <section class="dialog-list-section dialog-contraindications" aria-labelledby="biorezonans-contraindications-title">
+          <h3 id="biorezonans-contraindications-title">Przeciwwskazania</h3>
+          <ul id="biorezonans-contraindications"></ul>
+        </section>
+        <p class="dialog-disclaimer" id="biorezonans-disclaimer">Nie wykazano, że biorezonans wiarygodnie wykrywa niedobory, ocenia funkcje narządów lub oznacza toksyny. Usługa nie jest diagnostyką i nie zastępuje badań laboratoryjnych ani konsultacji lekarskiej.</p>
         <a class="button treatment-booking booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">Rezerwacja online</a>
       </div>
     </dialog>
@@ -3780,6 +3816,9 @@
     const certificateLightboxView = document.querySelector("#certificate-lightbox-view");
     const certificateLightboxError = document.querySelector("#certificate-lightbox-error");
     const certificateZoom = document.querySelector("#certificate-zoom");
+    const biorezonansDialog = document.querySelector("#biorezonans-modal");
+    const biorezonansOpen = document.querySelector("#open-biorezonans-btn");
+    const biorezonansClose = document.querySelector("#close-biorezonans-btn");
     let lastTreatmentTrigger = null;
     let lastCertificateTrigger = null;
 
@@ -3806,8 +3845,10 @@
     setupSiteDialog(rulesDialog, rulesClose, () => rulesOpen);
     setupSiteDialog(certificatesDialog, certificatesClose, () => certificatesOpen);
     setupSiteDialog(certificateLightbox, certificateLightboxClose, () => lastCertificateTrigger);
+    setupSiteDialog(biorezonansDialog, biorezonansClose, () => biorezonansOpen);
     rulesOpen.addEventListener("click", () => openSiteDialog(rulesDialog));
     certificatesOpen.addEventListener("click", () => openSiteDialog(certificatesDialog));
+    biorezonansOpen.addEventListener("click", () => openSiteDialog(biorezonansDialog));
 
     document.querySelectorAll(".certificate-tile").forEach((button) => {
       const thumbnail = button.querySelector("img");
@@ -3881,6 +3922,29 @@
       }));
     }
 
+    fillModalList(document.querySelector("#biorezonans-information"), [
+      "Niedobory witamin i minerałów wymagają odpowiednich badań laboratoryjnych.",
+      "Kondycję układu krążenia i odporności należy omawiać z lekarzem.",
+      "Pracę wątroby, nerek i tarczycy ocenia się za pomocą właściwych badań medycznych.",
+      "Wyników usługi nie należy traktować jako diagnozy ani pomiaru toksyn."
+    ], "positive");
+    fillModalList(document.querySelector("#biorezonans-preparation"), [
+      "Zdejmij biżuterię, zegarek i metalowe akcesoria zgodnie z zasadami gabinetu.",
+      "Wyłączenie internetu i odłożenie telefonu ustal z gabinetem.",
+      "Przerwę w jedzeniu skonsultuj z lekarzem; nie wprowadzaj postu na własną rękę.",
+      "Pij wodę zgodnie ze swoimi potrzebami i zaleceniami lekarza.",
+      "Nie odstawiaj leków, suplementów ani ziół bez konsultacji z lekarzem.",
+      "Wskazówki dotyczące palenia przed wizytą ustal z gabinetem."
+    ], "positive");
+    fillModalList(document.querySelector("#biorezonans-contraindications"), [
+      "Ciąża i okres karmienia",
+      "Rozrusznik serca lub implanty elektroniczne",
+      "Metalowe elementy w ciele (śruby, endoprotezy)",
+      "Przerwanie ciągłości skóry i kości",
+      "Choroba zakrzepowa",
+      "Pompa insulinowa"
+    ], "caution");
+
     function openTreatmentModal(id, trigger = document.activeElement) {
       const details = treatmentsData[id];
       if (!details) throw new Error(`Unknown treatment: ${id}`);
@@ -3912,7 +3976,7 @@
       openSiteDialog(treatmentDialog);
     }
 
-    document.querySelectorAll(".treatment-open").forEach((button) => {
+    document.querySelectorAll(".treatment-open[data-treatment]").forEach((button) => {
       button.addEventListener("click", () => {
         openTreatmentModal(button.dataset.treatment, button);
       });
