@@ -4,25 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#4a154b">
-  <meta name="description" content="Gabinet kosmetologiczny w Gliwicach. Specjalistyczna laseroterapia, masaże liftingujące Kobido, estGen, mezoterapia i holistyczna pielęgnacja twarzy. Umów wizytę: 512 166 250.">
+  <meta name="theme-color" content="#581c87">
+  <meta name="description" content="Gabinet kosmetologiczny Twój Kosmetolog Magdalena Nowicz w Gliwicach (ul. Dolnej Wsi 57). Profesjonalna kosmetyka twarzy, laseroterapia, mezoterapia igłowa, tropokolagen, biorezonans i neurorehabilitacja. Sprawdź cennik i zarezerwuj wizytę!">
+  <meta name="keywords" content="kosmetolog Gliwice, gabinet kosmetyczny Gliwice, zabiegi na twarz Gliwice, laseroterapia Gliwice, depilacja laserowa Gliwice, mezoterapia igłowa, biorezonans Gliwice, tropokolagen, cennik kosmetyczka Gliwice, Magdalena Nowicz">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
-  <meta property="og:title" content="Twój Kosmetolog Gliwice – Magdalena Marędziak">
-  <meta property="og:description" content="Profesjonalna kosmetologia estetyczna, laseroterapia i masaże w Gliwicach. Zadbaj o zdrowie i piękno swojej skóry.">
+  <meta property="og:title" content="Twój Kosmetolog Gliwice – Magdalena Nowicz | Zabiegi na twarz, Laseroterapia, Cennik">
+  <meta property="og:description" content="Gabinet kosmetologiczny Twój Kosmetolog Magdalena Nowicz w Gliwicach (ul. Dolnej Wsi 57). Profesjonalna kosmetyka twarzy, laseroterapia, mezoterapia igłowa, tropokolagen, biorezonans i neurorehabilitacja. Sprawdź cennik i zarezerwuj wizytę!">
   <meta property="og:url" content="https://twojkosmetolog.com">
-  <title>Twój Kosmetolog Gliwice | Magdalena Marędziak – Gabinet Kosmetologii i Fizjoterapii</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%236A2E61'/%3E%3Cpath d='M24 39C22 30 17 26 17 20c0-6 4-10 7-12 3 2 7 6 7 12 0 6-5 10-7 19Z' fill='none' stroke='%23f3e5e7' stroke-width='2'/%3E%3C/svg%3E">
+  <title>Twój Kosmetolog Gliwice – Magdalena Nowicz | Zabiegi na twarz, Laseroterapia, Cennik</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%23581c87'/%3E%3Cpath d='M24 39C22 30 17 26 17 20c0-6 4-10 7-12 3 2 7 6 7 12 0 6-5 10-7 19Z' fill='none' stroke='%23f3e5e7' stroke-width='2'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: light;
-      --primary-color: #6a2e61;
+      --accent-purple: #581c87;
+      --primary-color: var(--accent-purple);
       --plum: var(--primary-color);
-      --plum-deep: #4d2349;
+      --plum-deep: #3b0764;
+      --accent-soft: #f3e8ff;
+      --accent-border: #d8b4fe;
       --rose: #d48c96;
       --rose-pale: #f3e5e7;
       --ink: #302832;
@@ -90,7 +94,7 @@
     a:focus-visible,
     input:focus-visible,
     summary:focus-visible {
-      outline: 3px solid var(--rose);
+      outline: 3px solid var(--accent-purple);
       outline-offset: 4px;
     }
 
@@ -224,7 +228,7 @@
       bottom: 1px;
       left: 0;
       height: 2px;
-      background: var(--rose);
+      background: var(--accent-purple);
       content: "";
       transform: scaleX(0);
       transform-origin: left;
@@ -433,8 +437,8 @@
       width: 100%;
       overflow: hidden;
       padding-block: 12px;
-      background: #fafaf9;
-      border-block: 1px solid rgb(231 229 228 / 50%);
+      background: linear-gradient(90deg, #f3e8ff, #faf5ff, #f3e8ff);
+      border-block: 1px solid var(--accent-border);
       user-select: none;
     }
 
@@ -452,9 +456,9 @@
       flex: 1 0 50%;
       gap: 16px;
       padding-right: 16px;
-      color: rgb(88 28 135 / 40%);
+      color: var(--accent-purple);
       font-size: 0.75rem;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       white-space: nowrap;
@@ -462,6 +466,7 @@
 
     .treatment-ticker-copy span::after {
       margin-left: 16px;
+      color: var(--accent-purple);
       content: "•";
     }
 
@@ -474,20 +479,26 @@
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       margin: 0 0 17px;
-      color: var(--plum);
+      padding: 5px 12px;
+      color: var(--accent-purple);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      border-radius: 999px;
       font-size: 0.74rem;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 0.16em;
       line-height: 1.35;
       text-transform: uppercase;
     }
 
     .eyebrow::before {
-      width: 26px;
-      height: 1px;
-      background: var(--rose);
+      width: 6px;
+      height: 6px;
+      flex: 0 0 auto;
+      background: var(--accent-purple);
+      border-radius: 50%;
       content: "";
     }
 
@@ -553,7 +564,7 @@
       width: 19px;
       height: 19px;
       flex: 0 0 auto;
-      color: var(--rose);
+      color: var(--accent-purple);
     }
 
     .hero-media {
@@ -609,6 +620,7 @@
 
     .section-heading h2 {
       margin-bottom: 14px;
+      color: var(--accent-purple);
       font-size: clamp(2.35rem, 4vw, 3.4rem);
       line-height: 1.13;
     }
@@ -658,10 +670,12 @@
 
     .about-copy .eyebrow {
       margin-bottom: 12px;
+      color: var(--accent-purple);
     }
 
     .about-copy h2 {
       margin-bottom: 20px;
+      color: var(--accent-purple);
       font-size: clamp(2.45rem, 4vw, 3.55rem);
       line-height: 1.1;
     }
@@ -684,8 +698,8 @@
       gap: 8px;
       margin-top: 24px;
       padding: 12px 24px;
-      background: #581c87;
-      border-color: #581c87;
+      background: var(--accent-purple);
+      border-color: var(--accent-purple);
       font-size: 0.875rem;
       font-weight: 500;
     }
@@ -704,8 +718,8 @@
     .qualifications {
       margin-top: 24px;
       padding: 24px;
-      background: rgb(250 245 255 / 55%);
-      border: 1px solid #f3e8ff;
+      background: #faf5ff;
+      border: 1px solid var(--accent-border);
       border-radius: 16px;
     }
 
@@ -718,13 +732,13 @@
       align-items: center;
       margin: 0 0 12px;
       padding: 4px 11px;
-      color: var(--plum-deep);
-      background: rgb(255 255 255 / 82%);
-      border: 1px solid rgb(233 213 255 / 68%);
+      color: var(--accent-purple);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
       border-radius: 999px;
       box-shadow: 0 1px 2px rgb(40 25 39 / 6%);
       font-size: 0.78rem;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.4;
     }
 
@@ -741,9 +755,9 @@
       display: inline-flex;
       align-items: center;
       padding: 4px 12px;
-      color: #581c87;
-      background: #faf5ff;
-      border: 1px solid rgb(233 213 255 / 60%);
+      color: var(--accent-purple);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
       border-radius: 999px;
       font-size: 0.75rem;
       font-weight: 500;
@@ -781,18 +795,18 @@
       max-width: 100%;
       margin-bottom: 12px;
       padding: 4px 10px;
-      color: #581c87;
-      background: #faf5ff;
-      border: 1px solid rgb(233 213 255 / 50%);
+      color: var(--accent-purple);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
       border-radius: 999px;
       font-size: 0.6875rem;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 1.4;
     }
 
     .treatment-name {
       margin: 0 0 4px;
-      color: #1c1917;
+      color: var(--accent-purple);
       font-family: var(--serif);
       font-size: 1.125rem;
       font-weight: 600;
@@ -805,7 +819,7 @@
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
       margin: 0 0 16px;
-      color: #78716c;
+      color: #57534e;
       font-size: 0.75rem;
       line-height: 1.5;
     }
@@ -991,7 +1005,7 @@
     }
 
     .certificate-tile:hover {
-      border-color: var(--rose);
+      border-color: var(--accent-purple);
     }
 
     .certificate-tile img {
@@ -1201,7 +1215,7 @@
 
     .rules-kicker {
       margin: 0 0 4px;
-      color: #6b21a8;
+      color: var(--accent-purple);
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.1em;
@@ -1307,17 +1321,23 @@
     }
 
     .gift-eyebrow {
-      margin: 0 0 4px;
-      color: #6b21a8;
+      display: inline-flex;
+      margin: 0 0 10px;
+      padding: 5px 12px;
+      color: var(--accent-purple);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      border-radius: 999px;
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.1em;
+      line-height: 1.35;
       text-transform: uppercase;
     }
 
     .gift-card h2 {
       margin-bottom: 8px;
-      color: #1c1917;
+      color: var(--accent-purple);
       font-family: var(--serif);
       font-size: 1.5rem;
       line-height: 1.25;
@@ -1334,7 +1354,7 @@
       min-height: 48px;
       flex: 0 0 auto;
       padding: 12px 24px;
-      color: #581c87;
+      color: var(--accent-purple);
       background: var(--paper);
       border-color: #e9d5ff;
       border-radius: 12px;
@@ -1397,7 +1417,7 @@
 
     .price-tab[aria-selected="true"] {
       color: var(--paper);
-      background: #581c87;
+      background: var(--accent-purple);
       box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
     }
 
@@ -1444,7 +1464,7 @@
 
     .price-search input:focus {
       outline: none;
-      border-color: #581c87;
+      border-color: var(--accent-purple);
       box-shadow: 0 0 0 2px rgb(88 28 135 / 20%);
     }
 
@@ -1641,7 +1661,7 @@
     }
 
     .review-viewport:focus-visible {
-      outline: 3px solid var(--rose);
+      outline: 3px solid var(--accent-purple);
       outline-offset: 5px;
     }
 
@@ -1811,13 +1831,14 @@
     .updates-card {
       padding: 24px;
       background: #fafaf9;
-      border-left: 4px solid #581c87;
+      border-left: 4px solid var(--accent-purple);
       border-radius: 16px;
       box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
     }
 
     .updates-card h2 {
       margin-bottom: 8px;
+      color: var(--accent-purple);
       font-family: var(--serif);
       font-size: clamp(1.45rem, 3vw, 1.8rem);
       line-height: 1.25;
@@ -1827,6 +1848,10 @@
       margin-bottom: 12px;
       color: #57534e;
       font-size: 0.875rem;
+    }
+
+    .updates-card .eyebrow {
+      color: var(--accent-purple);
     }
 
     .updates-content {
@@ -1847,7 +1872,7 @@
       align-items: center;
       gap: 8px;
       padding: 10px 20px;
-      color: #581c87;
+      color: var(--accent-purple);
       background: var(--paper);
       border: 1px solid #e9d5ff;
       border-radius: 12px;
@@ -1918,7 +1943,7 @@
     .contact-section .contact-card h3 {
       margin-bottom: 25px;
       font-family: var(--serif);
-      color: #1c1917;
+      color: var(--accent-purple);
       font-size: 1.5rem;
       line-height: 1.25;
     }
@@ -1943,8 +1968,8 @@
       width: 40px;
       height: 40px;
       place-items: center;
-      color: #6b21a8;
-      background: #faf5ff;
+      color: var(--accent-purple);
+      background: var(--accent-soft);
       border-radius: 50%;
     }
 
@@ -1982,12 +2007,35 @@
       color: var(--plum);
     }
 
+    .contact-section .contact-social {
+      display: block;
+    }
+
+    .contact-section .contact-social a {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      gap: 16px;
+      color: #44403c;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 180ms ease;
+    }
+
+    .contact-section .contact-social a:hover {
+      color: var(--accent-purple);
+    }
+
+    .contact-social .contact-social-label {
+      color: inherit;
+    }
+
     .contact-section .appointment-note {
       margin: 0 0 24px;
       padding: 16px;
       color: #57534e;
       background: #f5f5f4;
-      border-left: 2px solid #5b2160;
+      border-left: 2px solid var(--accent-purple);
       border-radius: 0 12px 12px 0;
       font-size: 0.75rem;
     }
@@ -1999,7 +2047,7 @@
       gap: 8px;
       padding: 16px 20px;
       color: #fff;
-      background: var(--plum-deep);
+      background: var(--accent-purple);
       border: 0;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgb(77 35 73 / 16%);
@@ -2009,7 +2057,7 @@
     }
 
     .contact-section .contact-cta:hover {
-      background: #351832;
+      background: var(--plum-deep);
       box-shadow: 0 10px 24px rgb(77 35 73 / 20%);
       transform: translateY(-1px);
     }
@@ -2151,7 +2199,7 @@
       flex: 0 0 auto;
       padding: 8px 16px;
       color: var(--paper);
-      background: #581c87;
+      background: var(--accent-purple);
       border: 0;
       border-radius: 12px;
       cursor: pointer;
@@ -2195,8 +2243,8 @@
         min-height: 48px;
         gap: 8px;
         padding: 12px;
-        background: #581c87;
-        border-color: #581c87;
+        background: var(--accent-purple);
+        border-color: var(--accent-purple);
         border-radius: 12px;
         box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
         font-size: 0.875rem;
@@ -2961,9 +3009,9 @@
           </article>
           <article class="treatment-card">
             <span class="treatment-badge">Nowe zabiegi</span>
-            <h3 class="treatment-name">NeuroFace i NeuroBody</h3>
+            <h3 class="treatment-name">Neurorehabilitacja</h3>
             <p class="treatment-subtitle">Zabiegi oparte na stymulacji częstotliwościami Nogiera</p>
-            <button class="treatment-open" type="button" data-treatment="neurorehabilitacja" aria-label="Poznaj szczegóły i wskazania: NeuroFace i NeuroBody">Poznaj szczegóły i wskazania →</button>
+            <button class="treatment-open" type="button" data-treatment="neurorehabilitacja" aria-label="Poznaj szczegóły i wskazania: Neurorehabilitacja">Poznaj szczegóły i wskazania →</button>
           </article>
           <article class="treatment-card">
             <span class="treatment-badge">Informacje o usłudze</span>
@@ -3026,21 +3074,15 @@
           <button class="dialog-close" id="close-biorezonans-btn" type="button" aria-label="Zamknij okno biorezonansu">×</button>
         </div>
         <p class="dialog-description" id="biorezonans-description">Wypadają Ci włosy, łamią się paznokcie lub pojawiają się zmiany skórne? Przyczyny mogą być różnorodne. Ich ocenę i dobór odpowiednich badań warto omówić z lekarzem.</p>
-        <div class="dialog-lists">
-          <section class="dialog-list-section" aria-labelledby="biorezonans-information-title">
-            <h3 id="biorezonans-information-title">Informacje o usłudze</h3>
-            <ul id="biorezonans-information"></ul>
-          </section>
-          <section class="dialog-list-section" aria-labelledby="biorezonans-preparation-title">
-            <h3 id="biorezonans-preparation-title">Jak przygotować się do wizyty</h3>
-            <ul id="biorezonans-preparation"></ul>
-          </section>
-        </div>
+        <section class="dialog-list-section" aria-labelledby="biorezonans-preparation-title">
+          <h3 id="biorezonans-preparation-title">Jak przygotować się do wizyty</h3>
+          <ul id="biorezonans-preparation"></ul>
+        </section>
         <section class="dialog-list-section dialog-contraindications" aria-labelledby="biorezonans-contraindications-title">
           <h3 id="biorezonans-contraindications-title">Przeciwwskazania</h3>
           <ul id="biorezonans-contraindications"></ul>
         </section>
-        <p class="dialog-disclaimer" id="biorezonans-disclaimer">Nie wykazano, że biorezonans wiarygodnie wykrywa niedobory, ocenia funkcje narządów lub oznacza toksyny. Usługa nie jest diagnostyką i nie zastępuje badań laboratoryjnych ani konsultacji lekarskiej.</p>
+        <p class="dialog-disclaimer" id="biorezonans-disclaimer">Wyniki są jedynie orientacyjne i nie stanowią diagnozy. Nie wykazano, że biorezonans wiarygodnie wykrywa niedobory, ocenia funkcje narządów lub oznacza toksyny. Usługa nie zastępuje badań laboratoryjnych ani konsultacji lekarskiej.</p>
         <a class="button treatment-booking booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">Rezerwacja online</a>
       </div>
     </dialog>
@@ -3293,6 +3335,14 @@
                 </span>
                 <span><strong>E-mail</strong><a href="mailto:gabinettwojkosmetolog@gmail.com">gabinettwojkosmetolog@gmail.com</a></span>
               </li>
+              <li class="contact-item contact-social">
+                <a href="https://www.facebook.com/magdakosmetolog" target="_blank" rel="noopener noreferrer" aria-label="Odwiedź nas na Facebooku (otwiera się w nowej karcie)">
+                  <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  </span>
+                  <span class="contact-social-label">Odwiedź nas na Facebooku</span>
+                </a>
+              </li>
             </ul>
             <p class="appointment-note"><strong>Ważne:</strong> Gabinet czynny jest wyłącznie na wcześniej umówione wizyty. Jeśli masz bon podarunkowy, wybierz usługę BON podczas rezerwacji online.</p>
             <a class="button contact-cta booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">
@@ -3414,6 +3464,34 @@
       if (window.innerWidth > 1200 && menuToggle.getAttribute("aria-expanded") === "true") closeMenu();
     });
 
+    const laserAftercare = [
+      "Stosowanie filtrów SPF 50 i brak ekspozycji na słońce do miesiąca.",
+      "Rezygnacja z intensywnych aktywności (cardio, basen ze względu na chlor) ok. 5 dni po zabiegu.",
+      "Rezygnacja z sauny i gorących kąpieli ok. 1 tygodnia po zabiegu.",
+      "Nie spożywamy alkoholu ok. 5 dni po zabiegu.",
+      "Nie wykonujemy peelingów mechanicznych, nie zdrapujemy strupków ani pęcherzyków.",
+      "Nawilżanie i pielęgnacja skóry zgodnie z zaleceniami kosmetologa.",
+      "Szczegółowy czas ograniczeń zależy od metody i reakcji skóry; potwierdź zalecenia podczas wizyty."
+    ];
+
+    const laserContraindications = [
+      "Ciąża i laktacja",
+      "Ciemne fototypy skóry",
+      "Rozrusznik serca",
+      "Aktywne choroby nowotworowe",
+      "Wrażliwość / uczulenie na światło",
+      "Świeża opalenizna / solarium (min. miesiąc)",
+      "Zioła i leki światłouczulające oraz sterydy – stosowanie omów podczas kwalifikacji. Zioła, w tym skrzyp, arnikę, nagietek, dziurawiec i rumianek, odstaw na kilka dni po konsultacji.",
+      "Skłonność do keloidów",
+      "Nici i wypełniacze w obszarze zabiegu: nici wchłanialne do 6 miesięcy, niewchłanialne – przeciwwskazanie bezwzględne",
+      "Infekcje skóry, opryszczka w miejscu zabiegowym",
+      "Zaburzenia krzepnięcia, czucia i krążenia – przeciwwskazanie względne",
+      "Głębokie zabiegi złuszczające w ciągu ostatniego miesiąca",
+      "Choroby tkanki łącznej i choroby autoimmunologiczne – przeciwwskazanie względne",
+      "Epilepsja – wymagana konsultacja",
+      "Nie odstawiaj przepisanych leków bez konsultacji z lekarzem."
+    ];
+
     const treatmentsData = {
       "mezoterapia-iglowa": {
         title: "Mezoterapia igłowa",
@@ -3488,7 +3566,7 @@
         title: "Tropokolagen",
         subtitle: "Profesjonalny stymulator tkankowy – iniekcje kolagenu",
         badge: "Stymulator tkankowy",
-        description: "Iniekcje kolagenu pomagają zrównoważyć fizjologiczne procesy zachodzące w skórze i tkance łącznej pod wpływem starzenia i wolnych rodników. To profesjonalny stymulator tkankowy, który pozwoli Twojej skórze odżyć na nowo!",
+        description: "Biokompatybilny preparat zawierający wysokoczyszczony kolagen (głównie typu I). To profesjonalny stymulator tkankowy, który pozwoli Twojej skórze odżyć na nowo!",
         effectGroups: [
           {
             title: "Efekty zabiegu",
@@ -3518,21 +3596,28 @@
             ]
           },
           {
-            title: "Zalety i informacje o zabiegu",
+            title: "PO ZABIEGU",
             items: [
-              "Zabieg regeneracyjny stosowany na różnych obszarach ciała",
-              "Odczucia podczas iniekcji są indywidualne; możliwy jest dyskomfort",
-              "Krótki czas trwania zabiegu",
-              "Po iniekcji mogą wystąpić przejściowe zaczerwienienie, obrzęk lub siniaki",
-              "Zastosowanie całoroczne bez względu na porę roku"
+              "Po zabiegu mogą wystąpić: przejściowe zaczerwienienie, obrzęk lub siniak.",
+              "Zabieg całoroczny.",
+              "Zalecane filtry SPF 50 i brak ekspozycji na słońce do miesiąca.",
+              "Rezygnacja z intensywnych aktywności (cardio, basen ze względu na chlor) ok. 5 dni po zabiegu.",
+              "Rezygnacja z sauny i gorących kąpieli ok. 1 tygodnia po zabiegu.",
+              "Nie spożywamy alkoholu ok. 5 dni po zabiegu.",
+              "Nawilżanie i pielęgnacja skóry zgodnie z zaleceniami kosmetologa."
             ]
           }
         ],
         contraindications: [
-          "Miejscowe aktywne infekcje bakteryjne, wirusowe lub grzybicze w obszarze wkłucia",
-          "Uczulenie na składniki preparatu",
-          "Ciąża i okres karmienia piersią – wymagana konsultacja i kwalifikacja",
-          "Choroby autoimmunologiczne i nowotworowe – wymagana konsultacja"
+          "Ciąża i okres karmienia piersią",
+          "Aktywne procesy nowotworowe oraz trwająca terapia onkologiczna",
+          "Aktywne infekcje i stany zapalne skóry (np. aktywna opryszczka)",
+          "Choroby autoimmunologiczne (np. toczeń, reumatoidalne zapalenie stawów)",
+          "Zaburzenia krzepnięcia krwi / stosowanie leków rozrzedzających krew",
+          "Nadwrażliwość lub alergia na składniki pomocnicze lub alergeny źródłowe. Kolagen w produktach Guna jest pochodzenia wieprzowego; skład użytego preparatu potwierdź przed zabiegiem.",
+          "Skłonność do bliznowców",
+          "Stosowanie doustnej izotretynoiny w ciągu ostatnich 6 miesięcy",
+          "Niekontrolowana cukrzyca"
         ]
       },
       "radiofrekwencja-mikroiglowa": {
@@ -3564,10 +3649,11 @@
         ],
         guidanceTitle: "Seria i zalecenia",
         guidance: [
-          "Zalecane wykonanie 2–4 zabiegów w 4–6 tygodniowych odstępach. Efekty są w pełni widoczne około 3 miesięcy po zabiegu."
+          "Zalecane wykonanie 4 do 6 zabiegów w 4–6 tygodniowych odstępach. Efekty są w pełni widoczne około 3 miesięcy po zabiegu."
         ],
         contraindications: [
-          "Wszczepiony rozrusznik serca lub inne metalowe/elektroniczne implanty w ciele",
+          "Wszczepiony rozrusznik serca lub inne elektroniczne implanty",
+          "Metalowe implanty – wymagają indywidualnej oceny",
           "Ciąża oraz okres karmienia piersią",
           "Choroby nowotworowe",
           "Stany zapalne skóry",
@@ -3580,54 +3666,36 @@
         title: "Zabiegi laserowe",
         subtitle: "Aparaturowa laseroterapia: naczynka, lifting, przebarwienia i rewitalizacja",
         badge: "Laseroterapia",
-        description: "Zabiegi laserowe dobierane są po konsultacji i ocenie skóry. W przypadku infekcji skóry, w tym opryszczki, o kwalifikacji do zabiegu decyduje specjalista.",
+        description: "Laser wysokoenergetyczny emituje precyzyjnie skupione światło laserowe o dużej mocy i może działać w trybach ciągłym oraz impulsowym. Oddziaływanie na tkanki obejmuje efekty termiczne, biostymulacyjne i fotomechaniczne; parametry i możliwość zastosowania dobiera się indywidualnie po konsultacji.",
         effectGroups: [
+          {
+            title: "Mechanizmy działania",
+            items: [
+              "Efekt termiczny: energia lasera jest przekształcana w ciepło, które może wspierać krążenie, regenerację i łagodzenie bólu.",
+              "Efekt biostymulacyjny: stymulacja aktywności komórek może wspierać procesy naprawcze oraz produkcję kolagenu i elastyny.",
+              "Efekt fotomechaniczny: oddziaływanie na tkanki i receptory może wspierać łagodzenie bólu oraz stanów zapalnych."
+            ]
+          },
           {
             title: "Zakres zabiegów",
             items: [
-              "Zamykanie naczynek, rubinków",
+              "Redukcja naczynek, rubinków",
               "Usuwanie włókniaków i przerośniętych gruczołów łojowych",
               "Redukcja przebarwień",
               "Lifting laserowy twarzy i okolicy oczu",
               "Zabieg dla skóry ze zmianami AZS, łojotok",
               "Działanie przeciwbólowe",
               "Rewitalizacja laserowa skóry (stymulacja kolagenu i elastyny)",
-              "Terapia opryszczki/egzemy"
+              "Terapia opryszczki/egzemy – po indywidualnej kwalifikacji; aktywna infekcja w miejscu zabiegu jest przeciwwskazaniem",
+              "Dodatkowo w określonym terminie, przez firmę zewnętrzną: depilacja laserowa, fotoodmładzanie, redukcja rumienia i zmian trądzikowych."
             ]
           },
           {
             title: "Wskazówki i pielęgnacja pozabiegowa",
-            items: [
-              "Bezwzględne stosowanie filtrów SPF 50 i brak ekspozycji na słońce do miesiąca.",
-              "Zakaz intensywnego sportu i basenu min. tydzień po zabiegu.",
-              "Zakaz sauny i gorących kąpieli min. miesiąc po zabiegu.",
-              "Zakaz spożywania alkoholu min. tydzień po zabiegu.",
-              "Zakaz drażnienia mechanicznego, kosmetyków na alkoholu oraz zdrapywania strupków.",
-              "Nawilżanie i natłuszczanie zgodnie z zaleceniami kosmetologa."
-            ]
+            items: laserAftercare
           }
         ],
-        guidanceTitle: "Ważne przed zabiegiem",
-        guidance: [
-          "Nie odstawiaj przepisanych leków bez konsultacji z lekarzem. Omów stosowane leki, zioła i kosmetyki podczas kwalifikacji do zabiegu.",
-          "Podane odstępy dla retinolu, kwasów i niektórych ziół różnią się między opisem laseroterapii a instrukcją przygotowania. Potwierdź właściwy termin z gabinetem przed zabiegiem."
-        ],
-        contraindications: [
-          "Ciąża i laktacja",
-          "Ciemne fototypy skóry",
-          "Rozrusznik serca",
-          "Nowotwory",
-          "Wrażliwość / uczulenie na światło",
-          "Świeża opalenizna / solarium (min. miesiąc)",
-          "Zioła i leki światłouczulające (retinol, kwasy, dziurawiec, nagietek – 1 miesiąc; retinoidy – 3 miesiące)",
-          "Epilepsja",
-          "Skłonność do keloidów",
-          "Nici i wypełniacze w obszarze zabiegu (nici wchłanialne do 6 mies., niewchłanialne – bezwzględne)",
-          "Infekcje skóry",
-          "Zaburzenia krzepnięcia, czucia i krążenia – przeciwwskazanie względne",
-          "Głębokie zabiegi złuszczające w ciągu ostatniego miesiąca",
-          "Choroby tkanki łącznej i choroby autoimmunologiczne – przeciwwskazanie względne"
-        ]
+        contraindications: laserContraindications
       },
       "laser-przygotowanie": {
         title: "Jak się przygotować do zabiegu z zastosowaniem lasera",
@@ -3639,44 +3707,20 @@
             title: "Zasady przed zabiegiem",
             items: [
               "Świeża opalenizna / korzystanie z solarium: zaprzestać na miesiąc przed serią.",
-              "Retinol, wit. C, kwasy AHA/BHA oraz zioła: dziurawiec, nagietek, rumianek, skrzyp i pokrzywa – omów z gabinetem przerwę przed serią; w instrukcji przygotowania podano minimum tydzień.",
-              "Tetracykliny i inne leki światłouczulające: omów z lekarzem i gabinetem przed zabiegiem.",
-              "Retinoidy: omów z lekarzem i gabinetem wymaganą przerwę przed serią; w instrukcji przygotowania podano co najmniej 3 miesiące.",
-              "Zakaz głębokich zabiegów złuszczających w przeciągu ostatniego miesiąca.",
-              "Nici wchłanialne do 6 miesięcy po zabiegu, nici niewchłanialne – przeciwwskazanie bezwzględne. Poinformuj także o wypełniaczach i implantach w obszarze zabiegu.",
-              "Przed depilacją laserową: koniecznie ogolić miejsce zabiegowe."
+              "Zioła: dziurawiec, nagietek, rumianek, skrzyp i pokrzywa – przerwę wynoszącą min. tydzień omów przed wizytą.",
+              "Retinol, wit. C, kwasy AHA/BHA i leki światłouczulające, w tym antybiotyki – w instrukcji podano min. 14 dni przerwy; termin potwierdź przed zabiegiem. Nie odstawiaj leków bez konsultacji z lekarzem.",
+              "Retinoidy – minimalny czas od zakończenia terapii: 3 miesiące; omów terapię z lekarzem przed zabiegiem.",
+              "Głębokie zabiegi złuszczające: odstęp ok. 1 miesiąca; najlepiej skonsultować przed zabiegiem.",
+              "Botoks i wypełniacze kwasu hialuronowego: odstęp min. 1 miesiąc. Dla nici wchłanialnych obowiązuje ograniczenie do 6 miesięcy, a niewchłanialne stanowią przeciwwskazanie bezwzględne.",
+              "Przed depilacją laserową: zgolić miejsce zabiegowe maszynką jednorazową."
             ]
           },
           {
             title: "Zalecenia po zabiegu",
-            items: [
-              "Bezwzględne stosowanie filtrów SPF 50 i brak ekspozycji na słońce do miesiąca.",
-              "Zakaz intensywnego sportu, siłowni, fitnessu, tańca i basenu min. tydzień po zabiegu.",
-              "Zakaz przegrzewania (sauna, gorące kąpiele) min. miesiąc po zabiegu.",
-              "Zakaz spożywania alkoholu min. tydzień po zabiegu.",
-              "Zakaz drażnienia mechanicznego, kosmetyków na alkoholu oraz zdrapywania strupków/pęcherzyków.",
-              "Nawilżanie i natłuszczanie skóry zgodnie z zaleceniami kosmetologa."
-            ]
+            items: laserAftercare
           }
         ],
-        guidanceTitle: "Ważne przed wizytą",
-        guidance: [
-          "Nie odstawiaj przepisanych leków bez konsultacji z lekarzem.",
-          "Podane odstępy dla retinolu, kwasów i niektórych ziół różnią się między opisem laseroterapii a instrukcją przygotowania. Potwierdź właściwy termin z gabinetem przed zabiegiem."
-        ],
-        contraindications: [
-          "Ciąża i karmienie piersią",
-          "Ciemne fototypy skóry",
-          "Rozrusznik serca",
-          "Zmiany nowotworowe",
-          "Zaburzenia krzepnięcia, czucia i krążenia (przeciwwskazanie względne)",
-          "Uczulenie na światło",
-          "Epilepsja",
-          "Skłonność do keloidów",
-          "Infekcje bakteryjne / grzybicze / wirusowe",
-          "Choroby autoimmunologiczne",
-          "Choroby tkanki łącznej – wymagana konsultacja"
-        ]
+        contraindications: laserContraindications
       },
       "elektrokoagulacja": {
         title: "Elektrokoagulacja",
@@ -3709,10 +3753,10 @@
         ]
       },
       "neurorehabilitacja": {
-        title: "NeuroFace i NeuroBody",
+        title: "Neurorehabilitacja",
         subtitle: "Zabiegi oparte na stymulacji częstotliwościami Nogiera",
         badge: "Nowe zabiegi",
-        description: "Zabiegi NEUROFACE i NEUROBODY oparte są na stymulacji częstotliwościami Nogiera. Oddziałują na zakończenia nerwowe i nerw błędny, co pomaga wyciszyć układ nerwowy i zredukować stres. Zabiegi idealnie sprawdzą się przy stanach napięciowych stawu skroniowo-żuchwowego (bruksizm), wspomagająco przy migrenach. Pobudzają fibroblasty do produkcji kolagenu i elastyny oraz poprawiają mikrokrążenie oraz drenaż limfatyczny. Efekty widoczne już po pierwszym zabiegu.",
+        description: "NeuroFace i NeuroBody to zabiegi oparte na stymulacji częstotliwościami Nogiera. Mogą stanowić element pielęgnacji i relaksu. Przy bruksizmie, migrenach lub innych dolegliwościach skonsultuj się z odpowiednim specjalistą; zabieg nie zastępuje diagnostyki ani leczenia.",
         effectGroups: [
           {
             title: "Efekty NeuroFace",
@@ -3742,7 +3786,9 @@
           "Seria zabiegów na twarz: 5–7 zabiegów co 3–4 tygodnie.",
           "Seria zabiegów na ciało: 4–6 zabiegów co 2–4 tygodnie.",
           "Zabiegi przypominające: co 3–6 miesięcy.",
-          "Zalecenia: Do 7 dni po zabiegu nie korzystamy z basenu, sauny, solarium. Przed i po zabiegu nawodnienie + elektrolity."
+          "Zabiegi mogą wspierać rozluźnienie przy stanach napięciowych stawu skroniowo-żuchwowego (bruksizm), po konsultacji ze specjalistą.",
+          "Zalecane dobre nawodnienie w dniu zabiegu.",
+          "Do 7 dni po zabiegu nie korzystamy z basenu, sauny ani solarium."
         ],
         contraindications: [
           "Ciąża i okres karmienia piersią",
@@ -3894,19 +3940,13 @@
       }));
     }
 
-    fillModalList(document.querySelector("#biorezonans-information"), [
-      "Niedobory witamin i minerałów wymagają odpowiednich badań laboratoryjnych.",
-      "Kondycję układu krążenia i odporności należy omawiać z lekarzem.",
-      "Pracę wątroby, nerek i tarczycy ocenia się za pomocą właściwych badań medycznych.",
-      "Wyników usługi nie należy traktować jako diagnozy ani pomiaru toksyn."
-    ], "positive");
     fillModalList(document.querySelector("#biorezonans-preparation"), [
-      "Zdejmij biżuterię, zegarek i metalowe akcesoria zgodnie z zasadami gabinetu.",
-      "Wyłączenie internetu i odłożenie telefonu ustal z gabinetem.",
-      "Przerwę w jedzeniu skonsultuj z lekarzem; nie wprowadzaj postu na własną rękę.",
-      "Pij wodę zgodnie ze swoimi potrzebami i zaleceniami lekarza.",
-      "Nie odstawiaj leków, suplementów ani ziół bez konsultacji z lekarzem.",
-      "Wskazówki dotyczące palenia przed wizytą ustal z gabinetem."
+      "Na czas zabiegu zdejmij biżuterię, zegarek i metalowe akcesoria.",
+      "Podczas zabiegu wyłącz internet – najlepiej włączyć tryb samolotowy.",
+      "Gabinet zaleca wizytę 3–4 godziny po jedzeniu lub na czczo. Przerwę w jedzeniu skonsultuj z lekarzem; nie wprowadzaj postu na własną rękę.",
+      "Zadbaj o dobre nawodnienie przed zabiegiem zgodnie ze swoimi potrzebami i zaleceniami lekarza.",
+      "Gabinet zaleca przerwę w suplementach i ziołach na kilka dni. Nie odstawiaj ich ani leków bez konsultacji z lekarzem.",
+      "Nie pal przez min. 2 godziny przed wizytą."
     ], "positive");
     fillModalList(document.querySelector("#biorezonans-contraindications"), [
       "Ciąża i okres karmienia",
