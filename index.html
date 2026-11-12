@@ -1104,6 +1104,14 @@
       max-width: 650px;
       margin-bottom: 24px;
       color: var(--muted);
+      white-space: pre-line;
+    }
+
+    .dialog-list-note {
+      margin: 16px 0;
+      color: var(--plum-deep);
+      font-size: 0.87rem;
+      line-height: 1.5;
     }
 
     .modal-subtitle {
@@ -2998,7 +3006,6 @@
           <article class="treatment-card">
             <span class="treatment-badge">Wskazówki przed wizytą</span>
             <h3 class="treatment-name">Jak się przygotować do zabiegu z zastosowaniem lasera</h3>
-            <p class="treatment-subtitle">Zasady przygotowania, przeciwwskazania i zalecenia pozabiegowe</p>
             <button class="treatment-open" type="button" data-treatment="laser-przygotowanie" aria-label="Poznaj szczegóły: Jak się przygotować do zabiegu z zastosowaniem lasera">Poznaj szczegóły i wskazania →</button>
           </article>
           <article class="treatment-card">
@@ -3046,6 +3053,7 @@
             <ul id="modal-indications"></ul>
           </section>
         </div>
+        <p class="dialog-list-note" id="modal-indications-note" hidden><strong></strong></p>
         <section class="dialog-list-section dialog-additional-effects" id="modal-additional-effects-section" aria-labelledby="modal-additional-effects-title" hidden>
           <h3 id="modal-additional-effects-title"></h3>
           <ul id="modal-additional-effects"></ul>
@@ -3069,11 +3077,11 @@
           <div>
             <span class="treatment-badge">Informacje o usłudze</span>
             <h2 id="biorezonans-title">Biorezonans komórkowy</h2>
-            <p class="modal-subtitle">Informacje o usłudze i przygotowanie do wizyty</p>
           </div>
           <button class="dialog-close" id="close-biorezonans-btn" type="button" aria-label="Zamknij okno biorezonansu">×</button>
         </div>
-        <p class="dialog-description" id="biorezonans-description">Wypadają Ci włosy, łamią się paznokcie lub pojawiają się zmiany skórne? Przyczyny mogą być różnorodne. Ich ocenę i dobór odpowiednich badań warto omówić z lekarzem.</p>
+        <p class="dialog-description" id="biorezonans-description">Wypadają Ci włosy, łamią się paznokcie lub pojawiają się zmiany skórne? Przyczyny mogą być niedobory witamin, mikro i makroelementów.
+          Chcesz sprawdzić czy Twój organizm funkcjonuje prawidłowo, zapraszam na biorezonans. Krótkie skanowanie pokaże w jakiej kondycji jest Twój organizm.</p>
         <section class="dialog-list-section" aria-labelledby="biorezonans-preparation-title">
           <h3 id="biorezonans-preparation-title">Jak przygotować się do wizyty</h3>
           <ul id="biorezonans-preparation"></ul>
@@ -3082,7 +3090,7 @@
           <h3 id="biorezonans-contraindications-title">Przeciwwskazania</h3>
           <ul id="biorezonans-contraindications"></ul>
         </section>
-        <p class="dialog-disclaimer" id="biorezonans-disclaimer">Wyniki są jedynie orientacyjne i nie stanowią diagnozy. Nie wykazano, że biorezonans wiarygodnie wykrywa niedobory, ocenia funkcje narządów lub oznacza toksyny. Usługa nie zastępuje badań laboratoryjnych ani konsultacji lekarskiej.</p>
+        <p class="dialog-disclaimer" id="biorezonans-disclaimer">Wyniki testu są jedynie orientacyjne i nie stanowią końcowej diagnozy.</p>
         <a class="button treatment-booking booking-link" href="https://widget.zarezerwuj.pl/direct/10df1e36-0a62-42a5-acef-88d0462509d7" target="_blank" rel="noopener noreferrer">Rezerwacja online</a>
       </div>
     </dialog>
@@ -3470,8 +3478,7 @@
       "Rezygnacja z sauny i gorących kąpieli ok. 1 tygodnia po zabiegu.",
       "Nie spożywamy alkoholu ok. 5 dni po zabiegu.",
       "Nie wykonujemy peelingów mechanicznych, nie zdrapujemy strupków ani pęcherzyków.",
-      "Nawilżanie i pielęgnacja skóry zgodnie z zaleceniami kosmetologa.",
-      "Szczegółowy czas ograniczeń zależy od metody i reakcji skóry; potwierdź zalecenia podczas wizyty."
+      "Nawilżanie i pielęgnacja skóry zgodnie z zaleceniami kosmetologa."
     ];
 
     const laserContraindications = [
@@ -3488,8 +3495,7 @@
       "Zaburzenia krzepnięcia, czucia i krążenia – przeciwwskazanie względne",
       "Głębokie zabiegi złuszczające w ciągu ostatniego miesiąca",
       "Choroby tkanki łącznej i choroby autoimmunologiczne – przeciwwskazanie względne",
-      "Epilepsja – wymagana konsultacja",
-      "Nie odstawiaj przepisanych leków bez konsultacji z lekarzem."
+      "Epilepsja – względne"
     ];
 
     const treatmentsData = {
@@ -3686,38 +3692,45 @@
               "Zabieg dla skóry ze zmianami AZS, łojotok",
               "Działanie przeciwbólowe",
               "Rewitalizacja laserowa skóry (stymulacja kolagenu i elastyny)",
-              "Terapia opryszczki/egzemy – po indywidualnej kwalifikacji; aktywna infekcja w miejscu zabiegu jest przeciwwskazaniem",
-              "Dodatkowo w określonym terminie, przez firmę zewnętrzną: depilacja laserowa, fotoodmładzanie, redukcja rumienia i zmian trądzikowych."
-            ]
+              "Zabieg na opryszczkę/ egzemę"
+            ],
+            note: "Dodatkowo w określonym terminie, przez firmę zewnętrzną: depilacja laserowa, fotoodmładzanie, redukcja rumienia i zmian trądzikowych"
           },
           {
             title: "Wskazówki i pielęgnacja pozabiegowa",
             items: laserAftercare
           }
         ],
-        contraindications: laserContraindications
+        contraindications: [
+          ...laserContraindications,
+          "Nie odstawiaj przepisanych leków bez konsultacji z lekarzem."
+        ]
       },
       "laser-przygotowanie": {
         title: "Jak się przygotować do zabiegu z zastosowaniem lasera",
-        subtitle: "Zasady przygotowania, przeciwwskazania i zalecenia pozabiegowe",
+        subtitle: "",
         badge: "Wskazówki przed wizytą",
         description: "Sprawdź, czy możesz skorzystać z zabiegów z zastosowaniem lasera. Prawidłowe przygotowanie pomaga zmniejszyć ryzyko powikłań i wspiera skuteczność procedury.",
         effectGroups: [
           {
-            title: "Zasady przed zabiegiem",
+            title: "Przed zabiegiem",
             items: [
               "Świeża opalenizna / korzystanie z solarium: zaprzestać na miesiąc przed serią.",
               "Zioła: dziurawiec, nagietek, rumianek, skrzyp i pokrzywa – przerwę wynoszącą min. tydzień omów przed wizytą.",
-              "Retinol, wit. C, kwasy AHA/BHA i leki światłouczulające, w tym antybiotyki – w instrukcji podano min. 14 dni przerwy; termin potwierdź przed zabiegiem. Nie odstawiaj leków bez konsultacji z lekarzem.",
-              "Retinoidy – minimalny czas od zakończenia terapii: 3 miesiące; omów terapię z lekarzem przed zabiegiem.",
-              "Głębokie zabiegi złuszczające: odstęp ok. 1 miesiąca; najlepiej skonsultować przed zabiegiem.",
-              "Botoks i wypełniacze kwasu hialuronowego: odstęp min. 1 miesiąc. Dla nici wchłanialnych obowiązuje ograniczenie do 6 miesięcy, a niewchłanialne stanowią przeciwwskazanie bezwzględne.",
+              "Tetracykliny, retinol, wit. C, kwasy AHA/BHA   (i inne antybiotyki) lub leki światłouczulające - odstawić na min 14 dni. Wskazana konsultacja z kosmetologiem przed zabiegiem.",
+              "Retinoidy - minimalny czas od zakończenia terapii 3 miesiące.",
+              "Głębokie zabiegi złuszczające - odstęp ok 1 miesiąca - najlepiej skonsultować przed zabiegiem.",
+              "Nici, botox, wypełniacz kwasu hialurnowego - odstęp min 1 miesiąc.",
+              "Dla nici wchłanialnych obowiązuje ograniczenie do 6 miesięcy, a niewchłanialne stanowią przeciwwskazanie bezwzględne.",
               "Przed depilacją laserową: zgolić miejsce zabiegowe maszynką jednorazową."
             ]
           },
           {
             title: "Zalecenia po zabiegu",
-            items: laserAftercare
+            items: [
+              ...laserAftercare,
+              "Szczegółowy czas ograniczeń zależy od metody i reakcji skóry; potwierdź zalecenia podczas wizyty."
+            ]
           }
         ],
         contraindications: laserContraindications
@@ -3756,16 +3769,19 @@
         title: "Neurorehabilitacja",
         subtitle: "Zabiegi oparte na stymulacji częstotliwościami Nogiera",
         badge: "Nowe zabiegi",
-        description: "NeuroFace i NeuroBody to zabiegi oparte na stymulacji częstotliwościami Nogiera. Mogą stanowić element pielęgnacji i relaksu. Przy bruksizmie, migrenach lub innych dolegliwościach skonsultuj się z odpowiednim specjalistą; zabieg nie zastępuje diagnostyki ani leczenia.",
+        description: "Terapia wykorzystuje połączenie elektroakupunktury oparte na stymulacji częstotliwościami Nogiera, gdzie pracujemy z tkanką powięziową. Celem jest poprawa komunikacji nerwowo-mięśniowej, rozluźnienie napięć i przywrócenie homeostazy. Zabiegi gwarantują bezpieczeństwo zabiegowe bez skalpela, bólu i długiego okresu rekonwalescencji mogą cieszyć się młodszym wyglądem. Co najważniejsze efekt NEURO Face estGen jest naturalny, nie zmienia rysów twarzy, lecz wspiera fizjologiczną regenerację skóry.",
         effectGroups: [
           {
-            title: "Efekty NeuroFace",
+            title: "Efekty Neuro liftingu",
             items: [
-              "Uniesienie owalu twarzy i poprawa gęstości skóry",
-              "Wygładzenie zmarszczek mimicznych i bruzd",
-              "Redukcja obrzęków i stanów zapalnych",
-              "Rozluźnienie nadmiernie napiętych mięśni twarzy (np. przy bruksizmie)",
-              "Głęboki relaks, redukcja napięcia i poprawa samopoczucia"
+              "naturalny efekt liftingu",
+              "poprawa jędrności i elastyczności skóry",
+              "nawilżenie i rozświetlenie skóry",
+              "efekt „baby face” bez przerysowania i sztuczności",
+              "redukcja napięć mięśniowo-powięziowych",
+              "wyciszenie stanów zapalnych",
+              "ograniczenie reaktywności skóry",
+              "wsparcie przy migrenach."
             ]
           },
           {
@@ -3786,7 +3802,7 @@
           "Seria zabiegów na twarz: 5–7 zabiegów co 3–4 tygodnie.",
           "Seria zabiegów na ciało: 4–6 zabiegów co 2–4 tygodnie.",
           "Zabiegi przypominające: co 3–6 miesięcy.",
-          "Zabiegi mogą wspierać rozluźnienie przy stanach napięciowych stawu skroniowo-żuchwowego (bruksizm), po konsultacji ze specjalistą.",
+          "Zabiegi mogą wspierać rozluźnienie przy stanach napięciowych stawu skroniowo-żuchwowego (bruksizm).",
           "Zalecane dobre nawodnienie w dniu zabiegu.",
           "Do 7 dni po zabiegu nie korzystamy z basenu, sauny ani solarium."
         ],
@@ -3813,6 +3829,7 @@
     const modalEffects = document.querySelector("#modal-effects");
     const modalIndicationsTitle = document.querySelector("#modal-indications-title");
     const modalIndications = document.querySelector("#modal-indications");
+    const modalIndicationsNote = document.querySelector("#modal-indications-note");
     const modalAdditionalEffectsSection = document.querySelector("#modal-additional-effects-section");
     const modalAdditionalEffectsTitle = document.querySelector("#modal-additional-effects-title");
     const modalAdditionalEffects = document.querySelector("#modal-additional-effects");
@@ -3943,10 +3960,10 @@
     fillModalList(document.querySelector("#biorezonans-preparation"), [
       "Na czas zabiegu zdejmij biżuterię, zegarek i metalowe akcesoria.",
       "Podczas zabiegu wyłącz internet – najlepiej włączyć tryb samolotowy.",
-      "Gabinet zaleca wizytę 3–4 godziny po jedzeniu lub na czczo. Przerwę w jedzeniu skonsultuj z lekarzem; nie wprowadzaj postu na własną rękę.",
-      "Zadbaj o dobre nawodnienie przed zabiegiem zgodnie ze swoimi potrzebami i zaleceniami lekarza.",
-      "Gabinet zaleca przerwę w suplementach i ziołach na kilka dni. Nie odstawiaj ich ani leków bez konsultacji z lekarzem.",
-      "Nie pal przez min. 2 godziny przed wizytą."
+      "Gabinet zaleca wizytę 3–4 godziny po jedzeniu lub na czczo.",
+     "Zadbaj o dobre nawodnienie przed zabiegiem.",
+     "Na kilka dni przed badaniem odstawić suplementy i zioła",
+      "Nie pal przez min. 2 godziny przed wizytą."  
     ], "positive");
     fillModalList(document.querySelector("#biorezonans-contraindications"), [
       "Ciąża i okres karmienia",
@@ -3965,7 +3982,11 @@
       modalBadge.textContent = details.badge;
       modalTitle.textContent = details.title;
       modalSubtitle.textContent = details.subtitle;
+      modalSubtitle.hidden = !details.subtitle;
       modalDescription.textContent = details.description;
+      const indicationsNote = details.effectGroups && details.effectGroups[1].note;
+      modalIndicationsNote.hidden = !indicationsNote;
+      modalIndicationsNote.querySelector("strong").textContent = indicationsNote || "";
       if (details.effectGroups) {
         modalEffectsTitle.textContent = details.effectGroups[0].title;
         modalIndicationsTitle.textContent = details.effectGroups[1].title;
