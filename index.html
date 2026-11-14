@@ -174,6 +174,11 @@
       object-fit: contain;
     }
 
+    .brand-mark,
+    .footer-mark {
+      filter: brightness(0) invert(40%) sepia(69.0177%) saturate(479.841%) hue-rotate(230.5319deg) brightness(63.2%) contrast(146%);
+    }
+
     .brand-wordmark {
       display: flex;
       flex-direction: column;
@@ -1870,7 +1875,21 @@
 
     .updates-content > p {
       flex: 1 1 auto;
+      margin-top: 4px;
       margin-bottom: 0;
+      color: #44403c;
+    }
+
+    .updates-content strong {
+      font-weight: 600;
+    }
+
+    .updates-content .text-purple-900 {
+      color: var(--accent-purple);
+    }
+
+    .updates-content .text-stone-900 {
+      color: #1c1917;
     }
 
     .rules-open {
@@ -2146,7 +2165,13 @@
       height: 40px;
       flex: 0 0 auto;
       object-fit: contain;
-      filter: brightness(0) invert(1);
+    }
+
+    .footer-mark-wrap {
+      display: inline-flex;
+      padding: 4px;
+      background: var(--accent-soft);
+      border-radius: 8px;
     }
 
     .footer-brand .brand-name {
@@ -2897,6 +2922,16 @@
             <span>Neuro Face estGen</span>
             <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
           </button>
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/malu-wilz-1.jpg" data-certificate-title="Drenaż limfatyczny – MALU WILZ" aria-label="Powiększ certyfikat: drenaż limfatyczny MALU WILZ">
+            <img src="certyfikaty/malu-wilz-1.jpg" alt="" width="1096" height="767" loading="lazy" decoding="async">
+            <span>Drenaż limfatyczny – MALU WILZ</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
+          <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/malu-wilz-2.jpg" data-certificate-title="Chi Energy Lifting Massage – MALU WILZ" aria-label="Powiększ certyfikat: Chi Energy Lifting Massage MALU WILZ">
+            <img src="certyfikaty/malu-wilz-2.jpg" alt="" width="1096" height="769" loading="lazy" decoding="async">
+            <span>Chi Energy Lifting Massage – MALU WILZ</span>
+            <span class="certificate-error" hidden>Nie udało się załadować podglądu.</span>
+          </button>
         </div>
       </div>
     </dialog>
@@ -2917,10 +2952,11 @@
 
     <section class="updates-section" id="aktualnosci" aria-labelledby="updates-title">
       <div class="updates-card">
-        <p class="eyebrow">Aktualności i komunikaty</p>
-        <h2 id="updates-title">Ważne informacje i aktualności gabinetu</h2>
+        <h2 id="updates-title">Aktualności</h2>
         <div class="updates-content">
-          <p>W dniu 11 listopada (Święto Niepodległości) gabinet będzie nieczynny. W pozostałe dni zapraszamy zgodnie ze standardowym grafikiem. Rezerwacja wizyt na zabiegi jesienno-zimowe oraz terminy przedświąteczne dostępna jest całodobowo w systemie rezerwacji online.</p>
+          <p class="text-stone-700 mt-1">
+            <strong class="text-purple-900 font-semibold">Soboty pracujące:</strong> <strong class="text-stone-900 font-semibold">21 listopada</strong>, <strong class="text-stone-900 font-semibold">5 i 19 grudnia</strong> oraz <strong class="text-stone-900 font-semibold">2 stycznia</strong>.
+          </p>
           <button class="rules-open" id="open-rules-btn" type="button" aria-haspopup="dialog" aria-controls="rules-modal">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg>
             Regulamin gabinetu →
@@ -3201,8 +3237,8 @@
             <li class="price-row" data-category="laser"><span class="price-name">Usuwanie włókniaków</span><span class="price-value">70 zł / szt.</span></li>
             <li class="price-row" data-category="laser"><span class="price-name">Zmiany bólowe / opryszczka</span><span class="price-value">50 zł</span></li>
             <li class="price-row" data-category="laser"><span class="price-name">Rewitalizacja laserowa<span class="price-variants"><span><span>Rewitalizacja</span><strong>150 zł</strong></span><span><span>Pełny zabieg z pielęgnacją</span><strong>190 zł</strong></span></span></span></li>
-            <li class="price-row" data-category="laser"><span class="price-name">Redukowanie przebarwień</span><span class="price-value">230 zł</span></li>
-            <li class="price-row" data-category="laser"><span class="price-name">Zamykanie naczynek</span><span class="price-value">230 zł</span></li>
+            <li class="price-row" data-category="laser"><span class="price-name">Redukowanie przebarwień</span><span class="price-value">230 zł/sesja 10min</span></li>
+            <li class="price-row" data-category="laser"><span class="price-name">Zamykanie naczynek</span><span class="price-value">230zł/sesja 10min</span></li>
             <li class="price-row" data-category="laser"><span class="price-name">Laserowy lifting powiek</span><span class="price-value">250 zł</span></li>
             <li class="price-row" data-category="laser"><span class="price-name">Laserowy lifting twarzy</span><span class="price-value">550 zł</span></li>
             <li class="price-subcategory" data-price-heading="laser" data-service-group="external">Sesje laserowe z firmą zewnętrzną</li>
@@ -3376,7 +3412,7 @@
   <footer class="site-footer">
     <div class="shell footer-inner">
       <div class="footer-brand">
-        <img class="footer-mark" src="logo-kompletne.svg" alt="">
+        <span class="footer-mark-wrap"><img class="footer-mark" src="logo-kompletne.svg" alt=""></span>
         <span class="brand-wordmark">
           <span class="brand-name">Twój Kosmetolog</span>
           <span class="brand-owner">Magdalena Marędziak</span>
