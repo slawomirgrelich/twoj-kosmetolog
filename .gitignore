@@ -1,3 +1,5 @@
 .playwright-mcp/
 certyfikaty/*
 !certyfikaty/galeria/
+!certyfikaty/malu-wilz-1.jpg
+!certyfikaty/malu-wilz-2.jpg
