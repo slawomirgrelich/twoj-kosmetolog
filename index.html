@@ -1867,6 +1867,12 @@
       color: var(--accent-purple);
     }
 
+    .updates-card .content-error {
+      margin-top: 12px;
+      color: var(--red);
+      font-weight: 600;
+    }
+
     .updates-content {
       display: flex;
       align-items: center;
@@ -1878,18 +1884,6 @@
       margin-top: 4px;
       margin-bottom: 0;
       color: #44403c;
-    }
-
-    .updates-content strong {
-      font-weight: 600;
-    }
-
-    .updates-content .text-purple-900 {
-      color: var(--accent-purple);
-    }
-
-    .updates-content .text-stone-900 {
-      color: #1c1917;
     }
 
     .rules-open {
@@ -2954,14 +2948,13 @@
       <div class="updates-card">
         <h2 id="updates-title">Aktualności</h2>
         <div class="updates-content">
-          <p class="text-stone-700 mt-1">
-            <strong class="text-purple-900 font-semibold">Soboty pracujące:</strong> <strong class="text-stone-900 font-semibold">21 listopada</strong>, <strong class="text-stone-900 font-semibold">5 i 19 grudnia</strong> oraz <strong class="text-stone-900 font-semibold">2 stycznia</strong>.
-          </p>
+          <p class="text-stone-700 mt-1" id="aktualnosci-tekst">Soboty pracujące: 21 listopada, 5 i 19 grudnia oraz 2 stycznia.</p>
           <button class="rules-open" id="open-rules-btn" type="button" aria-haspopup="dialog" aria-controls="rules-modal">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg>
             Regulamin gabinetu →
           </button>
         </div>
+        <p class="content-error" id="content-error" role="status" hidden>Nie udało się wczytać danych strony. Wyświetlana jest zapasowa treść aktualności i cennika.</p>
       </div>
     </section>
 
@@ -3441,6 +3434,7 @@
     <button class="cookie-dismiss" type="button">Rozumiem</button>
   </div>
 
+  <script src="dane.js"></script>
   <script>
     document.documentElement.classList.add("js");
 
@@ -4050,6 +4044,120 @@
       });
     });
 
+    function validateSiteContent(data) {
+      const isText = (value) => typeof value === "string" && value.trim().length > 0;
+      if (!data || !isText(data.aktualnosciTekst) || !Array.isArray(data.cennik) || !data.cennik.length) {
+        return "Brakuje tekstu aktualności lub kategorii cennika.";
+      }
+
+      const ids = new Set();
+      for (const category of data.cennik) {
+        if (!category || !isText(category.id) || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(category.id) ||
+            ids.has(category.id) || !isText(category.nazwa) || !Array.isArray(category.pozycje) ||
+            !category.pozycje.length) {
+          return "Nieprawidłowa lub powtórzona kategoria cennika.";
+        }
+        ids.add(category.id);
+        let services = 0;
+        for (const item of category.pozycje) {
+          if (!item || typeof item !== "object") return `Nieprawidłowa pozycja w kategorii ${category.id}.`;
+          if ("naglowek" in item) {
+            if (!isText(item.naglowek) || !["in-house", "external"].includes(item.grupa)) {
+              return `Nieprawidłowy nagłówek w kategorii ${category.id}.`;
+            }
+            continue;
+          }
+          services += 1;
+          const hasPrice = "cena" in item;
+          const hasVariants = "warianty" in item;
+          if (!isText(item.nazwa) || hasPrice === hasVariants ||
+              (hasPrice && !isText(item.cena)) ||
+              (hasVariants && (!Array.isArray(item.warianty) || !item.warianty.length ||
+                !item.warianty.every((variant) => variant && isText(variant.nazwa) && isText(variant.cena)))) ||
+              ("szczegoly" in item && (!hasPrice || !isText(item.szczegoly))) ||
+              ("zewnetrzny" in item && typeof item.zewnetrzny !== "boolean")) {
+            return `Nieprawidłowy zabieg lub cena w kategorii ${category.id}.`;
+          }
+        }
+        if (!services) return `Kategoria ${category.id} nie zawiera zabiegów.`;
+      }
+      return "";
+    }
+
+    function renderSiteContent(data) {
+      const tabs = document.createDocumentFragment();
+      const rows = document.createDocumentFragment();
+      data.cennik.forEach((category, index) => {
+        const tab = document.createElement("button");
+        tab.className = "price-tab";
+        tab.type = "button";
+        tab.setAttribute("role", "tab");
+        tab.id = `tab-${category.id}`;
+        tab.setAttribute("aria-controls", "price-panel");
+        tab.setAttribute("aria-selected", String(index === 0));
+        tab.tabIndex = index === 0 ? 0 : -1;
+        tab.dataset.pricingTab = category.id;
+        tab.textContent = category.nazwa;
+        tabs.append(tab);
+
+        category.pozycje.forEach((item) => {
+          const row = document.createElement("li");
+          if ("naglowek" in item) {
+            row.className = "price-subcategory";
+            row.dataset.priceHeading = category.id;
+            row.dataset.serviceGroup = item.grupa;
+            row.textContent = item.naglowek;
+          } else {
+            row.className = "price-row";
+            row.dataset.category = category.id;
+            if (item.zewnetrzny) row.setAttribute("data-external-service", "");
+            const name = document.createElement("span");
+            name.className = "price-name";
+            name.textContent = item.nazwa;
+            if (item.warianty) {
+              const variants = document.createElement("span");
+              variants.className = "price-variants";
+              item.warianty.forEach((variant) => {
+                const line = document.createElement("span");
+                const label = document.createElement("span");
+                const price = document.createElement("strong");
+                label.textContent = variant.nazwa;
+                price.textContent = variant.cena;
+                line.append(label, price);
+                variants.append(line);
+              });
+              name.append(variants);
+              row.append(name);
+            } else {
+              const price = document.createElement("span");
+              price.className = "price-value";
+              price.textContent = item.cena;
+              if (item.szczegoly) {
+                const note = document.createElement("span");
+                note.className = "price-subnote";
+                note.textContent = item.szczegoly;
+                price.append(note);
+              }
+              row.append(name, price);
+            }
+          }
+          rows.append(row);
+        });
+      });
+
+      document.querySelector("#aktualnosci-tekst").textContent = data.aktualnosciTekst;
+      document.querySelector(".price-tabs").replaceChildren(tabs);
+      document.querySelector("#price-list").replaceChildren(rows);
+    }
+
+    const contentError = validateSiteContent(window.TRESC_STRONY);
+    if (contentError) {
+      console.error(`Nie można wczytać dane.js: ${contentError}`);
+      document.querySelector("#content-error").hidden = false;
+    } else {
+      renderSiteContent(window.TRESC_STRONY);
+    }
+
     const priceTabs = [...document.querySelectorAll("[data-pricing-tab]")];
     const priceRows = [...document.querySelectorAll(".price-row")];
     const priceHeadings = [...document.querySelectorAll("[data-price-heading]")];
@@ -4058,8 +4166,14 @@
     const pricePanel = document.querySelector("#price-panel");
     const priceSearchNote = document.querySelector("#price-search-note");
     const priceCategoryLabels = new Map(priceTabs.map((tab) => [tab.dataset.pricingTab, tab.textContent.trim()]));
+    const priceGroupLabels = new Map();
+    priceHeadings.forEach((heading) => {
+      if (!priceGroupLabels.has(heading.dataset.serviceGroup)) {
+        priceGroupLabels.set(heading.dataset.serviceGroup, heading.textContent.trim());
+      }
+    });
     const priceSearchIndex = new Map();
-    let activePriceCategory = "eyes";
+    let activePriceCategory = priceTabs[0].dataset.pricingTab;
 
     function normalizePriceSearch(text) {
       return text.toLocaleLowerCase("pl").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ł/g, "l");
@@ -4078,8 +4192,8 @@
       const category = document.createElement("span");
       category.className = "price-category";
       const group = priceServiceGroup(row);
-      const groupLabel = group === "external" ? "Sesje laserowe z firmą zewnętrzną" : "W stałej ofercie gabinetu";
-      category.textContent = group ? `${categoryLabel} · ${groupLabel}` : categoryLabel;
+      const groupLabel = priceGroupLabels.get(group);
+      category.textContent = groupLabel ? `${categoryLabel} · ${groupLabel}` : categoryLabel;
       row.querySelector(".price-name").append(document.createTextNode(" "), category);
 
       const textNodes = document.createTreeWalker(row, NodeFilter.SHOW_TEXT);
