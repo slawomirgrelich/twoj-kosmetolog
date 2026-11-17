@@ -20,9 +20,9 @@ window.TRESC_STRONY = {
     { plik: "certyfikaty/galeria/thalgolift-duzy.jpg", tytul: "Masaż Thalgolift", miniatura: "certyfikaty/galeria/thalgolift-podglad.jpg" },
     { plik: "certyfikaty/galeria/laser-podologia-oryginal.png", tytul: "Laseroterapia w podologii i kosmetologii", miniatura: "certyfikaty/galeria/laser-podologia-podglad.jpg" },
     { plik: "certyfikaty/galeria/neuro-face-oryginal.png", tytul: "Neuro Face estGen", miniatura: "certyfikaty/galeria/neuro-face-podglad.jpg" },
-    { plik: "certyfikaty/malu-wilz-1.jpg", tytul: "Drenaż limfatyczny – MALU WILZ" },
-    { plik: "certyfikaty/malu-wilz-2.jpg", tytul: "Chi Energy Lifting Massage – MALU WILZ" },
-	{ plik: "certyfikaty/malu-wilz-masaz-liftingujacy.jpg", tytul: "Masaż liftingujący – MALU WILZ Polska (16.11.2026)" },
+    { plik: "certyfikaty/galeria/malu-wilz-1.jpg", tytul: "Drenaż limfatyczny – MALU WILZ" },
+    { plik: "certyfikaty/galeria/malu-wilz-2.jpg", tytul: "Chi Energy Lifting Massage – MALU WILZ" },
+    { plik: "certyfikaty/galeria/malu-wilz-masaz-liftingujacy.jpg", tytul: "Masaż liftingujący – MALU WILZ Polska (16.11.2026)" },
   ],
   cennik: [
     { id: "eyes", nazwa: "Oprawa oczu", pozycje: [
