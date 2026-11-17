@@ -22,6 +22,7 @@ window.TRESC_STRONY = {
     { plik: "certyfikaty/galeria/neuro-face-oryginal.png", tytul: "Neuro Face estGen", miniatura: "certyfikaty/galeria/neuro-face-podglad.jpg" },
     { plik: "certyfikaty/malu-wilz-1.jpg", tytul: "Drenaż limfatyczny – MALU WILZ" },
     { plik: "certyfikaty/malu-wilz-2.jpg", tytul: "Chi Energy Lifting Massage – MALU WILZ" },
+	{ plik: "certyfikaty/malu-wilz-masaz-liftingujacy.jpg", tytul: "Masaż liftingujący – MALU WILZ Polska (16.11.2026)" },
   ],
   cennik: [
     { id: "eyes", nazwa: "Oprawa oczu", pozycje: [
