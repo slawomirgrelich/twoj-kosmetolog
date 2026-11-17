@@ -6,7 +6,7 @@
  * Gdy JavaScript nie działa, strona pokazuje zapasową wersję zapisaną w HTML.
  */
 window.TRESC_STRONY = {
-  aktualnosciTekst: "Soboty pracujące: 21 listopada, 5 i 19 grudnia oraz 2 stycznia.",
+  aktualnosciTekst: "Soboty pracujące: 21 listopada, 5 i 19 grudnia oraz 2 stycznia.nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn",
   cennik: [
     { id: "eyes", nazwa: "Oprawa oczu", pozycje: [
       {"nazwa": "Regulacja brwi", "cena": "30 zł"},
