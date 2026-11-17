@@ -4,10 +4,25 @@
  * Nazwy i ceny zmieniaj wyłącznie w cudzysłowach "...".
  * Zachowaj cudzysłowy, nawiasy, dwukropki i przecinki; nie zmieniaj pól id, grupa i zewnetrzny.
  * Warianty znajdują się w tablicy warianty; szczegoly to dodatkowy opis ceny.
+ * W tablicy certyfikaty dodaj plik i tytul; opcjonalnie podaj miniatura, tytulPodgladu i rodzaj.
  * Gdy JavaScript nie działa, strona pokazuje zapasową wersję zapisaną w HTML.
  */
 window.TRESC_STRONY = {
   aktualnosciTekst: `Soboty pracujące: 21 listopada, 5 i 19 grudnia oraz 2 stycznia.`,
+  certyfikaty: [
+    { plik: "certyfikaty/galeria/kosmetologia-estetyczna-duzy.jpg", tytul: "Studia podyplomowe – kosmetologia estetyczna", miniatura: "certyfikaty/galeria/kosmetologia-estetyczna-podglad.jpg", tytulPodgladu: "Kosmetologia estetyczna", rodzaj: "Świadectwo" },
+    { plik: "certyfikaty/galeria/fizjoterapia-duzy.jpg", tytul: "Dyplom – fizjoterapia", miniatura: "certyfikaty/galeria/fizjoterapia-podglad.jpg", tytulPodgladu: "Fizjoterapia", rodzaj: "Dyplom" },
+    { plik: "certyfikaty/galeria/naturoterapia-duzy.jpg", tytul: "Studia podyplomowe – naturoterapia", miniatura: "certyfikaty/galeria/naturoterapia-podglad.jpg", tytulPodgladu: "Naturoterapia", rodzaj: "Świadectwo" },
+    { plik: "certyfikaty/galeria/laseroterapia-duzy.jpg", tytul: "Laseroterapia w kosmetologii", miniatura: "certyfikaty/galeria/laseroterapia-podglad.jpg" },
+    { plik: "certyfikaty/galeria/kosmetologia-holistyczna-duzy.jpg", tytul: "Kosmetologia holistyczna", miniatura: "certyfikaty/galeria/kosmetologia-holistyczna-podglad.jpg" },
+    { plik: "certyfikaty/galeria/mezoterapia-duzy.jpg", tytul: "Mezoterapia", miniatura: "certyfikaty/galeria/mezoterapia-podglad.jpg" },
+    { plik: "certyfikaty/galeria/mezoterapia-iglowa-duzy.jpg", tytul: "Mezoterapia igłowa", miniatura: "certyfikaty/galeria/mezoterapia-iglowa-podglad.jpg" },
+    { plik: "certyfikaty/galeria/thalgolift-duzy.jpg", tytul: "Masaż Thalgolift", miniatura: "certyfikaty/galeria/thalgolift-podglad.jpg" },
+    { plik: "certyfikaty/galeria/laser-podologia-oryginal.png", tytul: "Laseroterapia w podologii i kosmetologii", miniatura: "certyfikaty/galeria/laser-podologia-podglad.jpg" },
+    { plik: "certyfikaty/galeria/neuro-face-oryginal.png", tytul: "Neuro Face estGen", miniatura: "certyfikaty/galeria/neuro-face-podglad.jpg" },
+    { plik: "certyfikaty/malu-wilz-1.jpg", tytul: "Drenaż limfatyczny – MALU WILZ" },
+    { plik: "certyfikaty/malu-wilz-2.jpg", tytul: "Chi Energy Lifting Massage – MALU WILZ" },
+  ],
   cennik: [
     { id: "eyes", nazwa: "Oprawa oczu", pozycje: [
       {"nazwa": "Regulacja brwi", "cena": "30 zł"},

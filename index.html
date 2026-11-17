@@ -2868,6 +2868,8 @@
           </div>
           <button class="dialog-close" id="close-certificates-btn" type="button" aria-label="Zamknij certyfikaty">×</button>
         </div>
+        <p class="certificate-error" id="certificates-data-error" role="status" hidden>Nie udało się wczytać listy certyfikatów. Wyświetlana jest wersja awaryjna.</p>
+        <p id="certificates-empty" role="status" hidden>Brak certyfikatów do wyświetlenia.</p>
         <div class="certificate-grid">
           <button class="certificate-tile" type="button" data-certificate-src="certyfikaty/galeria/kosmetologia-estetyczna-duzy.jpg" data-certificate-title="Kosmetologia estetyczna" data-certificate-type="Świadectwo" aria-label="Powiększ świadectwo: kosmetologia estetyczna">
             <img src="certyfikaty/galeria/kosmetologia-estetyczna-podglad.jpg" alt="" width="423" height="600" loading="lazy" decoding="async">
@@ -3916,6 +3918,54 @@
     rulesOpen.addEventListener("click", () => openSiteDialog(rulesDialog));
     certificatesOpen.addEventListener("click", () => openSiteDialog(certificatesDialog));
     biorezonansOpen.addEventListener("click", () => openSiteDialog(biorezonansDialog));
+
+    function renderCertificates(certificates) {
+      const isText = (value) => typeof value === "string" && value.trim().length > 0;
+      const isLocalImage = (value) => isText(value) && /^certyfikaty\/[^?#\\]+$/i.test(value) &&
+        !value.split("/").some((part) => part === "." || part === "..") &&
+        /\.(?:jpe?g|png|webp)$/i.test(value);
+      if (!Array.isArray(certificates) || !certificates.every((item) =>
+        item && isLocalImage(item.plik) && isText(item.tytul) &&
+        (!("miniatura" in item) || isLocalImage(item.miniatura)) &&
+        (!("tytulPodgladu" in item) || isText(item.tytulPodgladu)) &&
+        (!("rodzaj" in item) || isText(item.rodzaj))
+      )) {
+        console.error("Nie można wczytać listy certyfikatów z dane.js: nieprawidłowe dane.");
+        document.querySelector("#certificates-data-error").hidden = false;
+        return;
+      }
+
+      document.querySelector("#certificates-empty").hidden = certificates.length > 0;
+      const tiles = document.createDocumentFragment();
+      certificates.forEach((item) => {
+        const title = item.tytulPodgladu || item.tytul;
+        const type = item.rodzaj || "Certyfikat";
+        const button = document.createElement("button");
+        button.className = "certificate-tile";
+        button.type = "button";
+        button.dataset.certificateSrc = item.plik;
+        button.dataset.certificateTitle = title;
+        if (item.rodzaj) button.dataset.certificateType = item.rodzaj;
+        button.setAttribute("aria-label", `Powiększ ${type.toLocaleLowerCase("pl")}: ${title}`);
+
+        const thumbnail = document.createElement("img");
+        thumbnail.src = item.miniatura || item.plik;
+        thumbnail.alt = "";
+        thumbnail.loading = "lazy";
+        thumbnail.decoding = "async";
+        const label = document.createElement("span");
+        label.textContent = item.tytul;
+        const error = document.createElement("span");
+        error.className = "certificate-error";
+        error.hidden = true;
+        error.textContent = "Nie udało się załadować podglądu.";
+        button.append(thumbnail, label, error);
+        tiles.append(button);
+      });
+      document.querySelector(".certificate-grid").replaceChildren(tiles);
+    }
+
+    renderCertificates(window.TRESC_STRONY && window.TRESC_STRONY.certyfikaty);
 
     document.querySelectorAll(".certificate-tile").forEach((button) => {
       const thumbnail = button.querySelector("img");
