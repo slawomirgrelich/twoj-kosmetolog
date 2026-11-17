@@ -1,12 +1,13 @@
 /*
- * W polu aktualnosciTekst wpisz dowolny komunikat, np. o sobotach pracujących, urlopie lub promocjach.
- * Jak edytować: zmieniaj teksty, nazwy i ceny wyłącznie w cudzysłowach "...".
+ * W polu aktualnosciTekst wpisz dowolny komunikat między znakami `; Enter tworzy nową linię.
+ * Znaki `, \ oraz ciąg ${ w komunikacie poprzedź znakiem \.
+ * Nazwy i ceny zmieniaj wyłącznie w cudzysłowach "...".
  * Zachowaj cudzysłowy, nawiasy, dwukropki i przecinki; nie zmieniaj pól id, grupa i zewnetrzny.
  * Warianty znajdują się w tablicy warianty; szczegoly to dodatkowy opis ceny.
  * Gdy JavaScript nie działa, strona pokazuje zapasową wersję zapisaną w HTML.
  */
 window.TRESC_STRONY = {
-  aktualnosciTekst: "Soboty pracujące: 21 listopada, 5 i 19 grudnia oraz 2 stycznia.",
+  aktualnosciTekst: `Soboty pracujące: 21 listopada, 5 i 19 grudnia oraz 2 stycznia.`,
   cennik: [
     { id: "eyes", nazwa: "Oprawa oczu", pozycje: [
       {"nazwa": "Regulacja brwi", "cena": "30 zł"},
