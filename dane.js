@@ -9,8 +9,7 @@
  */
 window.TRESC_STRONY = {
   aktualnosciTekst: `Soboty pracujące: 21 listopada, 5 i 19 grudnia oraz 2 stycznia.
-  SOBORTY 1
-  NIEDZIELE 2`,
+  Dodatkowo 6 styczeń dla ZAINTERESOWANYCH.`,
   certyfikaty: [
     { plik: "certyfikaty/galeria/kosmetologia-estetyczna-duzy.jpg", tytul: "Studia podyplomowe – kosmetologia estetyczna", miniatura: "certyfikaty/galeria/kosmetologia-estetyczna-podglad.jpg", tytulPodgladu: "Kosmetologia estetyczna", rodzaj: "Świadectwo" },
     { plik: "certyfikaty/galeria/fizjoterapia-duzy.jpg", tytul: "Dyplom – fizjoterapia", miniatura: "certyfikaty/galeria/fizjoterapia-podglad.jpg", tytulPodgladu: "Fizjoterapia", rodzaj: "Dyplom" },
