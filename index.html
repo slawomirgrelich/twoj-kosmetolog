@@ -1886,7 +1886,7 @@
       margin-bottom: 0;
       color: #44403c;
       overflow-wrap: anywhere;
-      white-space: pre-wrap;
+      white-space: pre-line;
     }
 
     .rules-open {
@@ -3439,7 +3439,9 @@
     <button class="cookie-dismiss" type="button">Rozumiem</button>
   </div>
 
-  <script src="dane.js"></script>
+  <script>
+    document.write('<script src="dane.js?v=' + Date.now() + '"><\/script>');
+  </script>
   <script>
     document.documentElement.classList.add("js");
 
@@ -4198,7 +4200,13 @@
         });
       });
 
-      document.querySelector("#aktualnosci-tekst").textContent = data.aktualnosciTekst;
+      const aktualnosciTekst = data.aktualnosciTekst
+        .split("\n")
+        .map(line => line.trim())
+        .join("\n")
+        .trim();
+
+      document.querySelector("#aktualnosci-tekst").textContent = aktualnosciTekst;
       document.querySelector(".price-tabs").replaceChildren(tabs);
       document.querySelector("#price-list").replaceChildren(rows);
     }
